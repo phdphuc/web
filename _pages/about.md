@@ -25,6 +25,7 @@ My main interests: malware reverse-engineering, intelligence threats hunting, si
 ---
 ## Awards
 
+- 1st prize award of SILM Security of Software & Hardware Interfaces CTF 2019
 - Mandiant’s Fire Eye- Advanced Reverse Engineering 1,2,3,5,6 : Winning award. 2019, 2018, 2016, 2015, 2014
 - Batterii: Web penetration testing - Bug Bounty award. Oct. 2016
 - BlackHat Europe Conference: Student Scholarship. Aug. 2016
