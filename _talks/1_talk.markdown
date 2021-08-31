@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Mac-A-Mal: An Automated Platform for Mac Malware Hunting
+title: Mac-A-Mal An Automated Platform for Mac Malware Hunting
 description: Mac-A-Mal a system for behavioral monitoring of components at kernel level 
 redirect: https://www.youtube.com/watch?v=G5ZZXCEi_Rc
 importance: 1
