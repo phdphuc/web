@@ -35,6 +35,10 @@ My main interests: malware reverse-engineering, intelligence threats hunting, si
 - BKAV’s Whitehat contest 08: 1st prize award on behalf of BabyPhD team. Feb. 2015
 - Hanoi University of Science and Technology Young Scientific Research : 1st prize award. Jul. 2013
 
+## I am/was a member of the following:
+- CHES Artifact Evaluation PC [2021](https://ches.iacr.org/2021/artifacts.php)
+- International Symposium on Information and Communication Technology PC [2022](https://soict.org/)
+
 <!---
 [//]: <> (Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com){:target="\_blank"}. You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
