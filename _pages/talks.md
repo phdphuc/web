@@ -23,12 +23,13 @@ nav: true
         <div class="card-body">
           <h2 class="card-title ">{{ talk.title }}</h2>
           <p class="card-text">{{ talk.description }}</p>
+    </a>
           <p class="card-text">{{ talk.content }}</p>
           <div class="row ml-1 mr-1 p-0">
           </div>
         </div>
       </div>
-    </a>
+
   </div>
 {% endfor %}
 
