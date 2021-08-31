@@ -21,8 +21,9 @@ nav: true
         <img src="{{ talk.img | relative_url }}" alt="project thumbnail">
         {% endif %}
         <div class="card-body">
-          <h2 class="card-title text-lowercase">{{ talk.title }}</h2>
+          <h2 class="card-title ">{{ talk.title }}</h2>
           <p class="card-text">{{ talk.description }}</p>
+          <p class="card-text">{{ talk.content }}</p>
           <div class="row ml-1 mr-1 p-0">
           </div>
         </div>
