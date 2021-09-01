@@ -10,7 +10,7 @@ nav: true
 
 Organize your courses by years, topics, or universities, however you like! -->
 
-** Write me an email and send your cv if you are interested. I am always interested in working with students (either in hobby project or interns/thesis). Contact me with a specific proposal and make sure you have at least skipped some of my work.**
+**Write me an email and send your cv if you are interested. I am always interested in working with students (either in hobby project or interns/thesis). Contact me with a specific proposal and make sure you have at least skipped some of my work.**
 
 # Teaching courses
 
