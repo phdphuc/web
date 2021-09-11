@@ -38,7 +38,7 @@ My main interests: malware reverse-engineering, intelligence threats hunting, si
 ## I am/was a member of the following:
 - CHES Artifact Evaluation PC [2021](https://ches.iacr.org/2021/artifacts.php)
 - International Symposium on Information and Communication Technology PC [2022](https://soict.org/)
-
+- Quarterly security livestreaming roundtable of **BabyTalk** [1](https://www.youtube.com/watch?v=rMevp_WBY88&t=3090s) [2](https://www.youtube.com/watch?v=7gE_9P0CDUk) [3](https://www.youtube.com/watch?v=DDxRn3CNdeQ)
 <!---
 [//]: <> (Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com){:target="\_blank"}. You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
