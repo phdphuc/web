@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-description: <a href="https://inria.fr">INRIA</a>
+description: <a href="https://inria.fr" target="_blank">INRIA</a>
 
 profile:
   align: right
@@ -16,11 +16,11 @@ social: true  # includes social icons at the bottom of the page
 ---
 My main interests: malware reverse-engineering, intelligence threats hunting, side-channel information with deep learning analysis.
 
-- BA of Business Administration at <a href="https://www.hust.edu.vn/">Hanoi University of Science and Technology</a>
-- Engineering degree of Mechatronics at <a href="https://www.hust.edu.vn/">Institut polytechnique de Hanoï</a>
-- MSc of cyber-security at <a href="https://www.utwente.nl/">University of Twente</a> and <a href="https://www.unitn.it/">University of Trento</a>
-- PhD candidate at <a href = "https://www.irisa.fr/emsec/">EMSEC team</a>, <a href="https://irisa.fr">IRISA</a> & <a href="https://inria.fr">INRIA</a>.
-- Founder of CTF team <a href="https://babyphd.net">BabyPhD</a>
+- BA of Business Administration at <a href="https://www.hust.edu.vn/" target="_blank">Hanoi University of Science and Technology</a>
+- Engineering degree of Mechatronics at <a href="https://www.hust.edu.vn/" target="_blank">Institut polytechnique de Hanoï</a>
+- MSc of cyber-security at <a href="https://www.utwente.nl/" target="_blank">University of Twente</a> and <a href="https://www.unitn.it/" target="_blank">University of Trento</a>
+- PhD candidate at <a href = "https://www.irisa.fr/emsec/" target="_blank">EMSEC team</a>, <a href="https://irisa.fr" target="_blank">IRISA</a> & <a href="https://inria.fr" target="_blank">INRIA</a>.
+- Founder of CTF team <a href="https://babyphd.net" target="_blank">BabyPhD</a>
 
 ---
 ## Awards
@@ -36,9 +36,9 @@ My main interests: malware reverse-engineering, intelligence threats hunting, si
 - Hanoi University of Science and Technology Young Scientific Research : 1st prize award. Jul. 2013
 
 ## I am/was a member of the following:
-- CHES Artifact Evaluation PC [2021](https://ches.iacr.org/2021/artifacts.php)
-- International Symposium on Information and Communication Technology PC [2022](https://soict.org/)
-- Quarterly security livestreaming roundtable of BabyTalk from 2020- [3](https://www.youtube.com/watch?v=DDxRn3CNdeQ) [2](https://www.youtube.com/watch?v=7gE_9P0CDUk) [1](https://www.youtube.com/watch?v=rMevp_WBY88)
+- CHES Artifact Evaluation PC [2021](https://ches.iacr.org/2021/artifacts.php){:target="_blank"}
+- International Symposium on Information and Communication Technology PC [2022](https://soict.org/){:target="_blank"}
+- Quarterly security livestreaming roundtable of BabyTalk from 2020- [3](https://www.youtube.com/watch?v=DDxRn3CNdeQ){:target="_blank"} [2](https://www.youtube.com/watch?v=7gE_9P0CDUk){:target="_blank"} [1](https://www.youtube.com/watch?v=rMevp_WBY88){:target="_blank"}
 
 
 
