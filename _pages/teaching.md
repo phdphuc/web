@@ -16,7 +16,7 @@ Organize your courses by years, topics, or universities, however you like! -->
 
 - Database management system 2014-2015, UET-VNU.
 - Java Netwok Programming 2015-2015, T36.
-- Cassage de mots de passe sur GPU, 2021-2022, INSA Rennes. Week [1](assets/pdf/GPU_week1.pdf)
+- Cassage de mots de passe sur GPU, 2021-2022, INSA Rennes. Week [1][{{ '/assets/pdf/<GPU_week1.pdf>' | relative_url }}]
 
 # (Some) Interns/students I have been working with
 
