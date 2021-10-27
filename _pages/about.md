@@ -19,7 +19,7 @@ My main interests: malware reverse-engineering, intelligence threats hunting, si
 - BA of Business Administration at <a href="https://www.hust.edu.vn/" target="_blank">Hanoi University of Science and Technology</a>
 - Engineering degree of Mechatronics at <a href="https://www.hust.edu.vn/" target="_blank">Institut polytechnique de Hanoï</a>
 - MSc of cyber-security at <a href="https://www.utwente.nl/" target="_blank">University of Twente</a> and <a href="https://www.unitn.it/" target="_blank">University of Trento</a>
-- PhD candidate at <a href = "https://www.irisa.fr/emsec/" target="_blank">EMSEC team</a>, <a href="https://irisa.fr" target="_blank">IRISA</a> & <a href="https://inria.fr" target="_blank">INRIA</a>.
+- PhD candidate at <a href = "https://www.irisa.fr/emsec/" target="_blank">EMSEC team</a>, <a href="https://irisa.fr" target="_blank">IRISA</a> & <a href="https://inria.fr" target="_blank">INRIA</a> under supervision of Annelie Heuser, Olivier Zendra and Jean-Louis Lanet.
 - Founder of CTF team <a href="https://babyphd.net" target="_blank">BabyPhD</a>
 
 ---
