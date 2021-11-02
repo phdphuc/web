@@ -44,7 +44,7 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 github_username: phdphuc
 twitter_username: phd_phuc
 linkedin_username: phd-phuc
-scholar_userid: # your Google Scholar ID
+scholar_userid: H6A-M6EAAAAJ # your Google Scholar ID
 orcid_id: # your ORCID ID
 medium_username: # your Medium username
 quora_username: # your Quora username
@@ -55,7 +55,7 @@ keybase_username: # your keybase user name
 
 contact_note: >
   .
-google_analytics: UA-XXXXXXXXX # out your google-analytics code
+google_analytics: G-25Z3QPHEXC # out your google-analytics code
 
 # -----------------------------------------------------------------------------
 # Blog
@@ -152,12 +152,12 @@ scholar:
 # Optional Features
 # -----------------------------------------------------------------------------
 
-enable_google_analytics:  false
+enable_google_analytics:  true 
 enable_mansory:           true
 enable_math:              true
-enable_tooltips:          false
-enable_darkmode:          true
-show_social_icons:        false
+enable_tooltips:          true
+enable_darkmode:          false
+show_social_icons:        true
 
 # -----------------------------------------------------------------------------
 # Library versions
