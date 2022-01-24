@@ -33,7 +33,7 @@ Details could be found [here](https://github.com/ahma-hub/analysis/wiki){:target
 
 ## Media coverage
 
--   Using EM Waves to Detect Malware. Schneier on security. January 15, schneier. (n.d.). Retrieved January 21, 2022, from <https://www.schneier.com/blog/archives/2022/01/using-em-waves-to-detect-malware.html>
+-   Using EM Waves to Detect Malware. Schneier on security. January 15, schneier. (n.d.). Retrieved January 21, 2022, from <https://www.schneier.com/blog/archives/2022/01/using-em-waves-to-detect-malware.html>{:target="_blank"}
 -   'Skadlig kod kan upptäckas med elektromagnetiska vågor'. Computer Sweden. Accessed 21 January 2022. <https://computersweden.idg.se/2.2683/1.761341/skadlig-kod-kan-upptackas-med-elektromagnetiska-vagor>.
 -   'Identifying Malware By Sniffing Its EM Signature'. Tom Nardi. Hackaday (blog), 19 January 2022. <https://hackaday.com/2022/01/19/identifying-malware-by-sniffing-its-em-signature/>.
 -   Tracy, P. (2022, January 12). Raspberry pi can detect malware by scanning for electromagnetic waves. Gizmodo. Retrieved January 21, 2022, from <https://gizmodo.com/raspberry-pi-can-detect-malware-by-scanning-for-electro-1848339130>
