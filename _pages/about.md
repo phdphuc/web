@@ -36,6 +36,7 @@ My main interests: malware reverse-engineering, intelligence threats hunting, si
 - Hanoi University of Science and Technology Young Scientific Research : 1st prize award. Jul. 2013
 
 ## I am/was a member of the following:
+- USENIX Security 2022 Artifact Evaluation Committee [2022](https://www.usenix.org/conference/usenixsecurity22/call-for-artifacts){:target="_blank"}
 - CHES Artifact Evaluation PC [2021](https://ches.iacr.org/2021/artifacts.php){:target="_blank"}
 - International Symposium on Information and Communication Technology PC [2022](https://soict.org/){:target="_blank"}
 - Quarterly security livestreaming roundtable of BabyTalk from 2020- [3](https://www.youtube.com/watch?v=DDxRn3CNdeQ){:target="_blank"} [2](https://www.youtube.com/watch?v=7gE_9P0CDUk){:target="_blank"} [1](https://www.youtube.com/watch?v=rMevp_WBY88){:target="_blank"}
