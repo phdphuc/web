@@ -16,4 +16,4 @@ Contrary to popular belief, the Mac ecosystem is not unaffected by malware. In 2
 
 ## Projects code
 
-Details could be found here: https://github.com/phdphuc/mac-a-mal
+Details could be found [here](https://github.com/phdphuc/mac-a-mal){:target="_blank"}
