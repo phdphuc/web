@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Obfuscation defeated - Leveraging electromagnetic signals for malware classification with Deep learning
-description: GDR Hands-on Machine Learning for Security 
+description: GDR Hands-on Machine Learning for Security, Sep 2021.
 redirect: https://team.inria.fr/cidre/hands-on-machine-learning-for-security/
 importance: 2
 ---
