@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  When Electromagnetic Signals Reveal Obfuscated Malware: Deep and Machine Learning Use cases
+title: When Electromagnetic Signals Reveal Obfuscated Malware-Deep and Machine Learning Use cases
 description: SemSecuElec, DGA-MI. October 22, 2021
 redirect: https://videos-rennes.inria.fr/video/VJq91KPL6
 importance: 1
