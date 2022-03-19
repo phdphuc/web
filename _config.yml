@@ -88,6 +88,9 @@ collections:
   talks:
     output: true
     permalink: /talks/:path
+  arch:
+    output: true
+    permalink: /arch/:path/
 news_limit: 5
 
 # -----------------------------------------------------------------------------

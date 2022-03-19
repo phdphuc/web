@@ -279,7 +279,7 @@ footer.sticky-bottom {
 
 .projects {
   .grid-item {
-    width: 250px;
+    width: 100%;
     margin-bottom: 10px;
     a {
       color: black;
@@ -290,7 +290,13 @@ footer.sticky-bottom {
     }
   }
   .card img {
-    width: 100%;
+    width: 25%;
+  }
+  .card-body {
+    width: 2500px;
+  }
+  .card {
+    flex-direction: row;
   }
 }
 
