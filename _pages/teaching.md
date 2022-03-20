@@ -20,7 +20,7 @@ Organize your courses by years, topics, or universities, however you like! -->
 
 # (Some) Interns/students I have been working with
 
-- Max Kersten - McAfee
+- <a href="https://maxkersten.nl/" target="_blank">Max Kersten</a> - McAfee
 - Giap Le - WorldQuant.
 - Do Minh Tuan - STAR Labs.
-- Vincent Aubril (M2 CYBER school Rennes).
+- <a href="https://nuliel.fr/" target="_blank">Vincent Aubril (M2 CYBER school Rennes).</a>
