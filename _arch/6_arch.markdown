@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ZEUS MALWARE ANALYSIS REPORT
+title: Zeus malware analysis report
 description: 2015
 img: /assets/img/arch/zeus.assets/icon.jpg
 importance: 95
