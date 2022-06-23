@@ -16,10 +16,11 @@ social: true  # includes social icons at the bottom of the page
 ---
 My main interests: malware reverse-engineering, intelligence threats hunting, side-channel information with deep learning analysis.
 
+- Malware researcher at Advanced Programs Group (APG) -  <a href = "https://www.trellix.com/" target="_blank">Trellix</a>
+- PhD candidate at <a href = "https://www.irisa.fr/emsec/" target="_blank">EMSEC team</a>, <a href="https://irisa.fr" target="_blank">IRISA</a> & <a href="https://inria.fr" target="_blank">INRIA</a> under supervision of <a href="http://www.annelieheuser.com/" target="_blank">Annelie Heuser</a>, <a href="https://members.loria.fr/OZendra/" target="_blank">Olivier Zendra</a>, <a href="https://www.di.ens.fr/~fouque/" target="_blank">Pierre-Alain Fouque</a>, and <a href="http://p.lanet.free.fr/pmwiki-2.2.81/" target="_blank">Jean-Louis Lanet</a>.
+- MSc of cyber-security at <a href="https://www.utwente.nl/" target="_blank">University of Twente</a> and <a href="https://www.unitn.it/" target="_blank">University of Trento</a>
 - BA of Business Administration at <a href="https://www.hust.edu.vn/" target="_blank">Hanoi University of Science and Technology</a>
 - Engineering degree of Mechatronics at <a href="https://www.hust.edu.vn/" target="_blank">Institut polytechnique de Hanoï</a>
-- MSc of cyber-security at <a href="https://www.utwente.nl/" target="_blank">University of Twente</a> and <a href="https://www.unitn.it/" target="_blank">University of Trento</a>
-- PhD candidate at <a href = "https://www.irisa.fr/emsec/" target="_blank">EMSEC team</a>, <a href="https://irisa.fr" target="_blank">IRISA</a> & <a href="https://inria.fr" target="_blank">INRIA</a> under supervision of <a href="http://www.annelieheuser.com/" target="_blank">Annelie Heuser</a>, <a href="https://members.loria.fr/OZendra/" target="_blank">Olivier Zendra</a>, <a href="https://www.di.ens.fr/~fouque/" target="_blank">Pierre-Alain Fouque</a>, and <a href="http://p.lanet.free.fr/pmwiki-2.2.81/" target="_blank">Jean-Louis Lanet</a>.
 - Founder of CTF team <a href="https://babyphd.net" target="_blank">BabyPhD</a>
 
 ---
