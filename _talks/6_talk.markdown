@@ -3,7 +3,7 @@ layout: page
 title: When Electromagnetic Signals Reveal Obfuscated Malware-Deep and Machine Learning Use cases
 description: SemSecuElec, DGA-MI. October 22, 2021
 redirect: https://videos-rennes.inria.fr/video/VJq91KPL6
-importance: 1
+importance: 90
 ---
 
 The Internet of Things (IoT) is constituted of devices that are expo-nentially growing in number and in complexity. They use plentiful customized firmware and hardware, ignoring potential security issues, which make them a perfect victim for cybercriminals, especially malware authors.
