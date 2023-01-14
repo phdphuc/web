@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-description: <a href="https://inria.fr" target="_blank">INRIA</a>
+description: Threat analyst and malware researcher, PhD.
 
 profile:
   align: right
