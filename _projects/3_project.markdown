@@ -1,8 +1,8 @@
 ---
 layout: page
 title: AHMA
-description: ULTRA: Ultimate Rootkit Detection over the Air
-img: /assets/img/3.jpg
+description: ULTRA - Ultimate Rootkit Detection over the Air
+img: /assets/img/4.jpg
 importance: 3
 ---
 
