@@ -1,3 +1,10 @@
+---
+layout: page
+title: Qakbot Evolves to OneNote Malware Distribution
+description: 2023
+img: /assets/img/arch/Qakbot.assets/image5.jpeg
+importance: 96
+---
 **Qakbot Evolves to OneNote Malware Distribution**
 
 By [[Pham Duy
