@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Qakbot Evolves to OneNote Malware Distribution
+title: Shining Light on Dark Power - Yet Another Ransomware Gang
 description: March 23, 2023
 img: /assets/img/arch/DarkPower.assets/media/image5.jpeg
 importance: 88
 ---
-Shining Light on Dark Power: Yet Another Ransomware Gang
+# Shining Light on Dark Power: Yet Another Ransomware Gang
 
 By [Pham Duy
 Phuc](https://www.trellix.com/en-us/about/newsroom/stories/contributors/pham-duy-phuc.html), [Max
@@ -67,9 +67,9 @@ the creation of a generic decryption tool. Within the sample,
 the Nimcrypto library is used to carry out cryptographic operations. The
 used cryptographic algorithm is AES CRT.
 
-![Figure 1 Encryption
-key](/assets/img/arch/DarkPower.assets/media/image1.jpeg){width="6.5in"
-height="0.6347222222222222in"}Figure 1 Encryption key
+<img src="/assets/img/arch/DarkPower.assets/media/image1.jpeg"
+style="width:6.5in;height:0.63472in" alt="Figure 1 Encryption key" />Figure
+1 Encryption key
 
 Binary string encryption
 
@@ -81,27 +81,28 @@ using a fixed key, which is the SHA-256 hash of a hard-coded string. The
 initialization vector (IV) is also included within the binary, but each
 decryption call uses a different IV.
 
-![Code 1 String decryption
-disassembly.](/assets/img/arch/DarkPower.assets/media/image2.jpeg){width="6.5in"
-height="3.5215277777777776in"}Code 1 String decryption disassembly.
+<img src="/assets/img/arch/DarkPower.assets/media/image2.jpeg"
+style="width:6.5in;height:3.52153in"
+alt="Code 1 String decryption disassembly." />Code 1 String decryption
+disassembly.
 
 The disassembled instructions above are used to decrypt a string, the
-output of which is ".darkpower". The IV is loaded into "rdx", while
-"rax" is used to store the base64 encoded and encrypted string. The
-function call to "decrypt_AES_CTR" decrypts the given string.
+output of which is “.darkpower”. The IV is loaded into “rdx”, while
+“rax” is used to store the base64 encoded and encrypted string. The
+function call to “decrypt_AES_CTR” decrypts the given string.
 
 To make the analysis of the malware easier, all encrypted strings can be
 decrypted, as can be seen in the image below. This will allow an analyst
-to more easily understand the ransomware's inner workings.
+to more easily understand the ransomware’s inner workings.
 
-![Figure 2 Decrypted strings will be added as comments in the decompiler
-view.](/assets/img/arch/DarkPower.assets/media/image3.jpeg){width="5.719444444444444in"
-height="7.581944444444445in"}Figure 2 Decrypted strings will be added as
-comments in the decompiler view.
+<img src="/assets/img/arch/DarkPower.assets/media/image3.jpeg"
+style="width:5.71944in;height:7.58194in"
+alt="Figure 2 Decrypted strings will be added as comments in the decompiler view." />Figure
+2 Decrypted strings will be added as comments in the decompiler view.
 
 Stopping services
 
-The Dark Power ransomware targets specific services on the victim\'s
+The Dark Power ransomware targets specific services on the victim's
 machine. It stops the following services: *veeam, memtas, sql, mssql,
 backup, vss, sophos, svc\$, and mepocs*. By disabling these services,
 the ransomware makes it difficult for the victim to recover their files,
@@ -115,22 +116,23 @@ of files. 
 Additionally, other back-up and anti-malware services are stopped. All
 in all, the goal is to increase the chance that a victim will pay the
 demanded ransom. If the ransomware detects any services or processes
-that match the predefined list, it will print *\"\[YES\] in killing
-(service name)*\" to the console, as can be seen in the figure below.
+that match the predefined list, it will print *"\[YES\] in killing
+(service name)*" to the console, as can be seen in the figure below.
 
-![Figure 3 Terminating VSS
-service](/assets/img/arch/DarkPower.assets/media/image4.jpeg){width="6.5in"
-height="0.80625in"}Figure 3 Terminating VSS service
+<img src="/assets/img/arch/DarkPower.assets/media/image4.jpeg"
+style="width:6.5in;height:0.80625in"
+alt="Figure 3 Terminating VSS service" />Figure 3 Terminating VSS
+service
 
 Process termination
 
 Much like the stopped services, processes which often block files (such
 as office related activity) are terminated. The ransomware queries the
-Windows Management Instrumentation (WMI) named *"winmgmts: &
-{impersonationLevel=impersonate}!.\\root\\cimv2"* with the
-query *"select \* from win32_process"*. This query returns a list of all
-running processes. Any matches with the predefined process names are
-terminated. Within the list, entries such as *taskmgr.exe,
+Windows Management Instrumentation (WMI) named *“winmgmts: &
+{impersonationLevel=impersonate}!.\root\cimv2”* with the query *“select
+\* from win32_process”*. This query returns a list of all running
+processes. Any matches with the predefined process names are terminated.
+Within the list, entries such as *taskmgr.exe,
 steam.exe,* and *firefox.exe* are present, as well as Microsoft Office
 processes, such as *excel.exe, winword.exe,
 powerpnt.exe,* and *visio.exe*. The ransomware also targets specific
@@ -374,7 +376,7 @@ programdata
 
 intel
 
-\$windows.\~ws
+\$windows.~ws
 
 system volume information
 
@@ -386,7 +388,7 @@ program files (x86)
 
 msocache
 
-\$windows.\~bt
+\$windows.~bt
 
 boot
 
@@ -397,18 +399,18 @@ Table 4 List of excluded folders
 Clearing logs and console 
 
 After killing services, the ransomware sleeps for 30 seconds and
-executes the Windows command *\"C:\\Windows\\system32\\cmd.exe /c
-cls\"* to clear the console (Code 2). In this sample, the ransomware
-uses the WMI
-query *"Select \* from Win32_NTEventLogFile"* and *"ClearEventLog()"* to
+executes the Windows command *"C:\Windows\system32\cmd.exe /c cls"* to
+clear the console (Code 2). In this sample, the ransomware uses the WMI
+query *“Select \* from Win32_NTEventLogFile”* and *“ClearEventLog()”* to
 clear the system logs. Clearing logs is a common tactic used by
 ransomware to hide their tracks and to make it difficult for analysts to
 investigate the attack. Afterwards, it initiates the spreading ransom
 notes and encryption process. 
 
-![Code 2 Console clearing command
-execution.](/assets/img/arch/DarkPower.assets/media/image5.jpeg){width="6.5in"
-height="3.332638888888889in"}Code 2 Console clearing command execution.
+<img src="/assets/img/arch/DarkPower.assets/media/image5.jpeg"
+style="width:6.5in;height:3.33264in"
+alt="Code 2 Console clearing command execution." />Code 2 Console
+clearing command execution.
 
 Writing ransom notes
 
@@ -417,14 +419,14 @@ of the ransom note (Figure 4). Unlike the usual plain text ransom notes,
 this ransom note is a PDF file. The note is created using *Adobe
 Illustrator 26.0, and last* modified on the 9th of February 2023.
 
-![Figure 4 The first page screenshot of Dark Power ransom
-note.](/assets/img/arch/DarkPower.assets/media/image6.jpeg){width="6.5in"
-height="4.554861111111111in"}Figure 4 The first page screenshot of Dark
-Power ransom note.
+<img src="/assets/img/arch/DarkPower.assets/media/image6.jpeg"
+style="width:6.5in;height:4.55486in"
+alt="Figure 4 The first page screenshot of Dark Power ransom note." />Figure
+4 The first page screenshot of Dark Power ransom note.
 
 The ransom note demands \$10,000 USD to a Monero blockchain address:
-XMR\
-*85D16UodGevaWw6o9UuUu8j5uosk9fHmRZSUoDp6hTd2ceT9nvZ5hPedmoHYxedHzy6QW4KnxpNC7MwYFYYRCdt\[redacted\]*\
+XMR  
+*85D16UodGevaWw6o9UuUu8j5uosk9fHmRZSUoDp6hTd2ceT9nvZ5hPedmoHYxedHzy6QW4KnxpNC7MwYFYYRCdt\[redacted\]*  
 The ransom note also provides a Tor website (power*\[redacted\]*.onion)
 that includes claimed victims (Figure 5) and a qTox ID
 (*EBBB\[redacted\]*) for chat. Both the Tor network and the qTox
@@ -432,21 +434,22 @@ messenger allow anonymity due to decentralized servers and communication
 protocols. The claimed victims are shown in the figure below, where each
 rectangle is a logo of the victimised company. The logos are blurred in
 the image below to refrain from sharing who the victims are, but there
-is no such blur on the actor's website. 
+is no such blur on the actor’s website. 
 
-![Figure 5 Censored screenshot of the Dark Power web
-page.](/assets/img/arch/DarkPower.assets/media/image7.jpeg){width="5.5152777777777775in"
-height="9.0in"}Figure 5 Censored screenshot of the Dark Power web page.
+<img src="/assets/img/arch/DarkPower.assets/media/image7.jpeg"
+style="width:5.51528in;height:9in"
+alt="Figure 5 Censored screenshot of the Dark Power web page." />Figure
+5 Censored screenshot of the Dark Power web page.
 
 Data encryption
 
-The encryption of the files which aren't filtered out, are encrypted
+The encryption of the files which aren’t filtered out, are encrypted
 using AES (CRT mode). The encrypted file paths are printed, along with a
 counter, in the standard output, as can be seen in the image below.
 
-![Figure 6 Encrypted file
-paths](/assets/img/arch/DarkPower.assets/media/image8.jpeg){width="6.5in"
-height="4.789583333333334in"}Figure 6 Encrypted file paths
+<img src="/assets/img/arch/DarkPower.assets/media/image8.jpeg"
+style="width:6.5in;height:4.78958in"
+alt="Figure 6 Encrypted file paths" />Figure 6 Encrypted file paths
 
 There are two versions of the ransomware in the wild, each with a
 different encryption key and format:
@@ -457,11 +460,11 @@ different encryption key and format:
 
 2.  In the second variant, the resulted sha256 digest of the randomized
     key is used as the AES encryption key, and a fixed 128-bit
-    value, *\"73 4B D9 D6 BA D5 12 A0 72 7F D6 4C 1E F4 96 87\"* is used
+    value, *"73 4B D9 D6 BA D5 12 A0 72 7F D6 4C 1E F4 96 87"* is used
     as the encryption nonce.
 
 After a full encryption of the file contents, the ransomware renames
-encrypted files with the *\".dark_power\"* extension.
+encrypted files with the *".dark_power"* extension.
 
 Threat intelligence
 
@@ -475,7 +478,7 @@ deployment of the ransomware.
 
 The Dark Power gang is operating on a global scale, with claimed victims
 in Algeria, the Czech Republic, Egypt, France, Israel, Peru, Turkey, and
-the USA. According to the group\'s website, they have successfully
+the USA. According to the group's website, they have successfully
 targeted ten victims. The sectors of the victims, in no particular
 order, are: education, IT, healthcare, manufacturing, and food
 production.
@@ -494,9 +497,9 @@ start if you are the victim of ransomware.
 Conclusion
 
 The adoption of new(er) languages, such as Nim, Golang, or Rust, by
-malware authors is a trend that isn't new. The cost of the continuous
+malware authors is a trend that isn’t new. The cost of the continuous
 upkeep of knowledge from the defending side is higher than the
-attacker's required skill to learn a new language. Sharing this
+attacker’s required skill to learn a new language. Sharing this
 information, in blogs such as these, will help the community as a whole.
 
 Dark Power shows that a pretty generic approach to ransomware can still
@@ -514,16 +517,16 @@ Ransomware-HMQ
 
 Endpoint Security (HX/AV/MG)
 
-Trojan.GenericKD.65499855\
+Trojan.GenericKD.65499855  
 Trojan.GenericKD.65428966 
 
-Network Security(NX)\
-Detection as a Service\
-Email Security\
-Malware Analysis\
+Network Security(NX)  
+Detection as a Service  
+Email Security  
+Malware Analysis  
 File Protect
 
-Ransomware.Win64.Crypren.FEC3\
+Ransomware.Win64.Crypren.FEC3  
 Malware.Binary.exe 
 
 Appendix B - Key behaviors: ATT&CK techniques
@@ -566,5 +569,5 @@ SHA256 hashes of the analysed samples:
 *This document and the information contained herein describes computer
 security research for educational purposes only and the convenience of
 Trellix customers. Any attempt to recreate part or all of the activities
-described is solely at the user's risk, and neither Trellix nor its
+described is solely at the user’s risk, and neither Trellix nor its
 affiliates will bear any responsibility or liability.*
