@@ -43,7 +43,7 @@ sections outline our analysis results.
 
 The attachment received were as shown below:
 
-![image-20220320212552691](/web/assets/img/arch/zeus.assets/image-20220320212552691-7807958.png)
+![image-20220320212552691](/assets/img/arch/zeus.assets/image-20220320212552691-7807958.png)
 
 In order to analyze the executable code, I employ a combination of
 static and dynamic analysis techniques. Static analysis is the analysis
@@ -53,7 +53,7 @@ static analysis, or discover flaws in program logic only known at
 runtime. These analyzed steps will be implemented simultaneously in
 order to complement each other.
 
-![image-20220320212615277](/web/assets/img/arch/zeus.assets/image-20220320212615277.png)
+![image-20220320212615277](/assets/img/arch/zeus.assets/image-20220320212615277.png)
 
 Figure 1 Methodology
 
@@ -66,7 +66,7 @@ Windows XP system and a host-only network infrastructure. Malware must
 never be executed on any host systems because it may harm to the
 computer or other devices in network.
 
-![image-20220320212645603](/web/assets/img/arch/zeus.assets/image-20220320212645603.png)
+![image-20220320212645603](/assets/img/arch/zeus.assets/image-20220320212645603.png)
 
 Figure 2 Malware analysis environment
 
@@ -113,7 +113,7 @@ behavior when looking in deeper after.
 
 ### Automated dynamic analysis
 
-![image-20220320212747962](/web/assets/img/arch/zeus.assets/image-20220320212747962.png)
+![image-20220320212747962](/assets/img/arch/zeus.assets/image-20220320212747962.png)
 
 Figure 3 Cuckoo Sandbox setup environment
 
@@ -202,7 +202,7 @@ The sample created and dropped 2 directories, 2 files in `%AppData%` and a
 batch script in `%Temp%`. It also created a start up registry key to make
 the malware being executed each time the victim's machine starts.
 
-![](/web/assets/img/arch/zeus.assets/image1.png)
+![](/assets/img/arch/zeus.assets/image1.png)
 
 Figure 4 Cuckoo sandbox on running
 
@@ -234,14 +234,14 @@ content of 32-bit Portable Executable (PE) files. It displays header,
 section, directory, import table, export table, and resource information
 within EXE, DLL, OBJ files.
 
-![](/web/assets/img/arch/zeus.assets/image2.png)
+![](/assets/img/arch/zeus.assets/image2.png)
 
 Figure 5 PEView results
 
 Figure 4 shows that the malware might be built on 19/12/2013, however
 this value can be faked.
 
-![](/web/assets/img/arch/zeus.assets/image3.png)
+![](/assets/img/arch/zeus.assets/image3.png)
 
 Figure 6 Imported libraries and functions
 
@@ -286,7 +286,7 @@ disassembler, which many software security specialists are familiar
 with. The unique Hex-Rays decompiler delivers on the promise of high
 level representation of binary executables.
 
-![](/web/assets/img/arch/zeus.assets/image4.png)
+![](/assets/img/arch/zeus.assets/image4.png)
 Figure 7 Sample's Flow Graph
 
 The Fig. 3 shows a call graph of sample which has many function branches
@@ -389,7 +389,7 @@ kernel32.GetVersionExW() and seems to be supported by Windows
 (PC/Server) from version 5.0 to 6.1 (XP to Windows 7/ Windows Server
 2003 to 2008).
 
-![](/web/assets/img/arch/zeus.assets/image5.png)
+![](/assets/img/arch/zeus.assets/image5.png)
 
 Figure 8 Malware cases
 
@@ -400,22 +400,22 @@ the decrypted cipher text is equal to \"**DAVE**\" and verifies CRC32
 checksum at 0x412975 using rc4 key at dword 4026F0 then make a stream
 cipher at 0x4147D4.
 
-![](/web/assets/img/arch/zeus.assets/image6.png)
+![](/assets/img/arch/zeus.assets/image6.png)
 
 Figure 9 Function 0x4147D4 RC4 Initialization
 
-![](/web/assets/img/arch/zeus.assets/image7.png)
+![](/assets/img/arch/zeus.assets/image7.png)
 
 Figure 10 Apple RC4 implementation in C
 
-![](/web/assets/img/arch/zeus.assets/image8.png)
+![](/assets/img/arch/zeus.assets/image8.png)
 
 Figure 11 RC4 Crypt function
 
 The first decryption key is hardcoded in the binary from address
 0x403730.
 
-![](/web/assets/img/arch/zeus.assets/image9.png)
+![](/assets/img/arch/zeus.assets/image9.png)
 
 Figure 12 The first decryption key
 
@@ -433,7 +433,7 @@ and injector depends on *info* field, if the value is **0x0c** then it
 is still in installation phase if it is **0x1e6** then it has been
 replaced by installation routine with a new packer data structure .
 
-![](/web/assets/img/arch/zeus.assets/image10.png)
+![](/assets/img/arch/zeus.assets/image10.png)
 
 Figure 13 Configuration XOR Decryption
 
@@ -444,7 +444,7 @@ changes the protection on a region of committed pages in the virtual
 address space of the calling process, in this case it changes from
 PAGE_EXECUTE_READWRITE to PAGE_EXECUTE_READ.\[8\]
 
-![](/web/assets/img/arch/zeus.assets/image11.png)
+![](/assets/img/arch/zeus.assets/image11.png)
 
 Figure 14 Key generation
 
@@ -467,7 +467,7 @@ and engineers to quickly find differences and similarities in
 disassembled code. The 2 binaries have the same disassembly code but a
 small difference at the end of the resource field.
 
-![](/web/assets/img/arch/zeus.assets/image12.png)
+![](/assets/img/arch/zeus.assets/image12.png)
 
 Figure 15 BinDiff among original binary and dropped executable
 
@@ -486,7 +486,7 @@ attach with one of these techniques:
     attach to the suspended process using IDA/Ollydbg and restore the
     original bytes at the entrypoint and resume the process.
 
-![](/web/assets/img/arch/zeus.assets/image13.png)
+![](/assets/img/arch/zeus.assets/image13.png)
 
 Figure 16 Zeus configuration archive
 
@@ -496,7 +496,7 @@ lifestyles.pp.ru by changing host windows IP located at
 `%system32%/drivers/etc/hosts` and build old pieces of configuration
 binary grabbed from ZeusTracker.
 
-![](/web/assets/img/arch/zeus.assets/image14.png)
+![](/assets/img/arch/zeus.assets/image14.png)
 
 Figure 17 Create new process from dropped binary
 
@@ -508,7 +508,7 @@ Windows NT 5.1; SV1)"` in the binary can be referred to function
 debugging because the malware set the default user agent by calling the
 function `ObtainUserAgentString` in `urlmon.dll`.
 
-![](/web/assets/img/arch/zeus.assets/image15.png)
+![](/assets/img/arch/zeus.assets/image15.png)
 
 Figure 18 XREFs of user agent string
 
@@ -518,7 +518,7 @@ powerful tool to attach and debug inside kernel library running on
 explorer.exe. However, both IDA and Ollydbg sometimes crash this
 critical process and hang on running.
 
-![](/web/assets/img/arch/zeus.assets/image16.png)
+![](/assets/img/arch/zeus.assets/image16.png)
 
 Figure 19 Ollydbg triggered HTTPOpenRequestA
 
@@ -526,7 +526,7 @@ For communication, the malware continues XOR the first ciphertext with
 key from address 0x21000 to get configuration values include
 configuration URL, RC4 key.
 
-![](/web/assets/img/arch/zeus.assets/image17.png)
+![](/assets/img/arch/zeus.assets/image17.png)
 
 Figure 20 RC4 key of network communication
 
@@ -579,7 +579,7 @@ the internet since 2011. I grabbed the open source code \[11\] to deploy
 a whole Zeus system running on local machines. These system will help us
 fully understand the activities among both C&C server and clients.
 
-![](/web/assets/img/arch/zeus.assets/image18.png)
+![](/assets/img/arch/zeus.assets/image18.png)
 
 Figure 21 Zeus build
 
@@ -589,7 +589,7 @@ It built based on Microsoft Visual Studio, PHP and Apache Server.
 However, I have to refer to another leaked botnet source-code \[12\] to
 modify and build full Zeus kit.
 
-![](/web/assets/img/arch/zeus.assets/image19.png)
+![](/assets/img/arch/zeus.assets/image19.png)
 
 Figure 22 Zeus bot executable and configuration builds
 
@@ -604,7 +604,7 @@ visitors. Two other, namely cp.php and gate.php: cp.php is the user
 control panel to manage the bots, whereas gate.php is the PHP script
 that handles all the communication between bots and C&C server.
 
-![](/web/assets/img/arch/zeus.assets/image20.png)
+![](/assets/img/arch/zeus.assets/image20.png)
 
 Figure 23 Zeus control panel and victim's information
 
@@ -613,7 +613,7 @@ C&C server control the bots by creating a script for them referring to
 results of RC4 key, C&C configuration information, malware analysist can
 take advantages of known Zeus control panel security bugs \[13\]
 
-![](/web/assets/img/arch/zeus.assets/image21.png)
+![](/assets/img/arch/zeus.assets/image21.png)
 
 Figure 24 Sending control script to victim
 
@@ -677,7 +677,7 @@ been parsed, the bot reports information and activities about the
 infected computer to the C&C server. The following figure details those
 phases.
 
-![image-20220320213731222](/web/assets/img/arch/zeus.assets/image-20220320213731222.png)
+![image-20220320213731222](/assets/img/arch/zeus.assets/image-20220320213731222.png)
 
 Figure 25 Zeus initialization and communication phases
 

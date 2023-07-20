@@ -6,7 +6,7 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Duy Phuc
 middle_name: 
 last_name: Pham
-email: duy-phuc.pham@inria.fr
+email: duy-phuc.pham@trellix.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Dr. Pham Duy Phuc webpage
 footer_text: >

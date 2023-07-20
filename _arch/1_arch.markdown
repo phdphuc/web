@@ -18,14 +18,14 @@ Now, we have uncovered and analyzed a new version of the malware, dubbed Catelit
 -------------------------------
 
 While we are still investigating the details of this malware, here is what we know: this malware gets “dropped” onto your device after you download an app from a third-party app store (not official shops like Google Play) or from malicious adware (malvertisements) or phishing sites. Once dropped onto your Android device, the malicious app looks like the icon seen in the screen below and is titled “System Application.”
-![catelites-1.png](/web/assets/img/arch/Catelites.assets/catelites-1.png)
+![catelites-1.png](/assets/img/arch/Catelites.assets/catelites-1.png)
 
 ## How does it trick you?
 ----------------------
 
 When you click the malicious “System Application” app icon, it will ask you for admin rights. If you grant those permissions, the malware begins its work. The icon for the (fake) app you downloaded disappears and then, three familiar-looking, trusted app icons get dropped onto your home screen: one for Gmail, one for Google Play, and one for Chrome.
 
-![catelites-3-app-icons.png](/web/assets/img/arch/Catelites.assets/catelites-3-app-icons.png)
+![catelites-3-app-icons.png](/assets/img/arch/Catelites.assets/catelites-3-app-icons.png)
 
 _The 3 new icons appear on your home screen for Gmail, Google Play and Chrome._
 
@@ -36,7 +36,7 @@ The malware author uses two sophisticated “social engineering” techniques to
 
 By placing these apps on the home screen, the user is more likely to open them, activating the malware so that the criminal can steal sensitive information.
 
-_![Catelites-bank-overlay-4.png](/web/assets/img/arch/Catelites.assets/Catelites-bank-overlay-4.png)  
+_![Catelites-bank-overlay-4.png](/assets/img/arch/Catelites.assets/Catelites-bank-overlay-4.png)  
 _
 
 _First you click “Google Play Store” notification;  
@@ -47,14 +47,14 @@ then it asks for your credit card number._
 
 Worse still, this piece of malware can also go after your bank account login details. This malware has the ability to pose as over 2,200 banks and financial institutions. It does so by adopting the logo and mobile application name of a bank used in the Google Play Store, allowing the author to use simple templates to harvest username and password or credit card information. The overlay is HTML-based and not as sophisticated as other Android banking malware such as LokiBot, Red Alert, or Exobot, but the power here is clearly in the shotgun approach: using simple phishing overlay screens, the criminals are able to target many more users, increasing their likelihood of financial gain.
 
-![catelites-all-bank-apps-5.jpg](/web/assets/img/arch/Catelites.assets/catelites-all-bank-apps-5.jpg)
+![catelites-all-bank-apps-5.jpg](/assets/img/arch/Catelites.assets/catelites-all-bank-apps-5.jpg)
 
 _Above shows examples of the fake overlay screens  
 that pull in the logos of actual banks._
 
 Once you open your own banking app, the malware activates and places a fake overlay on your actual banking app, tricking you into entering your bank login details and also your credit card info. Once you provide this, they have access to your account and credit card.
 
-![catelites-6-sample-flow-blur.png](/web/assets/img/arch/Catelites.assets/catelites-6-sample-flow-blur.png)  
+![catelites-6-sample-flow-blur.png](/assets/img/arch/Catelites.assets/catelites-6-sample-flow-blur.png)  
 
 _If your bank is one of the 2,200 targeted financial institutions, the app pulls in the logo of your bank to make the overlay look official._
 
@@ -80,27 +80,27 @@ Furthermore, it appears to have a host of other functions built in, though not y
 
 **Sets ringer and stream volume to mute in order to suppress sms notifications:**
 
-![catelites-ringer-7.png](/web/assets/img/arch/Catelites.assets/catelites-ringer-7.png)
+![catelites-ringer-7.png](/assets/img/arch/Catelites.assets/catelites-ringer-7.png)
 
 **Admin privileges**
 
 Asks for device admin privileges in order to become persistent and get functions like Wipe Data, lock the device and force a new unlock password for the device:
 
-**![catelites-admin-privelages.png](/web/assets/img/arch/Catelites.assets/catelites-admin-privelages.png)**
+**![catelites-admin-privelages.png](/assets/img/arch/Catelites.assets/catelites-admin-privelages.png)**
 
 **Queries phone numbers from contacts:**
 
-![catelites-phone-numbers.png](/web/assets/img/arch/Catelites.assets/catelites-phone-numbers.png)
+![catelites-phone-numbers.png](/assets/img/arch/Catelites.assets/catelites-phone-numbers.png)
 
 The Trojan has code to encrypt a big batch of file extensions with AES. The encrypted files will usually be renamed with the original name and a different extension “.cat”.
 
-![catelites-last code.png](/web/assets/img/arch/Catelites.assets/catelites-last code.png)  
+![catelites-last code.png](/assets/img/arch/Catelites.assets/catelites-last code.png)  
 
 On December 8th 2017 a single botnet (C&C: 195.54.163.91) obtained 8553 bots in less than a month as shown in the panel of the C&C server.
 
 The panel picture also shows similarities with the panel from the research that GroupIB did together with law enforcement to take down the "Cron" crew. We have no hard evidence linking Catelites actor llyamov to Cron but it is likely that Cron members have used the Catelites malware in their campaigns based on the exact Panel and bot similarities. The screenshot of the panel below also shows how easy it is to adjust the general overlay HTML (inject).
 
-![Catelites-Panel-8.png](/web/assets/img/arch/Catelites.assets/Catelites-Panel-8.png)
+![Catelites-Panel-8.png](/assets/img/arch/Catelites.assets/Catelites-Panel-8.png)
 
 ## **IOCs**
 --------

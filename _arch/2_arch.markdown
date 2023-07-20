@@ -10,7 +10,7 @@ Co-authored with Wesley Gahr and Niels Croese of ThreatFabric
 
 Lately we have been seeing a new variant of Android banking malware which is well-developed and provides numerous unique features such as a ransomware module. Based on the BTC addresses that are used in the source code it seems that the actors behind this new Android malware are successful cybercriminals with over 1.5 million dollars in BTC.
 
-![Bitcoin wallet details](/web/assets/img/arch/LokiBot.assets/lokibot_the_first_hybrid_android_malware_bitcoin_wallet_details.png)*Bitcoin wallet details*
+![Bitcoin wallet details](/assets/img/arch/LokiBot.assets/lokibot_the_first_hybrid_android_malware_bitcoin_wallet_details.png)*Bitcoin wallet details*
 
 It is very unlikely that the actors behind Android LokiBot have gained this amount of money using only LokiBot since the requested fee for ransomware is between $70 and $100 and the bot counts in the various campaigns we have seen is usually around 1000. The malware is sold as a kit. A full license including updates costs $2000 in BTC. The main attack vector of the malware is showing phishing overlays on a large amount of banking apps (often around 100) and a handful of other popular apps such as Skype, Outlook and WhatsApp. The ransomware stage is activated when victims disable the administrative rights of the malware or try to uninstall it. Besides the automatic activation of the ransomware module the bot also has a “Go_Crypt” command, enabling the actors to trigger it. The ransomware attack however does not seem to be the main focus of their campaign at the time of writing.
 
@@ -30,21 +30,21 @@ The C2 web panel is well rounded and has a couple of interesting features. It pr
 
 In addition to building the APK an actor can also customize all aspects of the overlays which will be shown to the victims and do advanced searches on all collected data, such as logs, history and geolocation.
 
-![Malware command and control panel](/web/assets/img/arch/LokiBot.assets/lokibot_the_first_hybrid_android_malware_malware_command_and_control_panel.png)*Malware command and control panel*
+![Malware command and control panel](/assets/img/arch/LokiBot.assets/lokibot_the_first_hybrid_android_malware_malware_command_and_control_panel.png)*Malware command and control panel*
 
 ## Ransomware details
 
 The ransomware stage is automatically activated when victims tries to remove the malware. In addition, it can be activated from the C2 by sending the “Go_Crypt” command.
 
-![/blog/SFY20171001/ransomware_activation.png](/web/assets/img/arch/LokiBot.assets/lokibot_the_first_hybrid_android_malware_automatic_ransomware_activation_when_disabling_device_admin_code_snippet.png)*Automatic ransomware activation when disabling ‘device admin’*
+![/blog/SFY20171001/ransomware_activation.png](/assets/img/arch/LokiBot.assets/lokibot_the_first_hybrid_android_malware_automatic_ransomware_activation_when_disabling_device_admin_code_snippet.png)*Automatic ransomware activation when disabling ‘device admin’*
 
 As soon as the ransomware is activated, it starts searching for all files and directories in the primary shared or external storage directory (traditionally the SD card) and encrypts them using AES. The key is generated randomly under default AES/ECB/PKCS5 padding and 128-bit key size. However, the encryption function in this ransomware utterly fails, because even though the original files are deleted, the encrypted file is decrypted and written back to itself. Thus, victims won’t lose their files, they are only renamed.
 
 Even though the encryption part fails pretty badly, the screen locker still works and will lock the victim’s screen using the administrative permissions it has gained from the user when the malware was first started. A threat is then shown on the screen: “Your phone is locked for viewing child pornography.” The payment amount varies between $70 and $100. The Bitcoin addresses of LokiBot are hardcoded in the APK and can’t be updated from C2 server.
 
-![Screen shown when the ransomware locks the phone](/web/assets/img/arch/LokiBot.assets/lokibot_the_first_hybrid_android_malware_screen_shown_when_the_ransomware_locks_the_phone.png)*Screen shown when the ransomware locks the phone*
+![Screen shown when the ransomware locks the phone](/assets/img/arch/LokiBot.assets/lokibot_the_first_hybrid_android_malware_screen_shown_when_the_ransomware_locks_the_phone.png)*Screen shown when the ransomware locks the phone*
 
-![Hardcoded Bitcoin address](/web/assets/img/arch/LokiBot.assets/lokibot_the_first_hybrid_android_malware_hardcoded_bitcoin_address_code_snippet.png)*Hardcoded Bitcoin address*
+![Hardcoded Bitcoin address](/assets/img/arch/LokiBot.assets/lokibot_the_first_hybrid_android_malware_hardcoded_bitcoin_address_code_snippet.png)*Hardcoded Bitcoin address*
 
 ## Dynamic analysis evasion
 

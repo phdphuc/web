@@ -5,7 +5,7 @@ description: Feb 2017
 img: /assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_marcher_mobile_banking_trojan.png
 importance: 93
 ---
-![](/web/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_marcher_mobile_banking_trojan.png)
+![](/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_marcher_mobile_banking_trojan.png)
 Co-authored with Han Sahin and Niels Croese of ThreatFabric
 ## Introduction
 
@@ -44,7 +44,7 @@ Marcher’s APK size is fairly small (only 683KB for sample eb8f02fc30ec49e4af15
 
 Obviously a fairly significant list of permissions of which many are suspicious, especially when combined.
 
-![Runtastic sample permission prompt](/web/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_runtastic_sample_permission_prompt.png)*Runtastic sample permission prompt*
+![Runtastic sample permission prompt](/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_runtastic_sample_permission_prompt.png)*Runtastic sample permission prompt*
 
 ### Checking foreground app
 
@@ -54,9 +54,9 @@ Marcher is one of the few Android banking Trojans to use the [AndroidProcesses l
 
 When victims open up a targeted app, Marcher smoothly displays an overlay, a customized WebView, looks in its application preferences (main_prefs.xml) and decides which specified URL is needed for the targeted app. The complete list of apps can be seen below. The phishing pages shown in the overlay use Ajax calls to communicate with a PHP back-end which stores all user input. The C2 backend url looks like this: <https://evilhost/c2folder/njs2/?fields>[]. There is no way to access the original app again even if victims terminate the overlay process and reopen app, until credit card (name, number, expiry date, security code) and/or bank information (PIN, VBV passcode, date of birth, etc.) are filled in and verified. The information is then stored in local app database as well as sent to the backend.
 
-![Overlays for phishing Google Play, Facebook and ING-DiBa](/web/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_overlays_for_phishing_google_play_facebook_and_ing_diba.png)*Overlays for phishing Google Play, Facebook and ING-DiBa*
+![Overlays for phishing Google Play, Facebook and ING-DiBa](/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_overlays_for_phishing_google_play_facebook_and_ing_diba.png)*Overlays for phishing Google Play, Facebook and ING-DiBa*
 
-![Overlay for Postbank Finanzassistent](/web/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_overlay_for_postbank_finanzassistent.png)*Overlay for Postbank Finanzassistent*
+![Overlay for Postbank Finanzassistent](/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_overlay_for_postbank_finanzassistent.png)*Overlay for Postbank Finanzassistent*
 
 **Targeted banking apps** * at.bawag.mbanking (BAWAG P.S.K.)
 * at.easybank.mbanking (easybank)
@@ -189,7 +189,7 @@ When victims open up a targeted app, Marcher smoothly displays an overlay, a cus
 
 In addition to the list of apps that are targeted for phishing the app contains a list of antivirus applications for which it prevents removal of the malware. The technique used is quite simpe: look for any AV app in the list and if it is running, the malware will force the phone back to home screen. Even the AV program detects the malware, it will still wait and ask for permission from users before starting the removal process, but because the user can’t give the permission, the malware will not be removed.
 
-![Code snippet showing the malware forcing the device back to the home screen](/web/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_code_snippet_malware_forcing_device_back_to_home_screen.png)*Code snippet showing the malware forcing the device back to the home screen*
+![Code snippet showing the malware forcing the device back to the home screen](/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_code_snippet_malware_forcing_device_back_to_home_screen.png)*Code snippet showing the malware forcing the device back to the home screen*
 
 The following antivirus apps are targeted with this technique: * com.clean.booster.security.battery.memory (Booster Cleaner)
 * com.qihoo.security.lite (360 Security Lite)
@@ -219,15 +219,15 @@ The following antivirus apps are targeted with this technique: * com.clean.boost
 
 At startup, Marcher will ask for read/write permissions for both SMS and MMS messages if it doesn’t have the permissions already. Then, whenever the client received command ‘load_sms’ from the C2 server, it will grab all SMS messages from the device and send them back to the backend. In the same way, this method also is used to invoke ‘processIncomingMessages’ to intercept incoming messages.
 
-![Code snippet showing the malware intercepting SMS/MMS messages](/web/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_code_snippet_malware_intercepting_sms_mms_messages.png)*Code snippet showing the malware intercepting SMS/MMS messages*
+![Code snippet showing the malware intercepting SMS/MMS messages](/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_code_snippet_malware_intercepting_sms_mms_messages.png)*Code snippet showing the malware intercepting SMS/MMS messages*
 
 ### Smartly using permissions
 
 When the malware first runs, it will ask for device administrative rights, even when users deny or kill the process it will come up again, until they accept the request. Having this permission enables malware to lock and mute the phone, even reset the password and make a permanent phishing WebView. This malicious activity works similar to ransomware, but no files are encrypted.
 
-![Device admin "nagging" screen](/web/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_device_admin_nagging_screen.png)*Device admin “nagging” screen*
+![Device admin "nagging" screen](/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_device_admin_nagging_screen.png)*Device admin “nagging” screen*
 
-![Code snippet showing code to reset the password or lock the device](/web/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_code_snippet_reset_password_or_lock_device.png)*Code snippet showing code to reset the password or lock the device*
+![Code snippet showing code to reset the password or lock the device](/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_code_snippet_reset_password_or_lock_device.png)*Code snippet showing code to reset the password or lock the device*
 
 ### Different botnets
 
@@ -243,9 +243,9 @@ We have researched various Marcher actors the last 6 months. Many of them target
 
 The details in this blog are based on an assessment of only one Marcher actor/botnet. Based on statistics of the backend we know that their campaign has successfully infected 5696 German and 2198 French mobile devices over total of 11049 affected mobile devices. While assessing their C2 server, we found that most infected devices are running Android 6.0.1. The C2 server at the time of investigation contained at least 1300 credit card numbers and other bank information (username/password + SMS tan).
 
-![Bot amount by country](/web/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_bot_amount_by_country.png)*Bot amount by country*
+![Bot amount by country](/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_bot_amount_by_country.png)*Bot amount by country*
 
-![Bot amount by Android version](/web/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_bot_amount_by_android_version.png)*Bot amount by Android version*
+![Bot amount by Android version](/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_bot_amount_by_android_version.png)*Bot amount by Android version*
 
 ### C2 panel features
 
@@ -265,9 +265,9 @@ It can also instruct devices to send an SMS message, lock the screen showing a w
 
 Other options the panel has are chaning the backend URL and creating, enabling and disabling web injects which allows for a lot of flexibility concerning the targeted apps and displayed screens. The phishing screens are hosted on the C2 server and are loaded from there at the time the screen is displayed.
 
-![Marcher C2 admin panel](/web/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_marcher_c2_admin_panel.png)*Marcher C2 admin panel*
+![Marcher C2 admin panel](/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_marcher_c2_admin_panel.png)*Marcher C2 admin panel*
 
-![Marcher documentation 1](/web/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_marcher_documentation_1.jpg)![Marcher documentation 2](/web/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_marcher_documentation_2.jpg)*Marcher documentation*
+![Marcher documentation 1](/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_marcher_documentation_1.jpg)![Marcher documentation 2](/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_marcher_documentation_2.jpg)*Marcher documentation*
 
 The source code of the Marcher C2 server indicate that they successfully implemented a SOCKS feature for bots and are selling this as a separate module. Socks enables the attackers to perform malicious transactions using the victim’s device and IP. This feature could be enabled to circumvent detection of financial institutions that relies on device binding and the IP address of the customer’s Android device.
 

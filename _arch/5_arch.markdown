@@ -5,7 +5,7 @@ description: July 2016
 img: /assets/img/arch/beginner.assets/g1358952158275212121.png
 importance: 94
 ---
-![](/web/assets/img/arch/beginner.assets/g1358952158275212121.png)
+![](/assets/img/arch/beginner.assets/g1358952158275212121.png)
 
 
 The malware threat landscape is continuously evolving. In this blog post, I would like to introduce the basic concept of malware and malware analysis, the ideas of both static and dynamic malware analysis. Besides, malware evasive techniques and novel solutions will be introduced as well as modern research such as automatic protocol RE and Android malware behavior analysis will be mentioned in last sections.
@@ -47,7 +47,7 @@ Metamorphism \[4\] is a technique that mutates the binary code using different o
 
 The authors present a new framework named Metamorphic Malware Analysis and Real-Time Detection (MARD). It builds a behavioral signature and detect metamorphic malware in real-time using two techniques: ACFG (Annotated Control Flow Graph) provides a faster matching of CFGs, without compromising detection accuracy and SWOD-CFWeight (Sliding Window of Difference and Control Flow Weight) mitigates and addresses key issues in current techniques, related to the change of the frequencies of opcodes, such as the use of different compilers, compiler optimizations, operating systems and obfuscations.
 
-![](/web/assets/img/arch/beginner.assets/word-image.png)
+![](/assets/img/arch/beginner.assets/word-image.png)
 
 Fig 1. _Overview of MARD_
 
@@ -67,7 +67,7 @@ Shahid Alam et al propose a new opcode-based malware detection technique by tran
 
 Out of the 10 systems, ACFG clearly shows superior results and, unlike others is fully automatic, supports malware detection for 64 bit Windows (PE binaries) and Linux (ELF binaries) platforms and has the potential to be used as a realtime detector.
 
-![](/web/assets/img/arch/beginner.assets/word-image-1.png)
+![](/assets/img/arch/beginner.assets/word-image-1.png)
 
 Fig 2. _Comparison of ACFG with the metamorphic malware detection techniques based on control and information flow analysis._
 
@@ -148,7 +148,7 @@ Dispatcher implementation overview
 
 The captured output buffer (in case of encrypted protocols, they capture the buffer before being encrypted and sent or they capture the buffer after being decrypted and received, therefore they can obtain unencrypted data) will be _deconstructed_ to build message field tree.
 
-![](/web/assets/img/arch/beginner.assets/word-image-2.png) ![](/web/assets/img/arch/beginner.assets/word-image-3.png)
+![](/assets/img/arch/beginner.assets/word-image-2.png) ![](/assets/img/arch/beginner.assets/word-image-3.png)
 
 Fig 3. _Message field tree and Field semantics identified by Dispatcher_
 
@@ -169,7 +169,7 @@ With a huge user base of Anroid mobile devices, Android malwares are rising with
 CooperDroid
 -----------
 
-![](/web/assets/img/arch/beginner.assets/word-image-4.png)
+![](/assets/img/arch/beginner.assets/word-image-4.png)
 
 Fig 4. _CooperDroid Architecture_
 

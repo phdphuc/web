@@ -6,7 +6,7 @@ img: /assets/img/arch/SafeFinder.assets/Untitled-1.jpg
 importance: 92
 ---
 
-![](/web/assets/img/arch/SafeFinder.assets/Untitled-1.jpg)
+![](/assets/img/arch/SafeFinder.assets/Untitled-1.jpg)
 
 What is SafeFinder/OperatorMac campaign?
 ========================================
@@ -17,7 +17,7 @@ The sample was first noticed by _Gavriel State_‏ on Aug 7, then _Thomas A Reed
 
 From Patrick’s report we understand it’s an adware which installs lots of crabs. By default, cuckoo sandbox timeout is 120 sec. Let’s extend it a bit, 300 sec (5 min) would be enough.
 
-[![](/web/assets/img/arch/SafeFinder.assets/img_598c71a4b4bf1.png)](https://i1.wp.com/babyphd.net/wp-content/uploads/2017/08/img_598c71a4b4bf1.png?ssl=1)
+[![](/assets/img/arch/SafeFinder.assets/img_598c71a4b4bf1.png)](https://i1.wp.com/babyphd.net/wp-content/uploads/2017/08/img_598c71a4b4bf1.png?ssl=1)
 
 First result we got, that Apple developer ID “Quoc Thinh”, and he got his certificate revoked from Apple today by the way 😄.
 
@@ -25,19 +25,19 @@ First result we got, that Apple developer ID “Quoc Thinh”, and he got his ce
 
 From captured screenshots, we can see what this adware apparently executes: Install Adobe flash and offer you a bunch of PUA (potential unwanted applications) – Booking, Advanced Mac Cleaner, SafeFinder Safari extension, and AdBlock (in some relevant samples that will be discussed later).
 
-[![](/web/assets/img/arch/SafeFinder.assets/Webp.net-gifmaker.gif)](https://i1.wp.com/babyphd.net/wp-content/uploads/2017/08/Webp.net-gifmaker.gif?ssl=1)
+[![](/assets/img/arch/SafeFinder.assets/Webp.net-gifmaker.gif)](https://i1.wp.com/babyphd.net/wp-content/uploads/2017/08/Webp.net-gifmaker.gif?ssl=1)
 
 Behavioral analysis shows the packed DMG sample invoked a ‘mac’ binary, thereafter ‘Mughthesec’ with a persistence ‘I’ binary. Screenshots below already included other analysis variant of this campaign.
 
-[![](/web/assets/img/arch/SafeFinder.assets/img_598c722bde0a9.png)](https://i1.wp.com/babyphd.net/wp-content/uploads/2017/08/img_598c722bde0a9.png?ssl=1)[![](/web/assets/img/arch/SafeFinder.assets/img_598c72309c103.png)](https://i0.wp.com/babyphd.net/wp-content/uploads/2017/08/img_598c72309c103.png?ssl=1)[![](/web/assets/img/arch/SafeFinder.assets/img_598c7244ef84c.png)](https://i0.wp.com/babyphd.net/wp-content/uploads/2017/08/img_598c7244ef84c.png?ssl=1)
+[![](/assets/img/arch/SafeFinder.assets/img_598c722bde0a9.png)](https://i1.wp.com/babyphd.net/wp-content/uploads/2017/08/img_598c722bde0a9.png?ssl=1)[![](/assets/img/arch/SafeFinder.assets/img_598c72309c103.png)](https://i0.wp.com/babyphd.net/wp-content/uploads/2017/08/img_598c72309c103.png?ssl=1)[![](/assets/img/arch/SafeFinder.assets/img_598c7244ef84c.png)](https://i0.wp.com/babyphd.net/wp-content/uploads/2017/08/img_598c7244ef84c.png?ssl=1)
 
 Move on to the network DNS feature, we see a lot of queries and some domains look "suspicious". Their DNS servers mostly are pointed to Akamai so I suggest we rather use domain as IOC than IP address, which could be different from viewers location. Filtering system calls logs with some rules of mine, there is no evasion technique been found. It’s quite surprising because Virustotal behavioral analysis shows a shorter execution trace than mine, which usually means its environment was detected at some point and malware stop running. In Patrick’s report he said there might be MAC address verification to detect VM (VM MAC usually starts with ’00:xx’). Fortunately, my VM framework MAC address was modified long ago since my colleague Yorick Koster at Securify used same trick to abuse my lame framework (thanks Yorick). I should add new rule – “MAC address check” later.
 
-[![](/web/assets/img/arch/SafeFinder.assets/img_598c755999974.png)](https://i2.wp.com/babyphd.net/wp-content/uploads/2017/08/img_598c755999974.png?ssl=1)
+[![](/assets/img/arch/SafeFinder.assets/img_598c755999974.png)](https://i2.wp.com/babyphd.net/wp-content/uploads/2017/08/img_598c755999974.png?ssl=1)
 
 Additionally instead of execve(), MacOS sandbox policy usually invokes processes using XPCProxy or launchd services. So we got several processes created with posix\_spawn(): delete Safari, iBooks, Mail cache (likely Advanced Mac cleaner doing its job), install mentioned PUAs and we got some new IOCs.
 
-[![](/web/assets/img/arch/SafeFinder.assets/img_598c75725dafc.png)](https://i2.wp.com/babyphd.net/wp-content/uploads/2017/08/img_598c75725dafc.png?ssl=1)
+[![](/assets/img/arch/SafeFinder.assets/img_598c75725dafc.png)](https://i2.wp.com/babyphd.net/wp-content/uploads/2017/08/img_598c75725dafc.png?ssl=1)
 
 Other great things from Cuckoo sandbox are Network analysis and Dropped files. However previous report detailed it well enough, hence only some screenshots from these features will be showed:
 
@@ -45,13 +45,13 @@ Some dropped binaries like AMCleaner (93dd0c34a4ec25a508cd6d5fb86d8ccc0c318238d9
 
 Also with some fancy nonsense statistic screenshots, intent to scare analyst (:p)
 
-[![](/web/assets/img/arch/SafeFinder.assets/img_598c7796efc07.png)](https://i0.wp.com/babyphd.net/wp-content/uploads/2017/08/img_598c7796efc07.png?ssl=1)
+[![](/assets/img/arch/SafeFinder.assets/img_598c7796efc07.png)](https://i0.wp.com/babyphd.net/wp-content/uploads/2017/08/img_598c7796efc07.png?ssl=1)
 
-[![](/web/assets/img/arch/SafeFinder.assets/img_598c779ebc535.png)](https://i0.wp.com/babyphd.net/wp-content/uploads/2017/08/img_598c779ebc535.png?ssl=1)
+[![](/assets/img/arch/SafeFinder.assets/img_598c779ebc535.png)](https://i0.wp.com/babyphd.net/wp-content/uploads/2017/08/img_598c779ebc535.png?ssl=1)
 
 At this moment, we have got all indicators to make behavioral detection rule and go hunting for other similar adware samples. Reason why I call this blog post – “a campaign”: there are numerous similar packed DMG/Mac apps matched ‘my behavioral rule’: fake Adobe Flash installer, lots of PUAs from subdomain name \[cdn, dl, api\] and Vietnamese developer certificate ID.
 
-![image-20220319020601558](/web/assets/img/arch/SafeFinder.assets/image-20220319020601558.png)
+![image-20220319020601558](/assets/img/arch/SafeFinder.assets/image-20220319020601558.png)
 
 Please note that VT score is an indicator only, people usually fail to judge hardworking AVs by looking at VT score. We can never know if AV would detect those adwares live running whether or not. Also instead of Mughthesec, other adware use different loader names such as SearchWebSvc, TrustedSafeFinder, etc. I don’t think OSX/Mughthesec would be appropriate for the adware name. I suggest it would be OperatorMac because all campaign packages call a simple loader “mac” binary.
 
@@ -68,7 +68,7 @@ It’s likely an affiliation advertising campaign, in which adware authors spent
 
 **P/S:** I confronted one famous hacker in cyber pirate community – “Quoc Thinh” aka G4mm4, he seriously admitted he's behind the "crime". Not sure that’s true or he was just kidding :)
 
-[![](/web/assets/img/arch/SafeFinder.assets/img_598c77b2a0e82.png)](https://i2.wp.com/babyphd.net/wp-content/uploads/2017/08/img_598c77b2a0e82.png?ssl=1)
+[![](/assets/img/arch/SafeFinder.assets/img_598c77b2a0e82.png)](https://i2.wp.com/babyphd.net/wp-content/uploads/2017/08/img_598c77b2a0e82.png?ssl=1)
 
 **IOCs:**
 
