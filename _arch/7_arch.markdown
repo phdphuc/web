@@ -1,19 +1,19 @@
 ---
 layout: page
 title: Qakbot Evolves to OneNote Malware Distribution
-description: 2023
+description: March 07, 2023 
 img: /assets/img/arch/Qakbot.assets/image5.jpeg
-importance: 96
+importance: 89
 ---
 **Qakbot Evolves to OneNote Malware Distribution**
 
 By [[Pham Duy
-Phuc]{.underline}](https://www.trellix.com/en-us/about/newsroom/stories/contributors/pham-duy-phuc.html), [[Raghav
-Kapoor]{.underline}](https://www.trellix.com/en-us/about/newsroom/stories/contributors/raghav-kapoor.html), [[John
+Phuc]](https://www.trellix.com/en-us/about/newsroom/stories/contributors/pham-duy-phuc.html), [[Raghav
+Kapoor]](https://www.trellix.com/en-us/about/newsroom/stories/contributors/raghav-kapoor.html), [[John
 Fokker
-J.E.]{.underline}](https://www.trellix.com/en-us/about/newsroom/stories/contributors/john-fokker.html), [[Alejandro
-Houspanossian]{.underline}](https://www.trellix.com/en-us/about/newsroom/stories/contributors/alejandro-houspanossian.html) and [[Mathanraj
-Thangaraju]{.underline}](https://www.trellix.com/en-us/about/newsroom/stories/contributors/mathanraj-tk.html) ·
+J.E.]](https://www.trellix.com/en-us/about/newsroom/stories/contributors/john-fokker.html), [[Alejandro
+Houspanossian]](https://www.trellix.com/en-us/about/newsroom/stories/contributors/alejandro-houspanossian.html) and [[Mathanraj
+Thangaraju]](https://www.trellix.com/en-us/about/newsroom/stories/contributors/mathanraj-tk.html) ·
 March 07, 2023 
 
 *Qakbot* (aka QBot, QuakBot, and Pinkslipbot) is a sophisticated piece
@@ -71,7 +71,7 @@ Over the years, Qakbot has evolved with significant changes in terms of
 infection vectors. Email has been the preferred initial attack vector
 for threat actors. Recently, hijacked email threats have become popular
 for injecting their malicious email. A report
-from [[Sophos]{.underline}](https://news.sophos.com/en-us/2023/02/06/qakbot-onenote-attacks/) indicated
+from [[Sophos]](https://news.sophos.com/en-us/2023/02/06/qakbot-onenote-attacks/) indicated
 that malicious actors were starting to distribute spearphishing emails
 with malicious Microsoft OneNote documents to infect users with variants
 from the Qakbot malware family. 
@@ -121,7 +121,7 @@ We have seen different variations of OneNote document being used in
 these campaigns:
 
 ![Figure 5 Screenshot of Office365 themed phishing OneNote
-document.](/assets/img/arch/Qakbot.assets/image5.jpeg){width="6.5in" height="3.78125in"}Figure
+document.](/assets/img/arch/Qakbot.assets/image5.jpeg)Figure
 5 Screenshot of Office365 themed phishing OneNote document.
 
 *Figure 5* illustrates a themed phishing attack that has also been
@@ -129,7 +129,7 @@ spotted in PDF attachments that lure victims to download a ZIP file
 containing the malware Qakbot. The specific tactics and indicators of
 compromise can be found in the *Appendix*. ![Figure 6 Screenshot of the
 execution of phishing OneNote document: Variation
-2](/assets/img/arch/Qakbot.assets/image6.jpeg){width="6.5in" height="3.077777777777778in"}
+2](/assets/img/arch/Qakbot.assets/image6.jpeg)
 
 Figure 6 Screenshot of the execution of phishing OneNote document:
 Variation 2
@@ -206,7 +206,7 @@ File size
 
 To parse its information, a few free tools can help in analyzing OneNote
 documents such
-as [OneNoteAnalyzer]{.underline}, [[One-Extract]{.underline}](https://github.com/volexity/threat-intel/tree/main/tools/one-extract), [[Onedump.py]{.underline}](https://blog.didierstevens.com/2023/01/22/new-tool-onedump-py/).
+as [OneNoteAnalyzer], [[One-Extract]](https://github.com/volexity/threat-intel/tree/main/tools/one-extract), [[Onedump.py]](https://blog.didierstevens.com/2023/01/22/new-tool-onedump-py/).
 This specific OneNote sample contains CMD (Windows Command File), which
 indicates that it may include executable code. Below is the metadata
 that was extracted using OneNoteAnalyzer:
@@ -325,7 +325,7 @@ end.
 
 This particular sample leverages a variety of anti-debugging techniques
 through
-the [[PEB]{.underline}](https://anti-debug.checkpoint.com/techniques/debug-flags.html) ,
+the [[PEB]](https://anti-debug.checkpoint.com/techniques/debug-flags.html) ,
 so it is recommended that analysts utilize anti-evasion solutions when
 configuring the debugger environment (as depicted in the Figure 9).
 
@@ -345,8 +345,8 @@ height="4.0in"}Figure 10 Correct header alignment.
 Third-stage malware analysis: Qakbot Core DLL
 
 There are already numerous detailed reports such as from our
-research [[team]{.underline}](https://www.trellix.com/en-us/about/newsroom/stories/research/demystifying-qbot-malware.html) or [[others]{.underline}](https://www.elastic.co/security-labs/qbot-malware-analysis) available
-about this [Qakbot]{.underline}variant's behavior and techniques, which
+research [[team]](https://www.trellix.com/en-us/about/newsroom/stories/research/demystifying-qbot-malware.html) or [[others]](https://www.elastic.co/security-labs/qbot-malware-analysis) available
+about this [Qakbot]variant's behavior and techniques, which
 provide in-depth analysis of its capabilities and modus *operandi*. Our
 focus is presenting the key findings related to this sample: String
 obfuscation, Persistence, Evasion techniques and C2 communication,
@@ -628,7 +628,7 @@ After decryption, we found that the campaign ID for this Qakbot is
 February 15, 2023. All extracted C2 (IP:port) can be found in Appendix
 table 2. Most of these addresses belong to other infected systems that
 are used as a proxy to forward traffic to additional proxies or the
-actual [[C2]{.underline}](https://securelist.com/qakbot-technical-analysis/103931/). 
+actual [[C2]](https://securelist.com/qakbot-technical-analysis/103931/). 
 
 Qakbot has been known to use a few modules during its infection chain,
 most notably:
@@ -761,8 +761,8 @@ autorun registry keys.
 Detection Opportunities
 
 This is a mapping of Detection Opportunities to Threat Behaviours,
-Analysis Methods ([[D3FEND]{.underline}](https://d3fend.mitre.org/) )
-and [ATT&CK]{.underline}techniques.
+Analysis Methods ([[D3FEND]](https://d3fend.mitre.org/) )
+and [ATT&CK]techniques.
 
 Defense Goal
 
@@ -865,7 +865,7 @@ from their expected paths.
 Prevention and Mitigation
 
 On top of CISA's
-counter-phishing [[recommendations]{.underline}](https://www.cisa.gov/sites/default/files/publications/Capacity_Enhancement_Guide-Counter-Phishing_Recommendations_for_Federal_Agencies.pdf),
+counter-phishing [[recommendations]](https://www.cisa.gov/sites/default/files/publications/Capacity_Enhancement_Guide-Counter-Phishing_Recommendations_for_Federal_Agencies.pdf),
 we recommend the following prevention and mitigation countermeasures
 against this campaign:
 
@@ -901,10 +901,10 @@ potentially trick users into opening the file, believing it to be a
 OneNote document (Figure 13).
 
 ![Figure 13 U+202E trick in attached file
-name.](/assets/img/arch/Qakbot.assets/image13.jpeg){width="1.6375in" height="0.3625in"}Figure
+name.](/assets/img/arch/Qakbot.assets/image13.jpeg)Figure
 13 U+202E trick in attached file name.
 
-[[Sevagas]{.underline}](https://blog.sevagas.com/?RedTeam-With-OneNote) introduced
+[[Sevagas]](https://blog.sevagas.com/?RedTeam-With-OneNote) introduced
 the usage of OneNote in red teaming for the first time in August 2022.
 Thereafter, the distribution of malware via Microsoft OneNote documents
 in email is on the rise, with various cybercriminal threat actors
@@ -913,7 +913,7 @@ with a high volume of email phishing sent out. These attacks have
 impacted organizations globally, including those in North America and
 Europe, with TA577 returning from a break in activity and using OneNote
 to deliver Qakbot at the end of
-January [[2023]{.underline}](https://www.proofpoint.com/us/blog/threat-insight/onenote-documents-increasingly-used-to-deliver-malware) .
+January [[2023]](https://www.proofpoint.com/us/blog/threat-insight/onenote-documents-increasingly-used-to-deliver-malware) .
 To gain a deeper understanding of the distribution of malware via
 Microsoft OneNote documents, we conducted a comprehensive analysis of
 our telemetry data (see Figure 14). Monitoring phishing emails with
@@ -945,7 +945,7 @@ June 2022, or embedded HTA that downloads remote PowerShell scripts to
 install PoshC2 in mid-November 2022
 (1ff8e47def1e557b14470f95215d8763876f28411d4cf4fc7319c077733acd63). ![Figure
 15 Phishing OneNote document since November 2022 targeted
-NedBank](/assets/img/arch/Qakbot.assets/image15.jpeg){width="6.5in" height="2.09375in"}Figure
+NedBank](/assets/img/arch/Qakbot.assets/image15.jpeg)Figure
 15 Phishing OneNote document since November 2022 targeted NedBank
 
 However, the number of malicious OneNote samples has been gradually
