@@ -5,7 +5,6 @@ description: March 07, 2023 
 img: /assets/img/arch/Qakbot.assets/image5.jpeg
 importance: 89
 ---
-**Qakbot Evolves to OneNote Malware Distribution**
 
 By [[Pham Duy
 Phuc]](https://www.trellix.com/en-us/about/newsroom/stories/contributors/pham-duy-phuc.html), [[Raghav

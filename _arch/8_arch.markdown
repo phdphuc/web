@@ -2,10 +2,9 @@
 layout: page
 title: Shining Light on Dark Power - Yet Another Ransomware Gang
 description: March 23, 2023
-img: /assets/img/arch/DarkPower.assets/media/image5.jpeg
+img: /assets/img/arch/DarkPower.assets/media/image6.jpeg
 importance: 88
 ---
-# Shining Light on Dark Power: Yet Another Ransomware Gang
 
 By [Pham Duy
 Phuc](https://www.trellix.com/en-us/about/newsroom/stories/contributors/pham-duy-phuc.html), [Max
