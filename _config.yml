@@ -93,7 +93,7 @@ collections:
   arch:
     output: true
     permalink: /arch/:path/
-news_limit: 5
+news_limit: 3
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
