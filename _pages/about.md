@@ -28,7 +28,7 @@ My main interests: malware reverse-engineering, intelligence threats hunting, si
 
 - 1st winner of Airbus security challenge, CYBER IN Toulouse 2021.
 - 1st prize award of SILM Security of Software & Hardware Interfaces CTF 2019
-- Mandiant’s Fire Eye- Advanced Reverse Engineering 1,2,3,5,6,9 : Winning award. 2022, 2019, 2018, 2016, 2015, 2014
+- Mandiant’s Fire Eye- Advanced Reverse Engineering 1,2,3,5,6,9,10 : Winning award. 2023, 2022, 2019, 2018, 2016, 2015, 2014
 - Batterii: Web penetration testing - Bug Bounty award. Oct. 2016
 - BlackHat Europe Conference: Student Scholarship. Aug. 2016
 - KTH Royal Institute of Technology, Sweden: EIT Digital’s summer school Future Cloud. Jul. 2016
