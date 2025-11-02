@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>Duy Phuc  Pham | Exobot (Marcher) - Android banking Trojan on the rise</title>
+<meta name="description" content="Dr. Pham Duy Phuc webpage
+">
+
+<!-- Open Graph -->
+
+
+<!-- Bootstrap & MDB -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" integrity="sha512-RO38pBRxYH3SoOprtPTD86JFOclM51/XTIdEPh5j8sj4tp8jmQIx26twG52UaLi//hQldfrh7e51WzP9wuP32Q==" crossorigin="anonymous" />
+
+<!-- Fonts & Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+<!-- Code Syntax Highlighting -->
+<link rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/github.css" />
+
+<!-- Styles -->
+<link rel="shortcut icon" href="/assets/img/favicon.ico">
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<link rel="canonical" href="/arch/4_arch/">
+
+<!-- Theming-->
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-25Z3QPHEXC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-25Z3QPHEXC');
+  </script>
+
+
+    
+<!-- MathJax -->
+<script type="text/javascript">
+  window.MathJax = {
+    tex: {
+      tags: 'ams'
+    }
+  };
+</script>
+<script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js"></script>
+<script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+
+  </head>
+
+  <body class="fixed-top-nav ">
+
+    <!-- Header -->
+
+    <header>
+
+    <!-- Nav Bar -->
+    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+    <div class="container">
+      
+      <a class="navbar-brand title font-weight-lighter" href="https://phuc.fr/">
+       <span class="font-weight-bold">Duy Phuc</span>   Pham
+      </a>
+      
+      <!-- Navbar Toogle -->
+      <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          <!-- About -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/">
+              about
+              
+            </a>
+          </li>
+          
+          <!-- Other pages -->
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/projects/">
+                projects
+                
+              </a>
+          </li>
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/publications/">
+                publications
+                
+              </a>
+          </li>
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/talks/">
+                talks
+                
+              </a>
+          </li>
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/teaching/">
+                teaching
+                
+              </a>
+          </li>
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/arch/">
+                virus-archives
+                
+              </a>
+          </li>
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</header>
+
+
+    <!-- Content -->
+
+    <div class="container mt-5">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Exobot (Marcher) - Android banking Trojan on the rise</h1>
+    <p class="post-description">Feb 2017</p>
+  </header>
+
+  <article>
+    <p><img src="/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_marcher_mobile_banking_trojan.png" alt="" />
+Co-authored with Han Sahin and Niels Croese of ThreatFabric</p>
+<h2 id="introduction">Introduction</h2>
+
+<p>The past months many different banking Trojans for the Android platform have received media attention. One of these, called Marcher (aka Exobot), seems to be especially active with different samples appearing on a daily basis. This malware variant also appears to be technically superior to many other banking Trojans being able to use its overlay attack even on Android 6, which has technical improvements compared to the previous Android versions to prevent such attacks.</p>
+
+<p>The main infection vector is a phishing attack using SMS/MMS. The social engineering message includes a link that leads to a fake version of a popular app, using names like Runtastic, WhatsApp or Netflix. On installation, the app requests the user to provide SMS storage access and high Android privileges such as Device Admin. Other infection vectors include pornographic websites serving apps called Adobe Flash or YouPorn.</p>
+
+<p>The Marcher banking malware uses two main attack vectors. The first attack vector is to compromise the out of band authentication for online banks that rely on SMS using SMS forwarding. The second attack vector, the overlay attack, shows a customized phishing window whenever a targeted application is started on the device. The overlay window is often indistinguishable from the expected screen (such as a login screen for a banking app) and is used to steal the victim’s banking credentials. The target list and bank specific fake login pages can be dynamically updated via their C2 panel (dashboard back-end) which significantly increases the adaptability and scalability of this attack. In addition, this type of Android banking malware does not require the device to be rooted or the app to have any specific Android permission (besides android.permission.INTERNET to retrieve the overlay contents and send its captured data).</p>
+
+<p>The many changes we see in the way the attacks are performed show that attackers are heavily experimenting to find the best way of infecting a mobile device and abusing existing functionality to perform successful phishing attacks. The next stage in device infection could be the use of exploit kits and malvertising, which would be quite effective due the many Android vulnerabilities and consumers with unpatched devices. In addition future Trojans could leverage root exploits to make them almost impossible to remove and give malicious actors the ability to hook generic low level API’s that are used by all (banking) applications, just like the attack vector as has been used on the desktop platform for years.</p>
+
+<h2 id="technical-analysis">Technical Analysis</h2>
+
+<h3 id="permissions">Permissions</h3>
+
+<p>Marcher’s APK size is fairly small (only 683KB for sample eb8f02fc30ec49e4af1560e54b53d1a7), much smaller than most legitimate apps and other popular mobile malware samples. This sample only includes Dalvik bytecode and resources without any native libraries. The package name (vyn.hhsdzgvoexobmkygffzwuewrbikzud) and its many activities and services have randomized names, probably to make it a bit more difficult to detect the package using blacklisting. The set of permissions required by Marcher according to the manifest is as follows:</p>
+
+<p>∗ android.permission.CHANGE_NETWORK_STATE (change network connectivity state)
+∗ android.permission.SEND_SMS (send SMS messages)
+∗ android.permission.USES_POLICY_FORCE_LOCK (lock the device)
+∗ android.permission.RECEIVE_BOOT_COMPLETED (start malware when device boots)
+∗ android.permission.INTERNET (communicate with the internet)
+∗ android.permission.VIBRATE (control the vibrator)
+∗ android.permission.ACCESS_WIFI_STATE (view information about the status of Wi-Fi)
+∗ android.permission.WRITE_SMS (edit/delete SMS)
+∗ android.permission.ACCESS_NETWORK_STATE (view the status of all networks)
+∗ android.permission.WAKE_LOCK (prevent the phone from going to sleep)
+∗ android.permission.GET_TASKS (retrieve running applications)
+∗ android.permission.CALL_PHONE (call phone numbers)
+∗ android.permission.WRITE_SETTINGS (read/write global system settings)
+∗ android.permission.RECEIVE_SMS (intercept SMS messages)
+∗ android.permission.READ_PHONE_STATE (read phone details of the device such as phone number and serial number)
+∗ android.permission.CHANGE_WIFI_STATE (connect to and disconnect from Wi-Fi networks and make changes to configured networks)
+∗ android.permission.READ_CONTACTS (read all contact data)</p>
+<ul>
+  <li>android.permission.READ_SMS (read SMS messages)</li>
+</ul>
+
+<p>Obviously a fairly significant list of permissions of which many are suspicious, especially when combined.</p>
+
+<p><img src="/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_runtastic_sample_permission_prompt.png" alt="Runtastic sample permission prompt" /><em>Runtastic sample permission prompt</em></p>
+
+<h3 id="checking-foreground-app">Checking foreground app</h3>
+
+<p>Marcher is one of the few Android banking Trojans to use the <a href="https://github.com/jaredrummler/AndroidProcesses">AndroidProcesses library</a>, which enables the application to obtain the name of the Android package that is currently running in the foreground. This library is used because it uses the only (publicly known) way to retrieve this information on Android 6 (using the process <a href="https://lwn.net/Articles/317814/">OOM score</a> read from the /proc directory). When the current app on the foreground matches with an app targeted by the malware, the Trojan will show the corresponding phishing overlay, making the user think it is the app that was just started.</p>
+
+<h3 id="dynamic-overlays">Dynamic overlays</h3>
+
+<p>When victims open up a targeted app, Marcher smoothly displays an overlay, a customized WebView, looks in its application preferences (main_prefs.xml) and decides which specified URL is needed for the targeted app. The complete list of apps can be seen below. The phishing pages shown in the overlay use Ajax calls to communicate with a PHP back-end which stores all user input. The C2 backend url looks like this: <a href="https://evilhost/c2folder/njs2/?fields">https://evilhost/c2folder/njs2/?fields</a>[]. There is no way to access the original app again even if victims terminate the overlay process and reopen app, until credit card (name, number, expiry date, security code) and/or bank information (PIN, VBV passcode, date of birth, etc.) are filled in and verified. The information is then stored in local app database as well as sent to the backend.</p>
+
+<p><img src="/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_overlays_for_phishing_google_play_facebook_and_ing_diba.png" alt="Overlays for phishing Google Play, Facebook and ING-DiBa" /><em>Overlays for phishing Google Play, Facebook and ING-DiBa</em></p>
+
+<p><img src="/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_overlay_for_postbank_finanzassistent.png" alt="Overlay for Postbank Finanzassistent" /><em>Overlay for Postbank Finanzassistent</em></p>
+
+<p><strong>Targeted banking apps</strong> * at.bawag.mbanking (BAWAG P.S.K.)</p>
+<ul>
+  <li>at.easybank.mbanking (easybank)</li>
+  <li>at.spardat.netbanking  (ErsteBank/Sparkasse netbanking)</li>
+  <li>at.volksbank.volksbankmobile (Volksbank Banking)</li>
+  <li>com.bankaustria.android.olb (Bank Austria MobileBanking)</li>
+  <li>com.db.mm.deutschebank (Meine Bank)</li>
+  <li>com.ing.diba.mbbr2 (ING-DiBa Banking + Brokerage)</li>
+  <li>com.isis_papyrus.raiffeisen_pay_eyewdg (Raiffeisen ELBA)</li>
+  <li>com.starfinanz.smob.android.sfinanzstatus (Sparkasse)</li>
+  <li>de.comdirect.android (comdirect mobile App)</li>
+  <li>de.commerzbanking.mobil (Banking)</li>
+  <li>de.consorsbank (Consorsbank)</li>
+  <li>de.dkb.portalapp (DKB-Banking)</li>
+  <li>de.fiducia.smartphone.android.banking.vr (VR-Banking)</li>
+  <li>de.postbank.finanzassistent (Postbank Finanzassistent)</li>
+  <li>mobile.santander.de (Santander MobileBanking)</li>
+  <li>com.barclays.android.barclaysmobilebanking (Barclays Mobile Banking)</li>
+  <li>com.grppl.android.shell.BOS (Bank of Scotland Mobile Bank)</li>
+  <li>com.grppl.android.shell.CMBlloydsTSB73 (Lloyds Bank Mobile Banking)</li>
+  <li>com.grppl.android.shell.halifax (Halifax Mobile Banking app)</li>
+  <li>com.htsu.hsbcpersonalbanking (HSBC Mobile Banking)</li>
+  <li>com.rbs.mobile.android.natwest (NatWest)</li>
+  <li>com.rbs.mobile.android.rbs (Royal Bank, RBS)</li>
+  <li>com.rbs.mobile.android.ubr (Ulster Bank ROI)</li>
+  <li>uk.co.santander.santanderUK (Personal Banking)</li>
+  <li>uk.co.tsb.mobilebank (TSB Mobile Banking)</li>
+  <li>com.bbl.mobilebanking (Bualuang mBanking)</li>
+  <li>com.kasikornbank.retail.kmerchant (K-PowerPay (mPOS))</li>
+  <li>com.scb.phone (SCB EASY)</li>
+  <li>ktbcs.netbank (KTB netbank)</li>
+  <li>ar.com.santander.rio.mbanking (Santander Río)</li>
+  <li>br.com.bb.android (Banco do Brasil)</li>
+  <li>cl.santander.smartphone (Banca Personas)</li>
+  <li>co.com.bbva.mb (BBVA Colombia)</li>
+  <li>com.bancodebogota.bancamovil (Banco de Bogotá)</li>
+  <li>com.bancomer.mbanking (Bancomer móvil)</li>
+  <li>com.bapro.movil (Banco Provincia)</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>com.bbva.nxt_argentina (BBVA Francés</td>
+          <td>Banca Móvil AR)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>com.bbva.nxt_peru  (BBVA Continental - Banca Móvil)</li>
+  <li>com.bcp.bank.bcp (Banca Móvil BCP)</li>
+  <li>com.citibanamex.banamexmobile (Citibanamex Móvil)</li>
+  <li>com.grupoavalav1.bancamovil (AV Villas App)</li>
+  <li>com.itau (Banco Itaú)</li>
+  <li>com.mosync.app_Banco_Galicia (Banco Galicia)</li>
+  <li>com.santander.app (Santander Brasil)</li>
+  <li>com.todo1.davivienda.mobileapp (Davivienda Móvil)</li>
+  <li>com.todo1.mobile (Bancolombia App Personas)</li>
+  <li>mx.bancosantander.supermovil (Supermóvil)</li>
+  <li>org.banelco (Banelco MÓVIL)</li>
+  <li>org.microemu.android.model.common.VTUserApplicationLINKMB  (Link Celular)</li>
+  <li>pe.com.interbank.mobilebanking (Interbank APP)</li>
+  <li>se.accumulate.me.core.androidclient.csb (Bancoomeva Móvil)</li>
+  <li>se.accumulate.me.core.androidclient.occidente  (Banco de Occidente B.P)</li>
+  <li>au.com.bankwest.mobile (Bankwest)</li>
+  <li>au.com.ingdirect.android (ING DIRECT Australia Banking)</li>
+  <li>au.com.nab.mobile (NAB)</li>
+  <li>com.commbank.netbank (CommBank)</li>
+  <li>org.banksa.bank (BankSA Mobile Banking)</li>
+  <li>org.stgeorge.bank  (St.George Mobile Banking)</li>
+  <li>org.westpac.bank (Westpac Mobile Banking)</li>
+  <li>com.chase.sig.android  (Chase Mobile)</li>
+  <li>com.citi.citimobile (Citi Mobile®)</li>
+  <li>com.schwab.mobile  (Schwab Mobile)</li>
+  <li>com.wf.wellsfargomobile (Wells Fargo Mobile)</li>
+  <li>de.ing_diba.kontostand (ING-DiBa Kontostand)</li>
+  <li>de.adesso.mobile.android.gadfints  (Online-Filiale+)</li>
+  <li>com.starfinanz.mobile.android.dkbpushtan (DKB-pushTAN)</li>
+  <li>com.starfinanz.smob.android.sbanking (Sparkasse+)</li>
+  <li>com.kasikorn.retail.mbanking.wap (K-Mobile Banking PLUS)</li>
+  <li>com.scb.tablet (SCB EASY for Tablet)</li>
+  <li>com.SCBBizNet  (SCB Business Net)</li>
+  <li>com.scbup2me (SCB UP2ME)</li>
+  <li>th.co.ktam.ktampvd (KTAM PVD)</li>
+  <li>com.ktb.bizgrowing (KTB Biz Growing)</li>
+  <li>com.ing.mobile (ING Bankieren)</li>
+  <li>com.caisseepargne.android.mobilebanking (Banque)</li>
+  <li>fr.lcl.android.customerarea (Mes Comptes - LCL pour mobile)</li>
+  <li>net.bnpparibas.mescomptes  (Mes Comptes BNP Paribas)</li>
+  <li>com.cic_prod.bad (CIC)</li>
+  <li>com.fullsix.android.labanquepostale.accountaccess (La Banque Postale)</li>
+  <li>fr.banquepopulaire.cyberplus (Cyberplus)</li>
+  <li>fr.creditagricole.androidapp (Ma Banque)</li>
+  <li>mobi.societegenerale.mobile.lappli (L’Appli Société Générale)</li>
+  <li>pt.santandertotta.mobileparticulares (Santander Totta)</li>
+  <li>wit.android.bcpBankingApp.millennium (Millenniumbcp)</li>
+  <li>com.IngDirectAndroid (ING Direct France)</li>
+  <li>fr.bred.fr (BRED)</li>
+  <li>fr.lcl.android.entreprise  (Pro &amp; Entreprises LCL)</li>
+  <li>mobi.societegenerale.mobile.lapplipro  (L’Appli Pro Société Générale)</li>
+  <li>com.axabanque.fr (AXA Banque France)</li>
+  <li>com.fpe.comptenickel (Mon Compte-Nickel)</li>
+  <li>com.carrefour.bank (Carrefour Banque)</li>
+  <li>com.bnpp.easybanking (Easy Banking)</li>
+  <li>com.paypal.android.p2pmobile (PayPal)</li>
+  <li>com.westernunion.moneytransferr3app.eu (Western Union International)</li>
+  <li>fr.banquepopulaire.cyberplus.pro (Cyberplus PRO)</li>
+  <li>com.akbank.android.apps.akbank_direkt (Akbank Direkt)</li>
+  <li>com.akbank.softotp (Akbank Direkt Şifreci)</li>
+  <li>com.teb (CEPTETEB)</li>
+  <li>com.finansbank.mobile.cepsube  (QNB Finansbank Cep Şubesi)</li>
+  <li>com.garanti.cepbank (Garanti CepBank)</li>
+  <li>biz.mobinex.android.apps.cep_sifrematik (Garanti Cep Şifrematik)</li>
+  <li>com.garanti.cepsubesi  (Garanti Mobile Banking)</li>
+  <li>com.tmobtech.halkbank  (Halkbank Mobil)</li>
+  <li>com.ingbanktr.ingmobil (ING Mobil)</li>
+  <li>com.pozitron.iscep (İşCep)</li>
+  <li>com.intertech.mobilemoneytransfer.activity (fastPay)</li>
+  <li>com.tmob.denizbank (MobilDeniz)</li>
+  <li>tr.com.sekerbilisim.mbank  (ŞEKER MOBİL ŞUBE)</li>
+  <li>com.vakifbank.mobile (VakıfBank Mobil Bankacılık)</li>
+  <li>com.ykb.android.mobilonay (Yapı Kredi Kurumsal Mobil Şube)</li>
+  <li>com.ykb.androidtablet  (Yapı Kredi Mobil Şube)</li>
+  <li>com.ykb.android (Yapı Kredi Mobile)</li>
+  <li>com.ziraat.ziraatmobil (Ziraat Mobil)</li>
+  <li>com.akbank.android.apps.akbank_direkt_tablet (Akbank Direkt Tablet)</li>
+  <li>com.zentity.sbank.csobsk (SmartBanking SK)</li>
+  <li>cz.csob.smartbanking (ČSOB SmartBanking)</li>
+</ul>
+
+<p><strong>Other targeted apps (credit card overlay)</strong> * com.instagram.android  (Instagram)</p>
+<ul>
+  <li>com.android.vending (Play Store)</li>
+  <li>com.facebook.katana (Facebook)</li>
+  <li>com.skype.raider (Skype)</li>
+  <li>com.viber.voip (Viber)</li>
+  <li>com.whatsapp (WhatsApp Messenger)</li>
+  <li>com.google.android.gm  (Gmail)</li>
+  <li>com.amazon.mShop.android.shopping  (Amazon Shopping)</li>
+</ul>
+
+<h3 id="antivirus-evasion">Antivirus “evasion”</h3>
+
+<p>In addition to the list of apps that are targeted for phishing the app contains a list of antivirus applications for which it prevents removal of the malware. The technique used is quite simpe: look for any AV app in the list and if it is running, the malware will force the phone back to home screen. Even the AV program detects the malware, it will still wait and ask for permission from users before starting the removal process, but because the user can’t give the permission, the malware will not be removed.</p>
+
+<p><img src="/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_code_snippet_malware_forcing_device_back_to_home_screen.png" alt="Code snippet showing the malware forcing the device back to the home screen" /><em>Code snippet showing the malware forcing the device back to the home screen</em></p>
+
+<p>The following antivirus apps are targeted with this technique: * com.clean.booster.security.battery.memory (Booster Cleaner)</p>
+<ul>
+  <li>com.qihoo.security.lite (360 Security Lite)</li>
+  <li>com.piriform.ccleaner (CCleaner)</li>
+  <li>com.antivirus.tablet (Tablet AntiVirus FREE 2017)</li>
+  <li>com.dianxinos.optimizer.duplay (DU Speed Booster &amp; Cleaner)</li>
+  <li>com.womboidsystems.antivirus.security.android (Antivirus Go Next for Android™)</li>
+  <li>com.trustlook.antivirus (Free Antivirus &amp; Security)</li>
+  <li>com.avast.android.mobilesecurity (Mobile Security &amp; Antivirus)</li>
+  <li>com.cleanmaster.mguard (Clean Master (Boost&amp;Antivirus))</li>
+  <li>com.qihoo.security (360 Security - Antivirus)</li>
+  <li>com.symantec.mobilesecurity (Norton Security and Antivirus)</li>
+  <li>com.cleanmaster.security (CM Security AppLock AntiVirus)</li>
+  <li>com.duapps.antivirus (DU Antivirus - Lock app, video)</li>
+  <li>com.antivirus (AVG AntiVirus FREE for Android)</li>
+  <li>com.cleanmaster.boost (CM Speed Booster丨Cache Cleaner)</li>
+  <li>com.zrgiu.antivirus (Antivirus Free - Virus Cleaner)</li>
+  <li>com.kms.free (Kaspersky Antivirus &amp; Security)</li>
+  <li>com.nqmobile.antivirus20 (NQ Mobile Security &amp; Antivirus)</li>
+  <li>com.cleanmaster.mguard (Clean Master (Boost&amp;Antivirus))</li>
+  <li>com.drweb (Anti-virus Dr.Web Light)</li>
+  <li>com.bitdefender.antivirus (Bitdefender Antivirus Free)</li>
+  <li>com.avira.android (Avira Antivirus Security)</li>
+  <li>com.ikarus.mobile.security (IKARUS mobile.security)</li>
+</ul>
+
+<h3 id="sms-harvesting">SMS harvesting</h3>
+
+<p>At startup, Marcher will ask for read/write permissions for both SMS and MMS messages if it doesn’t have the permissions already. Then, whenever the client received command ‘load_sms’ from the C2 server, it will grab all SMS messages from the device and send them back to the backend. In the same way, this method also is used to invoke ‘processIncomingMessages’ to intercept incoming messages.</p>
+
+<p><img src="/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_code_snippet_malware_intercepting_sms_mms_messages.png" alt="Code snippet showing the malware intercepting SMS/MMS messages" /><em>Code snippet showing the malware intercepting SMS/MMS messages</em></p>
+
+<h3 id="smartly-using-permissions">Smartly using permissions</h3>
+
+<p>When the malware first runs, it will ask for device administrative rights, even when users deny or kill the process it will come up again, until they accept the request. Having this permission enables malware to lock and mute the phone, even reset the password and make a permanent phishing WebView. This malicious activity works similar to ransomware, but no files are encrypted.</p>
+
+<p><img src="/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_device_admin_nagging_screen.png" alt="Device admin &quot;nagging&quot; screen" /><em>Device admin “nagging” screen</em></p>
+
+<p><img src="/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_code_snippet_reset_password_or_lock_device.png" alt="Code snippet showing code to reset the password or lock the device" /><em>Code snippet showing code to reset the password or lock the device</em></p>
+
+<h3 id="different-botnets">Different botnets</h3>
+
+<p>We have researched various Marcher actors the last 6 months. Many of them targeting financials in Germany, France, UK and the United States. The latest samples are mainly targeting banks from Germany, Austria and France. Based on their own Trojan user manual we know that there are at least 9 Marcher actors with their own botnets supported by the original creators of the Trojan with new modules and targeted banks/webinjects (HTML overlay files) every week. The following botnets where observed by our team: * flexdeonblake</p>
+<ul>
+  <li>angelkelly</li>
+  <li>MUCHTHENWERESTO</li>
+  <li>balls51</li>
+  <li>CHECKPIECEUNTIL</li>
+  <li>crystalknight</li>
+  <li>jadafire</li>
+  <li>sinnamonlove</li>
+  <li>CONTAINSURE</li>
+</ul>
+
+<p>The details in this blog are based on an assessment of only one Marcher actor/botnet. Based on statistics of the backend we know that their campaign has successfully infected 5696 German and 2198 French mobile devices over total of 11049 affected mobile devices. While assessing their C2 server, we found that most infected devices are running Android 6.0.1. The C2 server at the time of investigation contained at least 1300 credit card numbers and other bank information (username/password + SMS tan).</p>
+
+<p><img src="/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_bot_amount_by_country.png" alt="Bot amount by country" /><em>Bot amount by country</em></p>
+
+<p><img src="/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_bot_amount_by_android_version.png" alt="Bot amount by Android version" /><em>Bot amount by Android version</em></p>
+
+<h3 id="c2-panel-features">C2 panel features</h3>
+
+<p>Besides information obtained through phishing, the C2 server collects the following information from infected devices: * IMEI</p>
+<ul>
+  <li>phone number</li>
+  <li>IP address</li>
+  <li>carrier name</li>
+  <li>SMS messages</li>
+  <li>contact phone numbers</li>
+  <li>installed packages</li>
+</ul>
+
+<p>It can also instruct devices to send an SMS message, lock the screen showing a webpage and run USSD commands for call-forwarding. The panel also has a feature to control bot via SMS messages using commands like: * rent&amp;&amp;&amp; (intercept and forward SMS)</p>
+<ul>
+  <li>ussd&amp;&amp;&amp; (call USSD code)</li>
+  <li>sent&amp;&amp;&amp; (send SMS from bot (e.g: sent&amp;&amp;&amp;+31000000#sms_body))</li>
+  <li>killStart (lock phone with password, disable screen permanently)</li>
+  <li>killStop (undo the killStart changes)</li>
+</ul>
+
+<p>Other options the panel has are chaning the backend URL and creating, enabling and disabling web injects which allows for a lot of flexibility concerning the targeted apps and displayed screens. The phishing screens are hosted on the C2 server and are loaded from there at the time the screen is displayed.</p>
+
+<p><img src="/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_marcher_c2_admin_panel.png" alt="Marcher C2 admin panel" /><em>Marcher C2 admin panel</em></p>
+
+<p><img src="/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_marcher_documentation_1.jpg" alt="Marcher documentation 1" /><img src="/assets/img/arch/Exobot.assets/exobot_android_banking_trojan_on_the_rise_marcher_documentation_2.jpg" alt="Marcher documentation 2" /><em>Marcher documentation</em></p>
+
+<p>The source code of the Marcher C2 server indicate that they successfully implemented a SOCKS feature for bots and are selling this as a separate module. Socks enables the attackers to perform malicious transactions using the victim’s device and IP. This feature could be enabled to circumvent detection of financial institutions that relies on device binding and the IP address of the customer’s Android device.</p>
+
+<p><strong>Source code snippet showing SOCKS functionality</strong></p>
+
+<pre><code class="language-php+HTML">replace :1111 -&gt; last_ip (ip of bot)
+
+$SOCKS_status = "Offline";
+if ($row["SOCKS_status"]){
+$SOCKS_status = $row["SOCKS_status"];
+if (isset($_SERVER["HTTP_X_FORWARDED_HOST"]))
+$SOCKS_status = str_replace("", $_SERVER["HTTP_X_FORWARDED_HOST"], $SOCKS_status);
+else
+$SOCKS_status = str_replace("", $_SERVER["REMOTE_ADDR"], $SOCKS_status);
+}
+
+   if(!isset($client_cfg['mod_SOCKS']) || !$client_cfg['mod_SOCKS'])
+   {
+
+      $data = "&lt;div style='padding: 20px'&gt;
+      &lt;h2&gt;SOCKS: &lt;b style='color: red'&gt;disabled&lt;/b&gt;&lt;/h2&gt;
+      &lt;br /&gt;
+      &lt;p&gt;Bots SOCKS server is a separate paid function.
+      You can launch SOCKS server in \"Bot details\" page.&lt;/p&gt;
+      &lt;br /&gt;
+      &lt;p&gt;Do you want to use SOCKS server? Contact support and buy SOCKS feature now.&lt;/p&gt;
+
+      &lt;/div&gt;";
+      return $data;
+   }
+</code></pre>
+
+<h3 id="samples">Samples</h3>
+
+<p>Below are the most recent Marcher samples we have come across. There are however many more out there. Samples can be obtained from for example <a href="https://koodous.com/">Koodous</a>.</p>
+
+<p><strong>Netflix BETA</strong></p>
+<ul>
+  <li>Package name: iyq.bmjhaqtqndshhxmrzeyxaaepaxxahy</li>
+  <li>SHA256: b087728f732ebb11c4a0f06e02c6f8748d621b776522e8c1ed3fb59a3af69729</li>
+</ul>
+
+<p><strong>Postbank</strong></p>
+<ul>
+  <li>Package name: jihpynmjnsftqlslbg.iraqakpzzdzspqbneq</li>
+  <li>SHA256: 5bb9b9173496d8b70093ef202ed0ddddd48ad323e594345a563a427c1b2ebc22</li>
+</ul>
+
+<p><strong>Youporn</strong></p>
+<ul>
+  <li>Package name: cisfm.rygkfxpsyyldznvjufubiacoriibbx</li>
+  <li>SHA256: c8f753904c14ecee5d693ce454353b70e010bdaf89b2d80c824de22bd11147d5</li>
+</ul>
+
+<p><strong>Android Update</strong></p>
+<ul>
+  <li>Package name: mor.yehoeiphksbxbwfigcopschkhfxpkj</li>
+  <li>SHA256: c172567ccb51582804e589afbfe5d9ef4bc833b99b887e70916b45e3a113afb8</li>
+</ul>
+
+<p><strong>DHL Express Mobile</strong></p>
+<ul>
+  <li>Package name: ijrtc.jwieuvxpjavuklczxdqecvhrjcvuho</li>
+  <li>SHA256: fcd18a2b174a9ef22cd74bb3b727a11b4c072fcef316aefbb989267d21d8bf7d</li>
+</ul>
+
+<p><strong>Mobilfunknetz Update</strong></p>
+<ul>
+  <li>Package name: com.tpvxjnxophkekmritrhjyeyrbnfsyl</li>
+  <li>SHA256: a1258e57c013385401d29b75cf4dc1559691d1b2a9afdab804f07718d1ba9116</li>
+</ul>
+
+<p><strong>Bloomberg PRO</strong></p>
+<ul>
+  <li>Package name: djgd.zvnnpjllwxrnqcvdonprixxpizlfzg</li>
+  <li>SHA256: a1258e57c013385401d29b75cf4dc1559691d1b2a9afdab804f07718d1ba9116</li>
+</ul>
+
+<p><strong>Alzashop.com</strong></p>
+<ul>
+  <li>Package name: atlk.ussdpifhzgedqrysfygranbxmffhck</li>
+  <li>SHA256: ed2b26c9cf4bc458c2fa89476742e9b0d598b0c300ab45e5211f29dfd9ddd67b</li>
+</ul>
+
+<p><strong>Super Mario Run</strong></p>
+<ul>
+  <li>Package name: vlhtc.hsicifsgxehymvdvajyzyckijyatpo</li>
+  <li>SHA256: be6c8a4afbd4b31841b2d925079963f3bd5422a5ee5f248c5ed5013093c21cf9</li>
+</ul>
+
+<p><strong>Runtastic</strong></p>
+<ul>
+  <li>Package name: zwhp.nbneaijecxwskcxtlkvmnqkryxgdgq</li>
+  <li>SHA256: ec4d182b0743dbdedb989d4f4cb2d607034ee1364c30103b2415ea8b90df8775</li>
+</ul>
+
+<p><strong>Whatsapp Security</strong></p>
+<ul>
+  <li>Package name: com.wood</li>
+  <li>SHA256: 5a9e3d2c2ef29b76c628e70a91575dc4be3999b60f34cab35ee70867faaff4a0</li>
+</ul>
+
+<p><strong>Postbank Sicherheitszertifikat</strong></p>
+<ul>
+  <li>Package name: zcdr.kmvxvlidqpezvegypetddrutebanrp</li>
+  <li>SHA256: 5df132235eccd1e75474deca5b95e59e430e23a22f68b6b27c2c3a4aeb748857</li>
+</ul>
+
+<p><strong>Pošta Online</strong></p>
+<ul>
+  <li>Package name: nkl.gewpfvqsnxehngqtzjlhrcqivqsqhw</li>
+  <li>SHA256: 25e07c50707c77c8656088a9a7ff3fdd9552b5b8022d8c154f73dca1e631db4f</li>
+</ul>
+
+<p><strong>360 Security</strong></p>
+<ul>
+  <li>Package name: com.p360courv</li>
+  <li>SHA256: f7743a01fc80484242d59868938ec64990c19bea983fb58b653822c9ee3306a1</li>
+</ul>
+
+<p><strong>Volksbank Sicherheitszertifikat</strong></p>
+<ul>
+  <li>Package name: amise.syrwhshjopuvyqhrucvvosjjcnrbrz</li>
+  <li>SHA256: 6f8b7aa6293238d23b1c5236d1c10cecc54ec8407007887e99ea76f9fce51075</li>
+</ul>
+
+<p><strong>ING Beveiligingsupdate</strong></p>
+<ul>
+  <li>Package name: com.ingbvupdd</li>
+  <li>SHA256: 7f08cc20aa6e1256f6a8db3966ac71ad209db6dff14a6dde0fd7b2407c2c23e7</li>
+</ul>
+
+<p><strong>Google Play Services</strong></p>
+<ul>
+  <li>Package name: cosmetiq.fl</li>
+  <li>SHA256: b4e5affbc3ea94eb771614550bc83fde85f90caddcca90d25704c9a556f523da</li>
+</ul>
+
+<h3 id="c2s">C2s</h3>
+
+<p>hxxps://loupeacara.net/flexdeonblake/
+hxxps://sarahtame.at/flexdeonblake/
+hxxps://loupeahak.com/flexdeonblake/
+hxxps://chudresex.at/flexdeonblake/
+hxxps://chudresex.cc/flexdeonblake/
+hxxps://memosigla.su/flexdeonblake/
+hxxps://rockybalboa.at/angelkelly/
+hxxps://storegoogle.at/angelkelly/
+hxxps://trackgoogle.at/angelkelly/
+hxxps://track-google.at/angelkelly/
+hxxps://coupon-online.fr/angelkelly/
+hxxps://inovea-engineering.com/angelkelly/
+hxxps://lingerieathome.eu/angelkelly/
+hxxps://playgoogle.at/angelkelly/
+hxxps://i-app5.online/MUCHTHENWERESTO/
+hxxps://i-app4.online/MUCHTHENWERESTO/
+hxxps://i-app1.online/MUCHTHENWERESTO/
+hxxps://176.119.28.74/balls51/
+hxxps://soulreaver.at/balls51/
+hxxps://olimpogods.at/balls51/
+hxxps://divingforpearls.at/balls51/
+hxxps://fhfhhhrjtfg3637fgjd.at/CHECKPIECEUNTIL/
+hxxps://dfjdgxm3753u744h.at/CHECKPIECEUNTIL/
+hxxps://dndzh457thdhjk.at/CHECKPIECEUNTIL/
+hxxps://playsstore.mobi/QUESTIONROADFAR/
+hxxps://secure-ingdirect.top/CHECKPIECEUNTIL /
+hxxps://playsstore.net/QUESTIONROADFAR/
+hxxps://compoz.at/crystalknight/
+hxxps://cpsxz1.at/crystalknight/
+hxxps://securitybitches3.at/jadafire/
+hxxps://wqetwertwertwerxcvbxcv.at/jadafire/
+hxxps://securitybitches1.at/jadafire/
+hxxps://ldfghvcxsadfgr.at/jadafire/
+hxxps://weituweritoiwetzer.at/jadafire/
+hxxps://wellscoastink.biz/jadafire/
+hxxps://deereebee.info/jadafire/
+hxxps://ssnoways.info/jadafire/
+hxxps://elitbizopa.info/jadafire/
+hxxps://filllfoll.biz/jadafire/
+hxxps://bizlikebiz.biz/jadafire/
+hxxps://barberink.biz/jadafire/
+hxxps://nowayright.biz/jadafire/
+hxxps://messviiqqq.info/jadafire/
+hxxps://qqqright.info/jadafire/
+hxxps://sudopsuedo1.su/sinnamonlove/
+hxxps://sudopsuedo2.su/sinnamonlove/
+hxxps://sudopsuedo3.su/sinnamonlove/
+hxxps://androidpt01.asia/CONTAINSURE/
+hxxps://androidpt02.asia/CONTAINSURE/</p>
+
+<h2 id="preventing-infection">Preventing infection</h2>
+
+<p>Users should avoid downloading apps from a third-party and only use Google Play Store (so do not enable installation from unknown sources). Take note however that even in the Google Play Store apps are not necessarily malware free. Check if the requested privileges correspond with the expected privileges of the app you want to install. Also, never click on a suspicious link in SMS and email messages even it is from trusted contacts.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Marcher is growing into a mature Trojan with solid organization behind it like many of the banking malware variants we have seen over the years on the Windows platform (Sinowal/Torpig, Dyre, Dridex, Gozi, etc.). Development of new features and support for newer Android versions is ongoing and we will be keeping an eye on it to see where things are going. The main actors of Marcher appear to not only make money off the stolen credentials but also from providing their Trojan to other groups and selling new capabilities such as the SOCKS module and new injects.</p>
+
+<p>Based on the statistics we found on this one C2 panel we researched and the amount of different C2 panels out there, we believe that the potential financial losses due to Android banking Trojans are, or will soon be, bigger than the current losses from desktop malware like Gozi and Dridex, especially since hardly any of the banking apps seem to detect the attack.</p>
+
+<p>If you yourself want to remain safe from malware, be vigilant when installing new applications on your device and try to keep your device up-to-date. From Google’s side we are seeing some improvements on the Android platform itself to combat techniques used by malware. The current techniques used to retrieve the foreground app for example are no longer working on Android 7. However, more can be done to improve platform security, especially around the “Unknown Sources” setting. To quote Yorick Koster, who has been testing mobile app security on all platforms for many years: “all these MDM solutions require you to enable Untrusted Sources. I don’t know why Google doesn’t have a solution for this yet, like Apple does with enterprise certificates”.</p>
+
+<p>We have been worrying about security on desktop computers for decades. Now, with mobile malware on the rise, it’s about time everyone starts worrying about mobile device security, especially considering that for many targeted financials most transactions these days take place on mobile devices.</p>
+
+  </article>
+
+</div>
+
+    </div>
+
+    <!-- Footer -->
+
+    
+<footer class="fixed-bottom">
+  <div class="container mt-0">
+    &copy; Copyright 2025 Duy Phuc  Pham.
+    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+
+    
+  </div>
+</footer>
+
+
+
+  </body>
+
+  <!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+  <!-- Bootsrap & MDB scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js" integrity="sha512-eUQ9hGdLjBjY3F41CScH3UX+4JDSI9zXeroz7hJ+RteoCaY+GP/LDoM8AO+Pt+DRFw3nXqsjh9Zsts8hnYv8/A==" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha512-M5KW3ztuIICmVIhjSqXe01oV2bpe248gOxqmlcYrEzAvws7Pw3z6BK0iGbrwvdrUQUhi3eXgtxp5I8PDo9YfjQ==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js" integrity="sha512-Mug9KHKmroQFMLm93zGrjhibM2z2Obg9l6qFG2qKjXEXkMp/VDkI4uju9m4QKPjWSwQ6O2qzZEnJDEeCw0Blcw==" crossorigin="anonymous"></script>
+
+  
+<!-- Mansory & imagesLoaded -->
+<script defer src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script defer src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script defer src="/assets/js/mansory.js" type="text/javascript"></script>
+
+
+  
+<!-- Enable Tooltips -->
+<script type="text/javascript">
+$(function () {$('[data-toggle="tooltip"]').tooltip()})
+</script>
+
+
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+<!-- Load DarkMode JS -->
+<script src="/assets/js/dark_mode.js"></script>
+
+
+</html>
